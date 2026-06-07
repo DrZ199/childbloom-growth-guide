@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "ChildBloom" },
+      { name: "description", content: "parenting and child health platform called \"ChildBloom\"" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "ChildBloom" },
+      { property: "og:description", content: "parenting and child health platform called \"ChildBloom\"" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "ChildBloom" },
+      { name: "twitter:description", content: "parenting and child health platform called \"ChildBloom\"" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/0bc4e4e2-d678-44e6-8f08-3296e9983ab5" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/0bc4e4e2-d678-44e6-8f08-3296e9983ab5" },
     ],
     links: [
       {
