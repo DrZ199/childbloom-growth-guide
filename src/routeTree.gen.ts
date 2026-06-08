@@ -20,10 +20,21 @@ import { Route as ArticlesRouteImport } from './routes/articles'
 import { Route as AffiliateDisclosureRouteImport } from './routes/affiliate-disclosure'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminIndexRouteImport } from './routes/admin/index'
+import { Route as GoSlugRouteImport } from './routes/go/$slug'
+import { Route as CategoriesSlugRouteImport } from './routes/categories/$slug'
 import { Route as ArticlesStartingSolidsRouteImport } from './routes/articles/starting-solids'
 import { Route as ArticlesSpeechMilestonesRouteImport } from './routes/articles/speech-milestones'
 import { Route as ArticlesNewbornSleepRouteImport } from './routes/articles/newborn-sleep'
 import { Route as ArticlesBestBabyMonitorsRouteImport } from './routes/articles/best-baby-monitors'
+import { Route as ArticlesSlugRouteImport } from './routes/articles/$slug'
+import { Route as AdminSubscribersRouteImport } from './routes/admin/subscribers'
+import { Route as AdminMessagesRouteImport } from './routes/admin/messages'
+import { Route as AdminDashboardRouteImport } from './routes/admin/dashboard'
+import { Route as AdminCategoriesRouteImport } from './routes/admin/categories'
+import { Route as AdminArticlesIndexRouteImport } from './routes/admin/articles/index'
+import { Route as AdminArticlesNewRouteImport } from './routes/admin/articles/new'
+import { Route as AdminArticlesIdRouteImport } from './routes/admin/articles/$id'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -80,6 +91,21 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GoSlugRoute = GoSlugRouteImport.update({
+  id: '/go/$slug',
+  path: '/go/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoriesSlugRoute = CategoriesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => CategoriesRoute,
+} as any)
 const ArticlesStartingSolidsRoute = ArticlesStartingSolidsRouteImport.update({
   id: '/starting-solids',
   path: '/starting-solids',
@@ -102,40 +128,102 @@ const ArticlesBestBabyMonitorsRoute =
     path: '/best-baby-monitors',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesSlugRoute = ArticlesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ArticlesRoute,
+} as any)
+const AdminSubscribersRoute = AdminSubscribersRouteImport.update({
+  id: '/admin/subscribers',
+  path: '/admin/subscribers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminMessagesRoute = AdminMessagesRouteImport.update({
+  id: '/admin/messages',
+  path: '/admin/messages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/admin/dashboard',
+  path: '/admin/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminCategoriesRoute = AdminCategoriesRouteImport.update({
+  id: '/admin/categories',
+  path: '/admin/categories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminArticlesIndexRoute = AdminArticlesIndexRouteImport.update({
+  id: '/admin/articles/',
+  path: '/admin/articles/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminArticlesNewRoute = AdminArticlesNewRouteImport.update({
+  id: '/admin/articles/new',
+  path: '/admin/articles/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminArticlesIdRoute = AdminArticlesIdRouteImport.update({
+  id: '/admin/articles/$id',
+  path: '/admin/articles/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/articles': typeof ArticlesRouteWithChildren
-  '/categories': typeof CategoriesRoute
+  '/categories': typeof CategoriesRouteWithChildren
   '/contact': typeof ContactRoute
   '/medical-disclaimer': typeof MedicalDisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/admin/categories': typeof AdminCategoriesRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/messages': typeof AdminMessagesRoute
+  '/admin/subscribers': typeof AdminSubscribersRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
   '/articles/best-baby-monitors': typeof ArticlesBestBabyMonitorsRoute
   '/articles/newborn-sleep': typeof ArticlesNewbornSleepRoute
   '/articles/speech-milestones': typeof ArticlesSpeechMilestonesRoute
   '/articles/starting-solids': typeof ArticlesStartingSolidsRoute
+  '/categories/$slug': typeof CategoriesSlugRoute
+  '/go/$slug': typeof GoSlugRoute
+  '/admin/': typeof AdminIndexRoute
+  '/admin/articles/$id': typeof AdminArticlesIdRoute
+  '/admin/articles/new': typeof AdminArticlesNewRoute
+  '/admin/articles/': typeof AdminArticlesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/articles': typeof ArticlesRouteWithChildren
-  '/categories': typeof CategoriesRoute
+  '/categories': typeof CategoriesRouteWithChildren
   '/contact': typeof ContactRoute
   '/medical-disclaimer': typeof MedicalDisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/admin/categories': typeof AdminCategoriesRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/messages': typeof AdminMessagesRoute
+  '/admin/subscribers': typeof AdminSubscribersRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
   '/articles/best-baby-monitors': typeof ArticlesBestBabyMonitorsRoute
   '/articles/newborn-sleep': typeof ArticlesNewbornSleepRoute
   '/articles/speech-milestones': typeof ArticlesSpeechMilestonesRoute
   '/articles/starting-solids': typeof ArticlesStartingSolidsRoute
+  '/categories/$slug': typeof CategoriesSlugRoute
+  '/go/$slug': typeof GoSlugRoute
+  '/admin': typeof AdminIndexRoute
+  '/admin/articles/$id': typeof AdminArticlesIdRoute
+  '/admin/articles/new': typeof AdminArticlesNewRoute
+  '/admin/articles': typeof AdminArticlesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -143,17 +231,28 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/articles': typeof ArticlesRouteWithChildren
-  '/categories': typeof CategoriesRoute
+  '/categories': typeof CategoriesRouteWithChildren
   '/contact': typeof ContactRoute
   '/medical-disclaimer': typeof MedicalDisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/admin/categories': typeof AdminCategoriesRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/messages': typeof AdminMessagesRoute
+  '/admin/subscribers': typeof AdminSubscribersRoute
+  '/articles/$slug': typeof ArticlesSlugRoute
   '/articles/best-baby-monitors': typeof ArticlesBestBabyMonitorsRoute
   '/articles/newborn-sleep': typeof ArticlesNewbornSleepRoute
   '/articles/speech-milestones': typeof ArticlesSpeechMilestonesRoute
   '/articles/starting-solids': typeof ArticlesStartingSolidsRoute
+  '/categories/$slug': typeof CategoriesSlugRoute
+  '/go/$slug': typeof GoSlugRoute
+  '/admin/': typeof AdminIndexRoute
+  '/admin/articles/$id': typeof AdminArticlesIdRoute
+  '/admin/articles/new': typeof AdminArticlesNewRoute
+  '/admin/articles/': typeof AdminArticlesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -169,10 +268,21 @@ export interface FileRouteTypes {
     | '/search'
     | '/sitemap.xml'
     | '/terms'
+    | '/admin/categories'
+    | '/admin/dashboard'
+    | '/admin/messages'
+    | '/admin/subscribers'
+    | '/articles/$slug'
     | '/articles/best-baby-monitors'
     | '/articles/newborn-sleep'
     | '/articles/speech-milestones'
     | '/articles/starting-solids'
+    | '/categories/$slug'
+    | '/go/$slug'
+    | '/admin/'
+    | '/admin/articles/$id'
+    | '/admin/articles/new'
+    | '/admin/articles/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -186,10 +296,21 @@ export interface FileRouteTypes {
     | '/search'
     | '/sitemap.xml'
     | '/terms'
+    | '/admin/categories'
+    | '/admin/dashboard'
+    | '/admin/messages'
+    | '/admin/subscribers'
+    | '/articles/$slug'
     | '/articles/best-baby-monitors'
     | '/articles/newborn-sleep'
     | '/articles/speech-milestones'
     | '/articles/starting-solids'
+    | '/categories/$slug'
+    | '/go/$slug'
+    | '/admin'
+    | '/admin/articles/$id'
+    | '/admin/articles/new'
+    | '/admin/articles'
   id:
     | '__root__'
     | '/'
@@ -203,10 +324,21 @@ export interface FileRouteTypes {
     | '/search'
     | '/sitemap.xml'
     | '/terms'
+    | '/admin/categories'
+    | '/admin/dashboard'
+    | '/admin/messages'
+    | '/admin/subscribers'
+    | '/articles/$slug'
     | '/articles/best-baby-monitors'
     | '/articles/newborn-sleep'
     | '/articles/speech-milestones'
     | '/articles/starting-solids'
+    | '/categories/$slug'
+    | '/go/$slug'
+    | '/admin/'
+    | '/admin/articles/$id'
+    | '/admin/articles/new'
+    | '/admin/articles/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -214,13 +346,22 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AffiliateDisclosureRoute: typeof AffiliateDisclosureRoute
   ArticlesRoute: typeof ArticlesRouteWithChildren
-  CategoriesRoute: typeof CategoriesRoute
+  CategoriesRoute: typeof CategoriesRouteWithChildren
   ContactRoute: typeof ContactRoute
   MedicalDisclaimerRoute: typeof MedicalDisclaimerRoute
   PrivacyRoute: typeof PrivacyRoute
   SearchRoute: typeof SearchRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  AdminCategoriesRoute: typeof AdminCategoriesRoute
+  AdminDashboardRoute: typeof AdminDashboardRoute
+  AdminMessagesRoute: typeof AdminMessagesRoute
+  AdminSubscribersRoute: typeof AdminSubscribersRoute
+  GoSlugRoute: typeof GoSlugRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+  AdminArticlesIdRoute: typeof AdminArticlesIdRoute
+  AdminArticlesNewRoute: typeof AdminArticlesNewRoute
+  AdminArticlesIndexRoute: typeof AdminArticlesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -302,6 +443,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/go/$slug': {
+      id: '/go/$slug'
+      path: '/go/$slug'
+      fullPath: '/go/$slug'
+      preLoaderRoute: typeof GoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/categories/$slug': {
+      id: '/categories/$slug'
+      path: '/$slug'
+      fullPath: '/categories/$slug'
+      preLoaderRoute: typeof CategoriesSlugRouteImport
+      parentRoute: typeof CategoriesRoute
+    }
     '/articles/starting-solids': {
       id: '/articles/starting-solids'
       path: '/starting-solids'
@@ -330,10 +492,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesBestBabyMonitorsRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/$slug': {
+      id: '/articles/$slug'
+      path: '/$slug'
+      fullPath: '/articles/$slug'
+      preLoaderRoute: typeof ArticlesSlugRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/admin/subscribers': {
+      id: '/admin/subscribers'
+      path: '/admin/subscribers'
+      fullPath: '/admin/subscribers'
+      preLoaderRoute: typeof AdminSubscribersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/messages': {
+      id: '/admin/messages'
+      path: '/admin/messages'
+      fullPath: '/admin/messages'
+      preLoaderRoute: typeof AdminMessagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/admin/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/categories': {
+      id: '/admin/categories'
+      path: '/admin/categories'
+      fullPath: '/admin/categories'
+      preLoaderRoute: typeof AdminCategoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/articles/': {
+      id: '/admin/articles/'
+      path: '/admin/articles'
+      fullPath: '/admin/articles/'
+      preLoaderRoute: typeof AdminArticlesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/articles/new': {
+      id: '/admin/articles/new'
+      path: '/admin/articles/new'
+      fullPath: '/admin/articles/new'
+      preLoaderRoute: typeof AdminArticlesNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/articles/$id': {
+      id: '/admin/articles/$id'
+      path: '/admin/articles/$id'
+      fullPath: '/admin/articles/$id'
+      preLoaderRoute: typeof AdminArticlesIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 interface ArticlesRouteChildren {
+  ArticlesSlugRoute: typeof ArticlesSlugRoute
   ArticlesBestBabyMonitorsRoute: typeof ArticlesBestBabyMonitorsRoute
   ArticlesNewbornSleepRoute: typeof ArticlesNewbornSleepRoute
   ArticlesSpeechMilestonesRoute: typeof ArticlesSpeechMilestonesRoute
@@ -341,6 +560,7 @@ interface ArticlesRouteChildren {
 }
 
 const ArticlesRouteChildren: ArticlesRouteChildren = {
+  ArticlesSlugRoute: ArticlesSlugRoute,
   ArticlesBestBabyMonitorsRoute: ArticlesBestBabyMonitorsRoute,
   ArticlesNewbornSleepRoute: ArticlesNewbornSleepRoute,
   ArticlesSpeechMilestonesRoute: ArticlesSpeechMilestonesRoute,
@@ -351,18 +571,39 @@ const ArticlesRouteWithChildren = ArticlesRoute._addFileChildren(
   ArticlesRouteChildren,
 )
 
+interface CategoriesRouteChildren {
+  CategoriesSlugRoute: typeof CategoriesSlugRoute
+}
+
+const CategoriesRouteChildren: CategoriesRouteChildren = {
+  CategoriesSlugRoute: CategoriesSlugRoute,
+}
+
+const CategoriesRouteWithChildren = CategoriesRoute._addFileChildren(
+  CategoriesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AffiliateDisclosureRoute: AffiliateDisclosureRoute,
   ArticlesRoute: ArticlesRouteWithChildren,
-  CategoriesRoute: CategoriesRoute,
+  CategoriesRoute: CategoriesRouteWithChildren,
   ContactRoute: ContactRoute,
   MedicalDisclaimerRoute: MedicalDisclaimerRoute,
   PrivacyRoute: PrivacyRoute,
   SearchRoute: SearchRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  AdminCategoriesRoute: AdminCategoriesRoute,
+  AdminDashboardRoute: AdminDashboardRoute,
+  AdminMessagesRoute: AdminMessagesRoute,
+  AdminSubscribersRoute: AdminSubscribersRoute,
+  GoSlugRoute: GoSlugRoute,
+  AdminIndexRoute: AdminIndexRoute,
+  AdminArticlesIdRoute: AdminArticlesIdRoute,
+  AdminArticlesNewRoute: AdminArticlesNewRoute,
+  AdminArticlesIndexRoute: AdminArticlesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
