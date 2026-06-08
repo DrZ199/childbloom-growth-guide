@@ -42,7 +42,7 @@ const newsletterInputSchema = z.object({
 });
 
 export const subscribeNewsletter = createServerFn({ method: "POST" })
-  .inputValidator(newsletterInputSchema)
+  .validator(newsletterInputSchema)
   .handler(async ({ data }) => {
     const ip = getClientIp();
     const limit = checkRateLimit(`newsletter:${ip}`, RATE_LIMIT_NEWSLETTER);
@@ -91,7 +91,7 @@ const contactInputSchema = z.object({
 });
 
 export const submitContactForm = createServerFn({ method: "POST" })
-  .inputValidator(contactInputSchema)
+  .validator(contactInputSchema)
   .handler(async ({ data }) => {
     const ip = getClientIp();
     const limit = checkRateLimit(`contact:${ip}`, RATE_LIMIT_CONTACT);
