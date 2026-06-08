@@ -1,9 +1,20 @@
+# ChildBloom Growth Guide — robots.txt
+# https://childbloom.app
+
 User-agent: *
 Allow: /
 
+# Block admin, auth, and API routes
 Disallow: /admin
-Disallow: /dashboard
-Disallow: /auth
+Disallow: /admin/
+Disallow: /go/
 Disallow: /api/
 
-Sitemap: https://childbloom-growth-guide.lovable.app/sitemap.xml
+# Block search results from indexing (thin content)
+Disallow: /search
+
+# Sitemaps
+Sitemap: https://childbloom.app/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
