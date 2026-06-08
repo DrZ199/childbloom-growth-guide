@@ -46,7 +46,7 @@ export const Route = createFileRoute("/categories/$slug")({
 
 function DynamicCategoryPage() {
   const { category } = Route.useLoaderData();
-  const baseUrl = "https://childbloom.app";
+  const baseUrl = "https://childbloom.site";
 
   const breadcrumbItems = [
     { label: "Categories", href: "/categories" },

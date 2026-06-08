@@ -37,7 +37,7 @@ export const Route = createFileRoute("/articles/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) return {};
     const { article } = loaderData;
-    const baseUrl = "https://childbloom.app";
+    const baseUrl = "https://childbloom.site";
     const url = `${baseUrl}/articles/${article.slug}`;
     return {
       meta: [
@@ -74,7 +74,7 @@ export const Route = createFileRoute("/articles/$slug")({
 
 function DynamicArticlePage() {
   const { article, related } = Route.useLoaderData();
-  const baseUrl = "https://childbloom.app";
+  const baseUrl = "https://childbloom.site";
   const articleUrl = `${baseUrl}/articles/${article.slug}`;
 
   // Process content HTML — add IDs to headings for TOC

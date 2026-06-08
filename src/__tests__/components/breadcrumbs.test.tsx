@@ -59,7 +59,7 @@ describe("generateBreadcrumbSchema", () => {
       { label: "Articles", href: "/articles" },
       { label: "Sleep Guide", href: "/articles/sleep" },
     ];
-    const schema = generateBreadcrumbSchema(items, "https://childbloom.app");
+    const schema = generateBreadcrumbSchema(items, "https://childbloom.site");
     expect(schema["@type"]).toBe("BreadcrumbList");
     expect(schema.itemListElement).toHaveLength(3); // Home + 2 items
     expect(schema.itemListElement[0].name).toBe("Home");
@@ -69,9 +69,9 @@ describe("generateBreadcrumbSchema", () => {
 
   it("last item has no URL", () => {
     const items: BreadcrumbItem[] = [{ label: "Current Page" }];
-    const schema = generateBreadcrumbSchema(items, "https://childbloom.app");
+    const schema = generateBreadcrumbSchema(items, "https://childbloom.site");
     // Home has URL, current page doesn't
-    expect(schema.itemListElement[0].item).toBe("https://childbloom.app/");
+    expect(schema.itemListElement[0].item).toBe("https://childbloom.site/");
     expect(schema.itemListElement[1].item).toBeUndefined();
   });
 });

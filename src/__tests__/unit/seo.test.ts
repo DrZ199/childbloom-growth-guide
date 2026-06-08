@@ -94,36 +94,36 @@ describe("truncateMetaDescription", () => {
 
 describe("absoluteUrl", () => {
   it("joins base and path", () => {
-    expect(absoluteUrl("https://childbloom.app", "/articles/sleep")).toBe(
-      "https://childbloom.app/articles/sleep",
+    expect(absoluteUrl("https://childbloom.site", "/articles/sleep")).toBe(
+      "https://childbloom.site/articles/sleep",
     );
   });
 
   it("strips trailing slash from base", () => {
-    expect(absoluteUrl("https://childbloom.app/", "/about")).toBe(
-      "https://childbloom.app/about",
+    expect(absoluteUrl("https://childbloom.site/", "/about")).toBe(
+      "https://childbloom.site/about",
     );
   });
 
   it("adds leading slash to path if missing", () => {
-    expect(absoluteUrl("https://childbloom.app", "about")).toBe(
-      "https://childbloom.app/about",
+    expect(absoluteUrl("https://childbloom.site", "about")).toBe(
+      "https://childbloom.site/about",
     );
   });
 });
 
 describe("buildOrganizationSchema", () => {
   it("returns valid JSON-LD structure", () => {
-    const schema = buildOrganizationSchema("https://childbloom.app", "ChildBloom");
+    const schema = buildOrganizationSchema("https://childbloom.site", "ChildBloom");
     expect(schema["@type"]).toBe("Organization");
     expect(schema.name).toBe("ChildBloom");
-    expect(schema.url).toBe("https://childbloom.app");
+    expect(schema.url).toBe("https://childbloom.site");
   });
 });
 
 describe("buildWebsiteSearchSchema", () => {
   it("includes SearchAction with correct target URL", () => {
-    const schema = buildWebsiteSearchSchema("https://childbloom.app", "ChildBloom");
+    const schema = buildWebsiteSearchSchema("https://childbloom.site", "ChildBloom");
     expect(schema.potentialAction["@type"]).toBe("SearchAction");
     expect(schema.potentialAction.target).toContain("/search?q=");
   });
@@ -135,7 +135,7 @@ describe("buildFaqSchema", () => {
       { question: "Q1?", answer: "A1." },
       { question: "Q2?", answer: "A2." },
     ];
-    const schema = buildFaqSchema(faq, "https://childbloom.app/articles/test");
+    const schema = buildFaqSchema(faq, "https://childbloom.site/articles/test");
     expect(schema["@type"]).toBe("FAQPage");
     expect(schema.mainEntity).toHaveLength(2);
     expect(schema.mainEntity[0]["@type"]).toBe("Question");
@@ -149,7 +149,7 @@ describe("buildItemListSchema", () => {
       { title: "Article A", slug: "a", position: 1 },
       { title: "Article B", slug: "b", position: 2 },
     ];
-    const schema = buildItemListSchema(items, "https://childbloom.app");
+    const schema = buildItemListSchema(items, "https://childbloom.site");
     expect(schema["@type"]).toBe("ItemList");
     expect(schema.itemListElement).toHaveLength(2);
     expect(schema.itemListElement[0].url).toContain("/articles/a");

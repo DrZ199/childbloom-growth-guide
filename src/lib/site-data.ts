@@ -3,7 +3,7 @@ import { Apple, Baby, Heart, ShoppingBag, Sparkles, Star } from "lucide-react";
 export const siteName = "ChildBloom";
 export const siteDescription =
   "Helping children grow, learn, and thrive with trustworthy parenting guidance, child health support, nutrition advice, and honest product recommendations.";
-export const siteUrl = "https://childbloom.app";
+export const siteUrl = "https://childbloom.site";
 
 export const categories = [
   {

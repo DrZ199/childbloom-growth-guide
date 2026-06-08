@@ -61,7 +61,7 @@ export function generateArticleSchema(params: {
       name: "ChildBloom",
       logo: {
         "@type": "ImageObject",
-        url: "https://childbloom.app/logo.png",
+        url: "https://childbloom.site/logo.png",
       },
     },
     articleSection: params.categoryName,
