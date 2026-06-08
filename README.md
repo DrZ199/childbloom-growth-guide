@@ -1,10 +1,10 @@
 # ChildBloom Growth Guide
 
-This repository is a modern, mobile-first parenting and child health website called **ChildBloom**.
+ChildBloom is a modern, mobile-first parenting and child health website built for scalability and SEO performance.
 
 ## Project Overview
 
-ChildBloom is designed to be a scalable authority website for:
+ChildBloom is designed to be a scalable authority website covering:
 
 - Child health
 - Parenting
@@ -17,42 +17,95 @@ The site is optimized for SEO, readability, and clean mobile-first layout.
 
 ## Tech Stack
 
-- React 19
-- TypeScript
-- Tailwind CSS
-- TanStack Start / React Router
-- Supabase backend integration
-- Vite build tooling
+- **Frontend:** React 19, TypeScript, TanStack Start, TanStack Router
+- **Styling:** Tailwind CSS 4, shadcn/ui (Radix UI primitives)
+- **Backend:** Supabase (PostgreSQL, Auth, RLS, Full-text search)
+- **Build:** Vite 7, Nitro (SSR)
+- **Hosting:** Vercel
 
-## What’s Included
+## Getting Started
 
-- Homepage with hero, categories, latest articles, featured guides, and newsletter signup
-- Articles listing page and sample article pages
-- Category browsing page
-- Search page with client-side filtering
-- About, Contact, Privacy, Terms, Affiliate Disclosure, and Medical Disclaimer pages
-- Sitemap generation at `/sitemap.xml`
-- SEO-friendly metadata and basic structured data for article pages
-- Removed visible Lovable branding from site metadata and error messaging
+### Prerequisites
 
-## Local Development
+- Node.js 20+
+- npm 10+
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Run the dev server:
-   ```bash
-   npm run dev
-   ```
-3. Open the site in the browser and navigate to `/`.
+### Installation
 
-## Notes
+```bash
+npm install
+```
 
-- This repository uses file-based routing under `src/routes`.
-- The generated route tree is available in `src/routeTree.gen.ts`.
-- Static content pages use the shared data model in `src/lib/site-data.ts`.
+### Environment Setup
 
-## Git
+Copy the example environment file and fill in your values:
 
-Changes were committed and pushed to `origin/main`.
+```bash
+cp .env.example .env
+```
+
+See `.env.example` for all required environment variables.
+
+### Development
+
+```bash
+npm run dev
+```
+
+Open the site at `http://localhost:3000`.
+
+### Build
+
+```bash
+npm run build
+npm run preview
+```
+
+### Linting & Formatting
+
+```bash
+npm run lint
+npm run format
+```
+
+## Project Structure
+
+```
+src/
+├── assets/                 # Static assets (images, fonts)
+├── components/ui/          # shadcn/ui components
+├── hooks/                  # Custom React hooks
+├── integrations/supabase/  # Supabase clients and auth
+├── lib/                    # Shared utilities, config, site data
+├── routes/                 # File-based routes (TanStack Router)
+├── router.tsx              # Router configuration
+├── server.ts               # SSR server entry
+├── start.ts                # TanStack Start configuration
+└── styles.css              # Global styles and design tokens
+```
+
+## Database
+
+Supabase migrations are in `supabase/migrations/`. The schema includes:
+
+- **articles** — CMS-driven content with full-text search
+- **categories / tags** — Content organization
+- **profiles** — Author profiles linked to Supabase Auth
+- **user_roles** — Role-based access (admin, editor, author)
+- **newsletter_subscribers** — Email subscribers with confirmation tokens
+- **contact_messages** — Contact form submissions
+
+## Scripts
+
+| Command          | Description                       |
+| ---------------- | --------------------------------- |
+| `npm run dev`    | Start development server          |
+| `npm run build`  | Production build                  |
+| `npm run build:dev` | Development build              |
+| `npm run preview`| Preview production build          |
+| `npm run lint`   | Run ESLint                        |
+| `npm run format` | Format with Prettier              |
+
+## License
+
+MIT

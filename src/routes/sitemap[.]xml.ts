@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import type { } from "@tanstack/react-start";
+import type {} from "@tanstack/react-start";
 
-const BASE_URL = "https://childbloom-growth-guide.lovable.app";
+const BASE_URL = "https://childbloom.app";
 
 interface SitemapEntry {
   path: string;
@@ -33,9 +33,7 @@ export const Route = createFileRoute("/sitemap.xml")({
 
         const dynamicEntries: SitemapEntry[] = [];
         try {
-          const { supabaseAdmin } = await import(
-            "@/integrations/supabase/client.server"
-          );
+          const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
           const [articlesRes, categoriesRes, tagsRes, authorsRes] = await Promise.all([
             supabaseAdmin

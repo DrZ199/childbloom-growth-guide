@@ -1,14 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Search, Heart, Baby, Apple, Sparkles, Star, ShoppingBag, ArrowRight, Mail, Clock } from "lucide-react";
+import {
+  Search,
+  Heart,
+  Baby,
+  Apple,
+  Sparkles,
+  Star,
+  ShoppingBag,
+  ArrowRight,
+  Clock,
+} from "lucide-react";
 import heroImg from "@/assets/hero-family.jpg";
+import { NewsletterForm } from "@/components/newsletter-form";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "ChildBloom — Helping Children Grow, Learn, and Thrive" },
-      { name: "description", content: "Expert, evidence-based guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews for modern families." },
+      {
+        name: "description",
+        content:
+          "Expert, evidence-based guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews for modern families.",
+      },
       { property: "og:title", content: "ChildBloom — Helping Children Grow, Learn, and Thrive" },
-      { property: "og:description", content: "Expert guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews." },
+      {
+        property: "og:description",
+        content:
+          "Expert guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:image", content: heroImg },
       { name: "twitter:card", content: "summary_large_image" },
@@ -37,13 +56,36 @@ const categories = [
   { name: "Nutrition", desc: "Feeding, recipes & guides", Icon: Apple, tone: "accent" },
   { name: "Development", desc: "Milestones month by month", Icon: Sparkles, tone: "primary" },
   { name: "Parenting", desc: "Practical, judgment-free help", Icon: Star, tone: "primary" },
-  { name: "Product Reviews", desc: "Tested picks you can trust", Icon: ShoppingBag, tone: "accent" },
+  {
+    name: "Product Reviews",
+    desc: "Tested picks you can trust",
+    Icon: ShoppingBag,
+    tone: "accent",
+  },
 ] as const;
 
 const articles = [
-  { tag: "Newborn Care", title: "Newborn Sleep: A Calm, Evidence-Based Guide for the First 12 Weeks", excerpt: "What pediatricians actually recommend for safe sleep, wake windows, and gentle routines.", read: "8 min read" },
-  { tag: "Nutrition", title: "Starting Solids at 6 Months: The Complete First-Foods Plan", excerpt: "Iron-rich first foods, allergens, textures, and a simple weekly schedule parents can follow.", read: "11 min read" },
-  { tag: "Development", title: "Speech Milestones from 12 to 24 Months (and When to Ask for Help)", excerpt: "What's typical, what's not, and 7 daily moments that quietly grow your toddler's vocabulary.", read: "7 min read" },
+  {
+    tag: "Newborn Care",
+    title: "Newborn Sleep: A Calm, Evidence-Based Guide for the First 12 Weeks",
+    excerpt:
+      "What pediatricians actually recommend for safe sleep, wake windows, and gentle routines.",
+    read: "8 min read",
+  },
+  {
+    tag: "Nutrition",
+    title: "Starting Solids at 6 Months: The Complete First-Foods Plan",
+    excerpt:
+      "Iron-rich first foods, allergens, textures, and a simple weekly schedule parents can follow.",
+    read: "11 min read",
+  },
+  {
+    tag: "Development",
+    title: "Speech Milestones from 12 to 24 Months (and When to Ask for Help)",
+    excerpt:
+      "What's typical, what's not, and 7 daily moments that quietly grow your toddler's vocabulary.",
+    read: "7 min read",
+  },
 ];
 
 const guides = [
@@ -61,7 +103,7 @@ function Index() {
         <Categories />
         <LatestArticles />
         <FeaturedGuides />
-        <Newsletter />
+        <NewsletterForm source="homepage" />
         <PopularArticles />
       </main>
       <Footer />
@@ -80,17 +122,30 @@ function Header() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <a href="/" className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-xl text-primary-foreground" style={{ background: "var(--gradient-primary)" }}>
+          <span
+            className="grid h-9 w-9 place-items-center rounded-xl text-primary-foreground"
+            style={{ background: "var(--gradient-primary)" }}
+          >
             <Sparkles className="h-5 w-5" />
           </span>
-          <span className="text-xl font-semibold tracking-tight" style={{ fontFamily: "Fraunces, serif" }}>ChildBloom</span>
+          <span
+            className="text-xl font-semibold tracking-tight"
+            style={{ fontFamily: "Fraunces, serif" }}
+          >
+            ChildBloom
+          </span>
         </a>
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground lg:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="transition-colors hover:text-foreground">{link.label}</a>
+            <a key={link.href} href={link.href} className="transition-colors hover:text-foreground">
+              {link.label}
+            </a>
           ))}
         </nav>
-        <a href="#newsletter" className="hidden rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition hover:opacity-90 sm:inline-flex">
+        <a
+          href="#newsletter"
+          className="hidden rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition hover:opacity-90 sm:inline-flex"
+        >
           Subscribe
         </a>
       </div>
@@ -108,10 +163,12 @@ function Hero() {
             Evidence-based · Pediatrician-reviewed
           </span>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            Helping children <span className="text-primary">grow</span>, learn, and <span className="text-accent">thrive</span>.
+            Helping children <span className="text-primary">grow</span>, learn, and{" "}
+            <span className="text-accent">thrive</span>.
           </h1>
           <p className="mt-5 max-w-xl text-lg text-muted-foreground">
-            Calm, trustworthy guidance on child health, newborn care, nutrition, and development — written for real, busy parents.
+            Calm, trustworthy guidance on child health, newborn care, nutrition, and development —
+            written for real, busy parents.
           </p>
 
           <form className="mt-7 flex w-full max-w-lg items-center gap-2 rounded-full border border-border bg-card p-1.5 shadow-[var(--shadow-soft)]">
@@ -122,14 +179,21 @@ function Hero() {
               aria-label="Search articles"
               className="flex-1 bg-transparent px-2 py-2 text-sm placeholder:text-muted-foreground focus:outline-none"
             />
-            <button type="submit" className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90">
+            <button
+              type="submit"
+              className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+            >
               Search
             </button>
           </form>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-accent" /> 500+ expert articles</span>
-            <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-primary" /> 120k parents subscribed</span>
+            <span className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-accent" /> 500+ expert articles
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-primary" /> 120k parents subscribed
+            </span>
           </div>
         </div>
 
@@ -195,18 +259,30 @@ function LatestArticles() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-end justify-between gap-6">
           <SectionHeader eyebrow="Latest" title="Fresh from the journal" />
-          <a href="#" className="hidden text-sm font-medium text-primary hover:underline sm:inline">View all →</a>
+          <a href="#" className="hidden text-sm font-medium text-primary hover:underline sm:inline">
+            View all →
+          </a>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {articles.map((a) => (
-            <article key={a.title} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]">
-              <div className="aspect-[16/10] w-full" style={{ background: "var(--gradient-hero)" }} />
+            <article
+              key={a.title}
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
+            >
+              <div
+                className="aspect-[16/10] w-full"
+                style={{ background: "var(--gradient-hero)" }}
+              />
               <div className="flex flex-1 flex-col p-6">
-                <span className="text-xs font-medium uppercase tracking-wider text-primary">{a.tag}</span>
+                <span className="text-xs font-medium uppercase tracking-wider text-primary">
+                  {a.tag}
+                </span>
                 <h3 className="mt-2 text-lg font-semibold leading-snug">{a.title}</h3>
                 <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{a.excerpt}</p>
                 <div className="mt-5 flex items-center justify-between text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {a.read}</span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock className="h-3.5 w-3.5" /> {a.read}
+                  </span>
                   <span className="font-medium text-primary">Read article →</span>
                 </div>
               </div>
@@ -224,41 +300,26 @@ function FeaturedGuides() {
       <SectionHeader eyebrow="Pillar guides" title="In-depth guides parents return to" />
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {guides.map((g, i) => (
-          <a key={g.title} href="#" className="relative flex h-56 flex-col justify-end overflow-hidden rounded-2xl border border-border p-6 text-primary-foreground shadow-[var(--shadow-card)] transition hover:shadow-[var(--shadow-soft)]"
-            style={{ background: i % 2 === 0 ? "var(--gradient-primary)" : "linear-gradient(135deg, oklch(0.72 0.12 165), oklch(0.62 0.13 235))" }}>
-            <span className="text-xs font-medium uppercase tracking-widest opacity-90">{g.kicker}</span>
+          <a
+            key={g.title}
+            href="#"
+            className="relative flex h-56 flex-col justify-end overflow-hidden rounded-2xl border border-border p-6 text-primary-foreground shadow-[var(--shadow-card)] transition hover:shadow-[var(--shadow-soft)]"
+            style={{
+              background:
+                i % 2 === 0
+                  ? "var(--gradient-primary)"
+                  : "linear-gradient(135deg, oklch(0.72 0.12 165), oklch(0.62 0.13 235))",
+            }}
+          >
+            <span className="text-xs font-medium uppercase tracking-widest opacity-90">
+              {g.kicker}
+            </span>
             <h3 className="mt-2 text-2xl font-semibold leading-tight">{g.title}</h3>
-            <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium">Open guide <ArrowRight className="h-4 w-4" /></span>
+            <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium">
+              Open guide <ArrowRight className="h-4 w-4" />
+            </span>
           </a>
         ))}
-      </div>
-    </section>
-  );
-}
-
-function Newsletter() {
-  return (
-    <section id="newsletter" className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
-      <div className="overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] sm:p-12" style={{ backgroundImage: "var(--gradient-hero)" }}>
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-card text-primary shadow-[var(--shadow-card)]">
-            <Mail className="h-6 w-6" />
-          </div>
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">The weekly ChildBloom letter</h2>
-          <p className="mt-3 text-muted-foreground">One calm email with the week's best guides, age-by-age tips, and product picks. No spam, ever.</p>
-          <form className="mt-6 flex flex-col gap-2 sm:flex-row">
-            <input
-              type="email"
-              required
-              placeholder="you@email.com"
-              aria-label="Email address"
-              className="flex-1 rounded-full border border-border bg-card px-5 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-            />
-            <button type="submit" className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90">
-              Subscribe free
-            </button>
-          </form>
-        </div>
       </div>
     </section>
   );
@@ -280,11 +341,19 @@ function PopularArticles() {
         <ol className="mt-10 grid gap-x-10 gap-y-4 sm:grid-cols-2">
           {popular.map((title, i) => (
             <li key={title}>
-              <a href="#" className="group flex items-start gap-4 rounded-xl p-3 transition hover:bg-card">
-                <span className="text-2xl font-semibold text-primary/50" style={{ fontFamily: "Fraunces, serif" }}>
+              <a
+                href="#"
+                className="group flex items-start gap-4 rounded-xl p-3 transition hover:bg-card"
+              >
+                <span
+                  className="text-2xl font-semibold text-primary/50"
+                  style={{ fontFamily: "Fraunces, serif" }}
+                >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="pt-1 text-base font-medium text-foreground group-hover:text-primary">{title}</span>
+                <span className="pt-1 text-base font-medium text-foreground group-hover:text-primary">
+                  {title}
+                </span>
               </a>
             </li>
           ))}
@@ -322,12 +391,19 @@ function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-xl text-primary-foreground" style={{ background: "var(--gradient-primary)" }}>
+              <span
+                className="grid h-9 w-9 place-items-center rounded-xl text-primary-foreground"
+                style={{ background: "var(--gradient-primary)" }}
+              >
                 <Sparkles className="h-5 w-5" />
               </span>
-              <span className="text-xl font-semibold" style={{ fontFamily: "Fraunces, serif" }}>ChildBloom</span>
+              <span className="text-xl font-semibold" style={{ fontFamily: "Fraunces, serif" }}>
+                ChildBloom
+              </span>
             </div>
-            <p className="mt-3 text-sm text-muted-foreground">Helping children grow, learn, and thrive.</p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Helping children grow, learn, and thrive.
+            </p>
           </div>
           {Object.entries(cols).map(([k, v]) => (
             <div key={k}>
@@ -335,7 +411,9 @@ function Footer() {
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 {v.map((item) => (
                   <li key={item.label}>
-                    <a href={item.href} className="hover:text-foreground">{item.label}</a>
+                    <a href={item.href} className="hover:text-foreground">
+                      {item.label}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -343,9 +421,13 @@ function Footer() {
           ))}
         </div>
         <div className="mt-12 rounded-xl border border-border bg-muted/50 p-4 text-xs leading-relaxed text-muted-foreground">
-          <strong className="text-foreground">Medical disclaimer:</strong> Content on ChildBloom is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment.
+          <strong className="text-foreground">Medical disclaimer:</strong> Content on ChildBloom is
+          for educational purposes only and is not a substitute for professional medical advice,
+          diagnosis, or treatment.
         </div>
-        <p className="mt-6 text-center text-xs text-muted-foreground">© {new Date().getFullYear()} ChildBloom. All rights reserved.</p>
+        <p className="mt-6 text-center text-xs text-muted-foreground">
+          © {new Date().getFullYear()} ChildBloom. All rights reserved.
+        </p>
       </div>
     </footer>
   );
@@ -354,7 +436,9 @@ function Footer() {
 function SectionHeader({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div>
-      <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">{eyebrow}</span>
+      <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+        {eyebrow}
+      </span>
       <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2>
     </div>
   );

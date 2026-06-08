@@ -21,18 +21,31 @@ function BabyMonitorReviewArticle() {
     <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
       <article className="space-y-8 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
         <div className="space-y-3">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Product Reviews</p>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">The Best Baby Monitors of 2026: Trusted Picks for New Parents</h1>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
+            Product Reviews
+          </p>
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            The Best Baby Monitors of 2026: Trusted Picks for New Parents
+          </h1>
           <p className="text-sm text-muted-foreground">9 min read • Published May 10, 2026</p>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
           <div className="space-y-6 text-sm leading-7 text-muted-foreground">
-            <p>We reviewed top baby monitors for picture quality, alerts, and reliability so parents can choose with confidence.</p>
+            <p>
+              We reviewed top baby monitors for picture quality, alerts, and reliability so parents
+              can choose with confidence.
+            </p>
             <h2 className="text-2xl font-semibold">What to look for</h2>
-            <p>Focus on secure connectivity, clear night vision, and reliable audio or motion alerts for the nursery.</p>
+            <p>
+              Focus on secure connectivity, clear night vision, and reliable audio or motion alerts
+              for the nursery.
+            </p>
             <div className="rounded-3xl border border-border bg-muted p-6">
               <h3 className="text-lg font-semibold">Featured review</h3>
-              <p className="mt-3 text-sm text-muted-foreground">The best option blends strong video performance with easy setup and an app parents can trust.</p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                The best option blends strong video performance with easy setup and an app parents
+                can trust.
+              </p>
             </div>
             <h2 className="text-2xl font-semibold">Pros and cons</h2>
             <div className="space-y-4 text-sm text-muted-foreground">
@@ -53,7 +66,12 @@ function BabyMonitorReviewArticle() {
                 </ul>
               </div>
             </div>
-            <a href="https://www.amazon.com/s?k=baby+monitor" className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://www.amazon.com/s?k=baby+monitor"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+              target="_blank"
+              rel="sponsored nofollow noopener"
+            >
               View recommended baby monitors
             </a>
           </div>
@@ -65,7 +83,8 @@ function BabyMonitorReviewArticle() {
               <li>Notifications for motion, sound, and temperature</li>
             </ul>
             <div className="mt-6 rounded-2xl bg-card p-4 text-xs text-muted-foreground">
-              <strong>Disclaimer:</strong> Content on ChildBloom is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment.
+              <strong>Disclaimer:</strong> Content on ChildBloom is for educational purposes only
+              and is not a substitute for professional medical advice, diagnosis, or treatment.
             </div>
           </aside>
         </div>
