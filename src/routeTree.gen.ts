@@ -11,6 +11,19 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArticlesRouteImport } from './routes/articles'
+import { Route as CategoriesRouteImport } from './routes/categories'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as AffiliateDisclosureRouteImport } from './routes/affiliate-disclosure'
+import { Route as MedicalDisclaimerRouteImport } from './routes/medical-disclaimer'
+import { Route as ArticlesNewbornSleepRouteImport } from './routes/articles/newborn-sleep'
+import { Route as ArticlesStartingSolidsRouteImport } from './routes/articles/starting-solids'
+import { Route as ArticlesSpeechMilestonesRouteImport } from './routes/articles/speech-milestones'
+import { Route as ArticlesBestBabyMonitorsRouteImport } from './routes/articles/best-baby-monitors'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -22,31 +35,194 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArticlesRoute = ArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoriesRoute = CategoriesRouteImport.update({
+  id: '/categories',
+  path: '/categories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AffiliateDisclosureRoute = AffiliateDisclosureRouteImport.update({
+  id: '/affiliate-disclosure',
+  path: '/affiliate-disclosure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MedicalDisclaimerRoute = MedicalDisclaimerRouteImport.update({
+  id: '/medical-disclaimer',
+  path: '/medical-disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesNewbornSleepRoute = ArticlesNewbornSleepRouteImport.update({
+  id: '/articles/newborn-sleep',
+  path: '/articles/newborn-sleep',
+  getParentRoute: () => ArticlesRoute,
+} as any)
+const ArticlesStartingSolidsRoute = ArticlesStartingSolidsRouteImport.update({
+  id: '/articles/starting-solids',
+  path: '/articles/starting-solids',
+  getParentRoute: () => ArticlesRoute,
+} as any)
+const ArticlesSpeechMilestonesRoute = ArticlesSpeechMilestonesRouteImport.update({
+  id: '/articles/speech-milestones',
+  path: '/articles/speech-milestones',
+  getParentRoute: () => ArticlesRoute,
+} as any)
+const ArticlesBestBabyMonitorsRoute = ArticlesBestBabyMonitorsRouteImport.update({
+  id: '/articles/best-baby-monitors',
+  path: '/articles/best-baby-monitors',
+  getParentRoute: () => ArticlesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/articles': typeof ArticlesRoute
+  '/categories': typeof CategoriesRoute
+  '/search': typeof SearchRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
+  '/affiliate-disclosure': typeof AffiliateDisclosureRoute
+  '/medical-disclaimer': typeof MedicalDisclaimerRoute
+  '/articles/newborn-sleep': typeof ArticlesNewbornSleepRoute
+  '/articles/starting-solids': typeof ArticlesStartingSolidsRoute
+  '/articles/speech-milestones': typeof ArticlesSpeechMilestonesRoute
+  '/articles/best-baby-monitors': typeof ArticlesBestBabyMonitorsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/articles': typeof ArticlesRoute
+  '/categories': typeof CategoriesRoute
+  '/search': typeof SearchRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
+  '/affiliate-disclosure': typeof AffiliateDisclosureRoute
+  '/medical-disclaimer': typeof MedicalDisclaimerRoute
+  '/articles/newborn-sleep': typeof ArticlesNewbornSleepRoute
+  '/articles/starting-solids': typeof ArticlesStartingSolidsRoute
+  '/articles/speech-milestones': typeof ArticlesSpeechMilestonesRoute
+  '/articles/best-baby-monitors': typeof ArticlesBestBabyMonitorsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/articles': typeof ArticlesRoute
+  '/categories': typeof CategoriesRoute
+  '/search': typeof SearchRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
+  '/affiliate-disclosure': typeof AffiliateDisclosureRoute
+  '/medical-disclaimer': typeof MedicalDisclaimerRoute
+  '/articles/newborn-sleep': typeof ArticlesNewbornSleepRoute
+  '/articles/starting-solids': typeof ArticlesStartingSolidsRoute
+  '/articles/speech-milestones': typeof ArticlesSpeechMilestonesRoute
+  '/articles/best-baby-monitors': typeof ArticlesBestBabyMonitorsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml'
+  fullPaths: |
+    | '/'
+  | '/sitemap.xml'
+  | '/articles'
+  | '/categories'
+  | '/search'
+  | '/about'
+  | '/contact'
+  | '/privacy'
+  | '/terms'
+  | '/affiliate-disclosure'
+  | '/medical-disclaimer'
+  | '/articles/newborn-sleep'
+  | '/articles/starting-solids'
+  | '/articles/speech-milestones'
+  | '/articles/best-baby-monitors'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml'
-  id: '__root__' | '/' | '/sitemap.xml'
+  to: |
+    | '/'
+  | '/sitemap.xml'
+  | '/articles'
+  | '/categories'
+  | '/search'
+  | '/about'
+  | '/contact'
+  | '/privacy'
+  | '/terms'
+  | '/affiliate-disclosure'
+  | '/medical-disclaimer'
+  | '/articles/newborn-sleep'
+  | '/articles/starting-solids'
+  | '/articles/speech-milestones'
+  | '/articles/best-baby-monitors'
+  id: |
+    | '__root__'
+  | '/'
+  | '/sitemap.xml'
+  | '/articles'
+  | '/categories'
+  | '/search'
+  | '/about'
+  | '/contact'
+  | '/privacy'
+  | '/terms'
+  | '/affiliate-disclosure'
+  | '/medical-disclaimer'
+  | '/articles/newborn-sleep'
+  | '/articles/starting-solids'
+  | '/articles/speech-milestones'
+  | '/articles/best-baby-monitors'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ArticlesRoute: typeof ArticlesRoute
+  CategoriesRoute: typeof CategoriesRoute
+  SearchRoute: typeof SearchRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
+  AffiliateDisclosureRoute: typeof AffiliateDisclosureRoute
+  MedicalDisclaimerRoute: typeof MedicalDisclaimerRoute
+  ArticlesNewbornSleepRoute: typeof ArticlesNewbornSleepRoute
+  ArticlesStartingSolidsRoute: typeof ArticlesStartingSolidsRoute
+  ArticlesSpeechMilestonesRoute: typeof ArticlesSpeechMilestonesRoute
+  ArticlesBestBabyMonitorsRoute: typeof ArticlesBestBabyMonitorsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +241,116 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/articles': {
+      id: '/articles'
+      path: '/articles'
+      fullPath: '/articles'
+      preLoaderRoute: typeof ArticlesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/categories': {
+      id: '/categories'
+      path: '/categories'
+      fullPath: '/categories'
+      preLoaderRoute: typeof CategoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/affiliate-disclosure': {
+      id: '/affiliate-disclosure'
+      path: '/affiliate-disclosure'
+      fullPath: '/affiliate-disclosure'
+      preLoaderRoute: typeof AffiliateDisclosureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/medical-disclaimer': {
+      id: '/medical-disclaimer'
+      path: '/medical-disclaimer'
+      fullPath: '/medical-disclaimer'
+      preLoaderRoute: typeof MedicalDisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles/newborn-sleep': {
+      id: '/articles/newborn-sleep'
+      path: '/articles/newborn-sleep'
+      fullPath: '/articles/newborn-sleep'
+      preLoaderRoute: typeof ArticlesNewbornSleepRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/starting-solids': {
+      id: '/articles/starting-solids'
+      path: '/articles/starting-solids'
+      fullPath: '/articles/starting-solids'
+      preLoaderRoute: typeof ArticlesStartingSolidsRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/speech-milestones': {
+      id: '/articles/speech-milestones'
+      path: '/articles/speech-milestones'
+      fullPath: '/articles/speech-milestones'
+      preLoaderRoute: typeof ArticlesSpeechMilestonesRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/best-baby-monitors': {
+      id: '/articles/best-baby-monitors'
+      path: '/articles/best-baby-monitors'
+      fullPath: '/articles/best-baby-monitors'
+      preLoaderRoute: typeof ArticlesBestBabyMonitorsRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ArticlesRoute: ArticlesRoute,
+  CategoriesRoute: CategoriesRoute,
+  SearchRoute: SearchRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
+  AffiliateDisclosureRoute: AffiliateDisclosureRoute,
+  MedicalDisclaimerRoute: MedicalDisclaimerRoute,
+  ArticlesNewbornSleepRoute: ArticlesNewbornSleepRoute,
+  ArticlesStartingSolidsRoute: ArticlesStartingSolidsRoute,
+  ArticlesSpeechMilestonesRoute: ArticlesSpeechMilestonesRoute,
+  ArticlesBestBabyMonitorsRoute: ArticlesBestBabyMonitorsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

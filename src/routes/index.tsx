@@ -70,7 +70,12 @@ function Index() {
 }
 
 function Header() {
-  const links = ["Health", "Parenting", "Newborn", "Nutrition", "Development", "Reviews"];
+  const links = [
+    { href: "/articles", label: "Articles" },
+    { href: "/categories", label: "Categories" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ];
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
@@ -81,8 +86,8 @@ function Header() {
           <span className="text-xl font-semibold tracking-tight" style={{ fontFamily: "Fraunces, serif" }}>ChildBloom</span>
         </a>
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground lg:flex">
-          {links.map((l) => (
-            <a key={l} href={`#${l.toLowerCase()}`} className="transition-colors hover:text-foreground">{l}</a>
+          {links.map((link) => (
+            <a key={link.href} href={link.href} className="transition-colors hover:text-foreground">{link.label}</a>
           ))}
         </nav>
         <a href="#newsletter" className="hidden rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition hover:opacity-90 sm:inline-flex">
@@ -291,9 +296,25 @@ function PopularArticles() {
 
 function Footer() {
   const cols = {
-    Explore: ["Child Health", "Parenting", "Newborn Care", "Nutrition", "Development"],
-    Company: ["About", "Contact", "Authors", "Editorial Policy"],
-    Legal: ["Privacy Policy", "Terms of Service", "Affiliate Disclosure", "Medical Disclaimer"],
+    Explore: [
+      { label: "Articles", href: "/articles" },
+      { label: "Categories", href: "/categories" },
+      { label: "Newborn Care", href: "/categories" },
+      { label: "Nutrition", href: "/categories" },
+      { label: "Development", href: "/categories" },
+    ],
+    Company: [
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
+      { label: "Authors", href: "/about" },
+      { label: "Editorial Policy", href: "/terms" },
+    ],
+    Legal: [
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
+      { label: "Affiliate Disclosure", href: "/affiliate-disclosure" },
+      { label: "Medical Disclaimer", href: "/medical-disclaimer" },
+    ],
   };
   return (
     <footer className="border-t border-border bg-card">
@@ -312,7 +333,11 @@ function Footer() {
             <div key={k}>
               <h4 className="text-sm font-semibold">{k}</h4>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                {v.map((i) => <li key={i}><a href="#" className="hover:text-foreground">{i}</a></li>)}
+                {v.map((item) => (
+                  <li key={item.label}>
+                    <a href={item.href} className="hover:text-foreground">{item.label}</a>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
