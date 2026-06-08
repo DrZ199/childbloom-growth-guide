@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { siteDescription } from "@/lib/site-data";
+import { ReadingProgress } from "@/components/content/reading-progress";
+import { BackToTop } from "@/components/content/back-to-top";
 
 export const Route = createFileRoute("/articles/newborn-sleep")({
   head: () => ({
@@ -35,7 +37,9 @@ export const Route = createFileRoute("/articles/newborn-sleep")({
 
 function NewbornSleepArticle() {
   return (
-    <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <>
+      <ReadingProgress />
+      <main id="main-content" tabIndex={-1} className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
       <article className="space-y-8 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
         <div className="space-y-3">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
@@ -74,5 +78,7 @@ function NewbornSleepArticle() {
         </div>
       </article>
     </main>
+    <BackToTop />
+    </>
   );
 }
