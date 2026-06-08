@@ -2,10 +2,11 @@ import * as SentryServer from "@sentry/node";
 
 import "./lib/error-capture";
 
+const SENTRY_DSN = process.env.SENTRY_DSN || "";
 SentryServer.init({
-  dsn: process.env.SENTRY_DSN || "",
+  dsn: SENTRY_DSN,
   environment: process.env.NODE_ENV,
-  tracesSampleRate: 0.1,
+  tracesSampleRate: SENTRY_DSN ? 1.0 : 0,
 });
 
 import { consumeLastCapturedError } from "./lib/error-capture";
@@ -45,7 +46,7 @@ async function normalizeCatastrophicSsrResponse(
   }
 
   const _captured = consumeLastCapturedError();
-  if (_captured) SentryServer.captureException(_captured);
+  if (_captured && SENTRY_DSN) SentryServer.captureException(_captured);
   console.error(
     _captured ?? new Error(`h3 swallowed SSR error: ${body}`),
   );
@@ -62,7 +63,7 @@ export default {
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
     } catch (error) {
-      SentryServer.captureException(error);
+      if (SENTRY_DSN) SentryServer.captureException(error);
       console.error(error);
       return new Response(renderErrorPage(), {
         status: 500,

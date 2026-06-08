@@ -138,12 +138,6 @@ function RootComponent() {
       document.head.appendChild(initScript);
     }
 
-    import("@vercel/speed-insights").then(({ injectSpeedInsights }) => {
-      injectSpeedInsights();
-    }).catch(() => {
-      // @vercel/speed-insights is optional
-    });
-  }, []);
 
   return (
     <ThemeProvider defaultTheme="system">
