@@ -1,11 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { siteDescription } from "@/lib/site-data";
+import { ReadingProgress } from "@/components/content/reading-progress";
+import { BackToTop } from "@/components/content/back-to-top";
 
 export const Route = createFileRoute("/articles/best-baby-monitors")({
   head: () => ({
     meta: [
       { title: "Best Baby Monitors 2026 | ChildBloom" },
-      { name: "description", content: "Trusted baby monitor reviews and buying advice for 2026." },
+      {
+        name: "description",
+        content: "Trusted baby monitor reviews with pros, cons, and buying advice for nursery safety.",
+      },
       { property: "og:title", content: "Best Baby Monitors 2026 | ChildBloom" },
       { property: "og:description", content: siteDescription },
       { property: "og:type", content: "article" },
@@ -13,27 +18,28 @@ export const Route = createFileRoute("/articles/best-baby-monitors")({
     ],
     links: [{ rel: "canonical", href: "/articles/best-baby-monitors" }],
   }),
-  component: BabyMonitorReviewArticle,
+  component: BabyMonitorsArticle,
 });
 
-function BabyMonitorReviewArticle() {
+function BabyMonitorsArticle() {
   return (
-    <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-      <article className="space-y-8 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
-        <div className="space-y-3">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-            Product Reviews
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            The Best Baby Monitors of 2026: Trusted Picks for New Parents
-          </h1>
-          <p className="text-sm text-muted-foreground">9 min read • Published May 10, 2026</p>
-        </div>
-        <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
+    <>
+      <ReadingProgress />
+      <main id="main-content" tabIndex={-1} className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+        <article className="space-y-8 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
+          <div className="space-y-3">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
+              Product Reviews
+            </p>
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+              The Best Baby Monitors of 2026
+            </h1>
+            <p className="text-sm text-muted-foreground">9 min read • Published May 10, 2026</p>
+          </div>
           <div className="space-y-6 text-sm leading-7 text-muted-foreground">
             <p>
-              We reviewed top baby monitors for picture quality, alerts, and reliability so parents
-              can choose with confidence.
+              We tested top baby monitors for picture quality, alerts, and reliability so parents can
+              choose with confidence.
             </p>
             <h2 className="text-2xl font-semibold">What to look for</h2>
             <p>
@@ -68,27 +74,16 @@ function BabyMonitorReviewArticle() {
             </div>
             <a
               href="https://www.amazon.com/s?k=baby+monitor"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
               target="_blank"
               rel="sponsored nofollow noopener"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
             >
               View recommended baby monitors
             </a>
           </div>
-          <aside className="rounded-3xl border border-border bg-muted p-6 text-sm text-muted-foreground">
-            <h3 className="font-semibold">Key features</h3>
-            <ul className="mt-4 space-y-3 list-disc pl-6">
-              <li>Night vision for low-light nursery checks</li>
-              <li>Two-way talk for soothing from another room</li>
-              <li>Notifications for motion, sound, and temperature</li>
-            </ul>
-            <div className="mt-6 rounded-2xl bg-card p-4 text-xs text-muted-foreground">
-              <strong>Disclaimer:</strong> Content on ChildBloom is for educational purposes only
-              and is not a substitute for professional medical advice, diagnosis, or treatment.
-            </div>
-          </aside>
-        </div>
-      </article>
-    </main>
+        </article>
+      </main>
+      <BackToTop />
+    </>
   );
 }
