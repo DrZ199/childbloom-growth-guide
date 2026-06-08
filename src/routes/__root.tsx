@@ -10,7 +10,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -38,7 +37,16 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    // Report error to monitoring service (e.g. Sentry)
+    const reporter = (window as unknown as Record<string, unknown>).__errorReporter as
+      | { captureException: (err: Error, ctx: Record<string, unknown>) => void }
+      | undefined;
+    if (typeof window !== "undefined" && reporter) {
+      reporter.captureException(error, {
+        boundary: "tanstack_root_error_component",
+        route: window.location.pathname,
+      });
+    }
   }, [error]);
 
   return (
@@ -77,18 +85,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ChildBloom" },
-      { name: "description", content: "parenting and child health platform called \"ChildBloom\"" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "ChildBloom" },
-      { property: "og:description", content: "parenting and child health platform called \"ChildBloom\"" },
+      { title: "ChildBloom — Helping Children Grow, Learn, and Thrive" },
+      {
+        name: "description",
+        content:
+          "Expert, evidence-based guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews for modern families.",
+      },
+      { property: "og:title", content: "ChildBloom — Helping Children Grow, Learn, and Thrive" },
+      {
+        property: "og:description",
+        content:
+          "Expert guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "ChildBloom" },
-      { name: "twitter:description", content: "parenting and child health platform called \"ChildBloom\"" },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/0bc4e4e2-d678-44e6-8f08-3296e9983ab5" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/0bc4e4e2-d678-44e6-8f08-3296e9983ab5" },
+      { property: "og:image", content: "/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "ChildBloom — Helping Children Grow, Learn, and Thrive" },
+      {
+        name: "twitter:description",
+        content:
+          "Expert guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews.",
+      },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [
       {
@@ -128,7 +146,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
   );
