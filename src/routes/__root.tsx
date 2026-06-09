@@ -137,7 +137,7 @@ function RootComponent() {
       ].join("\n");
       document.head.appendChild(initScript);
     }
-
+  }, []);
 
   return (
     <ThemeProvider defaultTheme="system">
