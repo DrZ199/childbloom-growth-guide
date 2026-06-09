@@ -138,7 +138,8 @@ export function MobileNav() {
 
             {/* Subscribe button */}
             <Link
-              to="/#newsletter"
+              to="/"
+              hash="newsletter"
               onClick={() => setIsOpen(false)}
               className="w-full inline-flex items-center justify-center rounded-full bg-primary px-4 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
               style={{ minHeight: 44 }}
