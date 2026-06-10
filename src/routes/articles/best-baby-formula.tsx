@@ -5,7 +5,7 @@ import BackToTop from 'src/components/articles/back-to-top'
 import TableOfContents from 'src/components/articles/table-of-contents'
 import RelatedArticles from 'src/components/articles/related-articles'
 
-export const Route = createFileRoute('/articles/best-baby-formula/')({
+export const Route = createFileRoute('/articles/best-baby-formula')({
   component: BestBabyFormula,
   head: () => {
     const url = 'https://childbloom.site/articles/best-baby-formula/'

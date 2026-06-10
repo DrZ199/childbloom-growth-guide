@@ -200,7 +200,7 @@ function ChildNutritionGuideArticle() {
               <li><strong>Combo:</strong> Offer purees on preloaded spoons + finger foods on tray</li>
             </ul>
 
-            <h3 className="text-xl font-semibold">Foods to Avoid < 1 Year</h3>
+            <h3 className="text-xl font-semibold">Foods to Avoid &lt; 1 Year</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li><strong>Honey</strong> (botulism risk)</li>
               <li><strong>Cow's milk as main drink</strong> (yogurt/cheese OK)</li>
@@ -286,7 +286,7 @@ function ChildNutritionGuideArticle() {
 
             <h3 className="text-xl font-semibold">When to Seek Help</h3>
             <ul className="list-disc space-y-2 pl-6">
-              <li><strong>ARFID signs:</strong> Eating <20 foods, entire food groups avoided, weight loss, nutritional deficiency</li>
+              <li><strong>ARFID signs:</strong> Eating &lt;20 foods, entire food groups avoided, weight loss, nutritional deficiency</li>
               <li><strong>Sensory issues:</strong> Gagging/vomiting with textures, extreme brand specificity</li>
               <li><strong>Growth faltering:</strong> Falling off growth curve, low energy, frequent illness</li>
               <li>See a feeding therapist (OT or SLP) or pediatric dietitian</li>
@@ -339,7 +339,7 @@ function ChildNutritionGuideArticle() {
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="p-3 font-medium">Fluoride</td>
-                    <td className="p-3">If water <0.6 ppm fluoride</td>
+                    <td className="p-3">If water &lt;0.6 ppm fluoride</td>
                     <td className="p-3">Per dentist/pediatrician</td>
                     <td className="p-3">Check local water; don't double up with toothpaste</td>
                   </tr>
@@ -363,13 +363,13 @@ function ChildNutritionGuideArticle() {
             <ul className="list-disc space-y-2 pl-6">
               <li>Water as primary drink (offer with every meal/snack)</li>
               <li>Milk with meals (not all day)</li>
-              <li>Juice: <4 oz/day (1–3 yr), <6 oz/day (4–6 yr), <8 oz/day (7+); whole fruit better</li>
+              <li>Juice: &lt;4 oz/day (1–3 yr), &lt;6 oz/day (4–6 yr), &lt;8 oz/day (7+); whole fruit better</li>
               <li>No soda, sports drinks, caffeinated beverages</li>
             </ul>
 
             <h3 className="text-xl font-semibold">Sugar & Ultra-Processed Foods</h3>
             <ul className="list-disc space-y-2 pl-6">
-              <li>Added sugar: <25 g/day (6 tsp) for kids 2+</li>
+              <li>Added sugar: &lt;25 g/day (6 tsp) for kids 2+</li>
               <li>Read labels: sugar hides in yogurt, granola bars, pasta sauce, bread</li>
               <li>Ultra-processed foods: minimize; cook at home when possible</li>
               <li>"Sometimes foods" language, not "bad foods"—prevents guilt/shame</li>

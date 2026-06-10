@@ -211,7 +211,7 @@ function NewbornCareGuideArticle() {
             <ul className="list-disc space-y-2 pl-6">
               <li><strong>Moisturize:</strong> Fragrance-free cream/ointment after bath (locks in moisture)</li>
               <li><strong>Laundry:</strong> Free & clear detergent; no fabric softener/dryer sheets</li>
-              <li><strong>Sun protection:</strong> Shade, clothing, hat — no sunscreen <6 months</li>
+              <li><strong>Sun protection:</strong> Shade, clothing, hat — no sunscreen &lt;6 months</li>
               <li><strong>Nail care:</strong> File or clip while baby sleeps; mittens only for first few weeks</li>
             </ul>
           </section>
@@ -270,7 +270,7 @@ function NewbornCareGuideArticle() {
             <div className="rounded-2xl border border-red-200 bg-red-50 p-5">
               <h3 className="font-semibold text-red-800 mb-2">📞 Call Immediately (Any Time)</h3>
               <ul className="list-disc space-y-2 pl-6 text-sm text-red-700">
-                <li>Rectal temperature ≥100.4°F (38°C) in baby <3 months</li>
+                <li>Rectal temperature ≥100.4°F (38°C) in baby &lt;3 months</li>
                 <li>Difficulty breathing, grunting, blue lips, retractions</li>
                 <li>Unresponsive, limp, difficult to wake</li>
                 <li>Seizure</li>
@@ -286,7 +286,7 @@ function NewbornCareGuideArticle() {
               <li>No bowel movement 48+ hours (if breastfed, can go longer if soft)</li>
               <li>Umbilical cord: spreading redness, foul odor, pus</li>
               <li>Circumcision: persistent bleeding, increasing redness</li>
-              <li>Jaundice spreading to arms/legs or baby <24 hours old</li>
+              <li>Jaundice spreading to arms/legs or baby &lt;24 hours old</li>
               <li>Rash with fever or blisters</li>
               <li>Eye discharge (blocked tear duct common, but check if persistent)</li>
             </ul>

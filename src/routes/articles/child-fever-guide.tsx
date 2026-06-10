@@ -135,11 +135,11 @@ function ChildFeverGuideArticle() {
             <h3 className="text-xl font-semibold">Rectal vs. Oral vs. Axillary (Armpit) Temperatures</h3>
             <p>Method affects the reading. For accuracy:</p>
             <ul className="list-disc space-y-2 pl-6">
-              <li><strong>Rectal:</strong> Gold standard for infants <3 months. Most accurate.</li>
+              <li><strong>Rectal:</strong> Gold standard for infants &lt;3 months. Most accurate.</li>
               <li><strong>Oral:</strong> Accurate for ages 4+. Child must keep mouth closed.</li>
               <li><strong>Temporal (forehead):</strong> Good screening tool; confirm with rectal if high.</li>
               <li><strong>Axillary:</strong> Least accurate; add ~1°F to estimate core temperature.</li>
-              <li><strong>Tympanic (ear):</strong> Accurate if positioned correctly; not for babies <6 months.</li>
+              <li><strong>Tympanic (ear):</strong> Accurate if positioned correctly; not for babies &lt;6 months.</li>
             </ul>
           </section>
 
@@ -148,7 +148,7 @@ function ChildFeverGuideArticle() {
             
             <h3 className="text-xl font-semibold text-red-600">Call Immediately (Any Age)</h3>
             <ul className="list-disc space-y-2 pl-6">
-              <li>Fever in baby <3 months (any temperature ≥100.4°F rectal)</li>
+              <li>Fever in baby &lt;3 months (any temperature ≥100.4°F rectal)</li>
               <li>Fever ≥104°F (40°C) that doesn't respond to medication</li>
               <li>Fever lasting >3 days (72 hours)</li>
               <li>Child looks very ill, unusually drowsy, or difficult to wake</li>
@@ -214,7 +214,7 @@ function ChildFeverGuideArticle() {
             <div className="rounded-2xl border border-border bg-muted p-5">
               <h3 className="font-semibold text-lg mb-2">Hydration Goals by Age</h3>
               <ul className="list-disc space-y-1 pl-6 text-sm text-muted-foreground">
-                <li><strong>Infants <6 months:</strong> Breast milk or formula on demand (small, frequent feeds)</li>
+                <li><strong>Infants &lt;6 months:</strong> Breast milk or formula on demand (small, frequent feeds)</li>
                 <li><strong>6–12 months:</strong> 4–8 oz water + breast milk/formula; electrolyte solution if vomiting/diarrhea</li>
                 <li><strong>1–3 years:</strong> 4–6 cups fluids/day; offer every 1–2 hours</li>
                 <li><strong>4+ years:</strong> 5–8 cups fluids/day; popsicles and soup count</li>
@@ -240,7 +240,7 @@ function ChildFeverGuideArticle() {
                 <tbody>
                   <tr className="border-b border-border/50">
                     <td className="p-3 font-medium">Acetaminophen</td>
-                    <td className="p-3">Any age (consult <3 mo)</td>
+                    <td className="p-3">Any age (consult &lt;3 mo)</td>
                     <td className="p-3">Every 4–6 hours</td>
                     <td className="p-3">5 doses</td>
                   </tr>

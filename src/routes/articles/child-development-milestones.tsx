@@ -476,9 +476,9 @@ function ChildDevelopmentMilestonesArticle() {
                 <li><strong>6 months:</strong> No laughter, doesn't reach for objects, no rolling</li>
                 <li><strong>9 months:</strong> No babbling, no back-and-forth gestures, no sitting independently</li>
                 <li><strong>12 months:</strong> No pointing, no words, no crawling/standing with support</li>
-                <li><strong>18 months:</strong> <5 words, no pointing to show interest, doesn't know familiar object functions</li>
-                <li><strong>24 months:</strong> <50 words, no 2-word phrases, doesn't follow simple commands</li>
-                <li><strong>3 years:</strong> <200 words, 50% unintelligible, no pretend play, no interest in peers</li>
+<li><strong>18 months:</strong> &lt;5 words, no pointing to show interest, doesn't know familiar object functions</li>
+<li><strong>24 months:</strong> &lt;50 words, no 2-word phrases, doesn't follow simple commands</li>
+<li><strong>3 years:</strong> &lt;200 words, 50% unintelligible, no pretend play, no interest in peers</li>
                 <li><strong>4 years:</strong> Can't tell simple story, doesn't follow 3-step commands, unclear speech</li>
                 <li><strong>Any age:</strong> Loss of previously acquired skills (regression) — urgent evaluation needed</li>
               </ul>
@@ -514,7 +514,7 @@ function ChildDevelopmentMilestonesArticle() {
               <li><strong>Read daily:</strong> 15 minutes from birth. Point to pictures, ask "where's the...?", let them turn pages.</li>
               <li><strong>Play on the floor:</strong> Tummy time, then crawling, then building. Floor play builds core strength and motor planning.</li>
               <li><strong>Follow their lead:</strong> Join their play, expand on it. If they're banging blocks, show stacking.</li>
-              <li><strong>Limit screens:</strong> AAP: no screens <18 months (except video chat); 18–24 months: high-quality only with caregiver; 2–5 years: 1 hour/day max.</li>
+              <li><strong>Limit screens:</strong> AAP: no screens &lt;18 months (except video chat); 18–24 months: high-quality only with caregiver; 2–5 years: 1 hour/day max.</li>
               <li><strong>Safe exploration:</strong> Baby-proof so you can say "yes" more than "no."</li>
               <li><strong>Routines build security:</strong> Predictable meals, naps, bedtime = cognitive bandwidth for learning.</li>
               <li><strong>Social opportunities:</strong> Playgroups, library storytime, park—even parallel play builds skills.</li>
