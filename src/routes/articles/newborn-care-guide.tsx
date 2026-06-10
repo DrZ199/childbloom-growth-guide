@@ -192,7 +192,7 @@ function NewbornCareGuideArticle() {
               <li>Change promptly after every wet/soiled diaper</li>
               <li>Air time: let skin dry completely before new diaper</li>
               <li>Barrier cream with each change (zinc oxide, petroleum jelly)</li>
-              <li>If rash persists >3 days, has blisters/pus, or spreads: call doctor (may be yeast)</li>
+              <li>If rash persists &gt;3 days, has blisters/pus, or spreads: call doctor (may be yeast)</li>
             </ul>
           </section>
 
@@ -224,7 +224,7 @@ function NewbornCareGuideArticle() {
               <li><strong>Falls off:</strong> Typically 1–3 weeks</li>
               <li><strong>Care:</strong> Keep clean and dry; fold diaper below stump</li>
               <li><strong>No alcohol needed</strong> — current guidelines: dry care only</li>
-              <li><strong>Call doctor if:</strong> Redness spreading, foul odor, pus, bleeding > few drops</li>
+              <li><strong>Call doctor if:</strong> Redness spreading, foul odor, pus, bleeding &gt; few drops</li>
             </ul>
 
             <h3 className="text-xl font-semibold">Circumcision Care (if applicable)</h3>
@@ -255,7 +255,7 @@ function NewbornCareGuideArticle() {
             </ul>
 
             <h3 className="text-xl font-semibold">Colic</h3>
-            <p>Crying >3 hours/day, >3 days/week, >3 weeks in otherwise healthy baby. Peaks 6 weeks, resolves by 3–4 months.</p>
+            <p>Crying &gt;3 hours/day, &gt;3 days/week, &gt;3 weeks in otherwise healthy baby. Peaks 6 weeks, resolves by 3–4 months.</p>
             <ul className="list-disc space-y-2 pl-6">
               <li><strong>Not your fault</strong> — not caused by parenting, diet (usually), or gas</li>
               <li><strong>Soothing:</strong> 5 S's (swaddle, side/stomach hold, shush, swing, suck); white noise; walk outside</li>
