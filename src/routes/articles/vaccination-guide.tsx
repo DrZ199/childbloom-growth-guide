@@ -231,7 +231,7 @@ function VaccinationGuideArticle() {
                   <tr className="border-b border-border/50">
                     <td className="p-3 font-medium">Annual</td>
                     <td className="p-3">Influenza (Flu)</td>
-                    <td className="p-3">Every fall; 2 doses first year if <9 years</td>
+                    <td className="p-3">Every fall; 2 doses first year if &lt;9 years</td>
                   </tr>
                 </tbody>
               </table>
@@ -251,7 +251,7 @@ function VaccinationGuideArticle() {
                   <tr className="border-b border-border/50">
                     <td className="p-3 font-medium">11–12 years</td>
                     <td className="p-3">Tdap, HPV (2-dose), MenACWY #1</td>
-                    <td className="p-3">HPV works best before exposure; 2 doses if <15, 3 if 15+</td>
+                    <td className="p-3">HPV works best before exposure; 2 doses if &lt;15, 3 if 15+</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="p-3 font-medium">16 years</td>
@@ -294,7 +294,7 @@ function VaccinationGuideArticle() {
 
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <h3 className="font-semibold text-lg">Hib — Haemophilus influenzae type b</h3>
-                <p className="text-sm text-muted-foreground mt-2"><strong>Diseases:</strong> Meningitis, epiglottitis, pneumonia, sepsis. Was leading cause of bacterial meningitis <5 years.</p>
+                <p className="text-sm text-muted-foreground mt-2"><strong>Diseases:</strong> Meningitis, epiglottitis, pneumonia, sepsis. Was leading cause of bacterial meningitis &lt;5 years.</p>
                 <p className="text-sm text-muted-foreground mt-2"><strong>Schedule:</strong> 2, 4, 6*, 12–15 mo (*brand dependent)</p>
                 <p className="text-sm text-muted-foreground mt-2"><strong>Key:</strong> Nearly eliminated in vaccinated populations.</p>
               </div>
@@ -344,7 +344,7 @@ function VaccinationGuideArticle() {
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <h3 className="font-semibold text-lg">HPV — Human Papillomavirus</h3>
                 <p className="text-sm text-muted-foreground mt-2"><strong>Diseases:</strong> Cervical, throat, anal, penile cancers; genital warts. 85% of people get HPV.</p>
-                <p className="text-sm text-muted-foreground mt-2"><strong>Schedule:</strong> 11–12 yr (2 doses 6–12 mo apart if <15; 3 doses if 15+)</p>
+                <p className="text-sm text-muted-foreground mt-2"><strong>Schedule:</strong> 11–12 yr (2 doses 6–12 mo apart if &lt;15; 3 doses if 15+)</p>
                 <p className="text-sm text-muted-foreground mt-2"><strong>Key:</strong> Cancer prevention vaccine. Best before any exposure. Approved through age 45.</p>
               </div>
 
@@ -357,8 +357,8 @@ function VaccinationGuideArticle() {
 
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <h3 className="font-semibold text-lg">Influenza — Flu (Annual)</h3>
-                <p className="text-sm text-muted-foreground mt-2"><strong>Diseases:</strong> Fever, cough, body aches; complications: pneumonia, hospitalization, death. Kids <5 high risk.</p>
-                <p className="text-sm text-muted-foreground mt-2"><strong>Schedule:</strong> Every fall from 6 mo. 2 doses first year if <9 yr.</p>
+                <p className="text-sm text-muted-foreground mt-2"><strong>Diseases:</strong> Fever, cough, body aches; complications: pneumonia, hospitalization, death. Kids &lt;5 high risk.</p>
+                <p className="text-sm text-muted-foreground mt-2"><strong>Schedule:</strong> Every fall from 6 mo. 2 doses first year if &lt;9 yr.</p>
                 <p className="text-sm text-muted-foreground mt-2"><strong>Key:</strong> Shot (inactivated) for all; nasal spray (live) for healthy 2–49 yr non-pregnant.</p>
               </div>
 
@@ -371,7 +371,7 @@ function VaccinationGuideArticle() {
 
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <h3 className="font-semibold text-lg">RSV — Respiratory Syncytial Virus</h3>
-                <p className="text-sm text-muted-foreground mt-2"><strong>Options:</strong> Nirsevimab (Beyfortus) monoclonal antibody for infants <8 mo; maternal RSV vaccine (Abrysvo) 32–36 weeks pregnancy</p>
+                <p className="text-sm text-muted-foreground mt-2"><strong>Options:</strong> Nirsevimab (Beyfortus) monoclonal antibody for infants &lt;8 mo; maternal RSV vaccine (Abrysvo) 32–36 weeks pregnancy</p>
                 <p className="text-sm text-muted-foreground mt-2"><strong>Key:</strong> Not a traditional vaccine. Nirsevimab = passive immunity (ready-made antibodies). One dose protects through RSV season.</p>
               </div>
             </div>
@@ -462,7 +462,7 @@ function VaccinationGuideArticle() {
               </div>
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <dt className="font-semibold text-foreground">"Vaccines contain toxic ingredients (aluminum, formaldehyde, mercury)."</dt>
-                <dd className="mt-2">False. Ingredients are in trace amounts far below harmful levels. Aluminum: <1mg per dose (breast milk has ~0.4mg/L, formula ~0.2mg/L; baby gets more from food). Formaldehyde: body makes 10x more naturally. Thimerosal (ethylmercury): removed from routine childhood vaccines 2001; never in MMR/Varicella/IPV.</dd>
+                <dd className="mt-2">False. Ingredients are in trace amounts far below harmful levels. Aluminum: &lt;1mg per dose (breast milk has ~0.4mg/L, formula ~0.2mg/L; baby gets more from food). Formaldehyde: body makes 10x more naturally. Thimerosal (ethylmercury): removed from routine childhood vaccines 2001; never in MMR/Varicella/IPV.</dd>
               </div>
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <dt className="font-semibold text-foreground">"MMR causes autism."</dt>
@@ -497,7 +497,7 @@ function VaccinationGuideArticle() {
               <li><strong>Distraction:</strong> Bubbles, pinwheel, video on phone, singing, counting, "blow out the candles"</li>
               <li><strong>Numbing cream:</strong> 4% lidocaine (LMX, EMLA) applied 30–60 min before—ask office or bring your own</li>
               <li><strong>Breastfeeding:</strong> During shots for infants—powerful pain relief</li>
-              <li><strong>Sweet solution:</strong> 24% sucrose on pacifier 2 min before (infants <12 mo)</li>
+              <li><strong>Sweet solution:</strong> 24% sucrose on pacifier 2 min before (infants &lt;12 mo)</li>
               <li><strong>Your calm:</strong> Kids co-regulate. Deep breaths, steady voice, "I'm right here."</li>
             </ul>
 
@@ -516,7 +516,7 @@ function VaccinationGuideArticle() {
             
             <h3 className="text-xl font-semibold">Fever & Discomfort</h3>
             <ul className="list-disc space-y-2 pl-6">
-              <li><strong>Acetaminophen (Tylenol):</strong> Any age (consult <3 mo). Dose by weight every 4–6 hrs.</li>
+              <li><strong>Acetaminophen (Tylenol):</strong> Any age (consult &lt;3 mo). Dose by weight every 4–6 hrs.</li>
               <li><strong>Ibuprofen (Advil, Motrin):</strong> 6+ months. Every 6–8 hrs.</li>
               <li><strong>Timing:</strong> Give AFTER symptoms start, not before. Exception: MMR fever at 7–14 days.</li>
               <li><strong>Comfort:</strong> Cool compress on injection site, light clothing, extra fluids, cuddles</li>
@@ -532,7 +532,7 @@ function VaccinationGuideArticle() {
             <h3 className="text-xl font-semibold">When to Call the Doctor</h3>
             <div className="rounded-2xl border border-red-200 bg-red-50 p-5">
               <ul className="list-disc space-y-2 pl-6 text-sm text-red-700">
-                <li>Fever ≥104°F (40°C) or any fever in baby <3 months</li>
+                <li>Fever ≥104°F (40°C) or any fever in baby &lt;3 months</li>
                 <li>Fever lasting >48 hours post-vaccination</li>
                 <li>Crying inconsolably >3 hours (high-pitched)</li>
                 <li>Seizure (febrile or otherwise)</li>
@@ -623,7 +623,7 @@ function VaccinationGuideArticle() {
               <li><strong>Severe immunodeficiency:</strong> No live vaccines (MMR, Varicella, Rotavirus, LAIV flu)</li>
               <li><strong>Anaphylaxis to prior dose or component:</strong> Contraindication to that vaccine</li>
               <li><strong>Pregnancy:</strong> No live vaccines; Tdap, Flu (inactivated), COVID, RSV recommended</li>
-              <li><strong>Premature infants:</strong> Vaccinate on chronological age (not corrected), except HepB <2000g at birth</li>
+              <li><strong>Premature infants:</strong> Vaccinate on chronological age (not corrected), except HepB &lt;2000g at birth</li>
               <li><strong>Antibiotics/steroids:</strong> Not a contraindication (except high-dose steroids >2 weeks)</li>
             </ul>
 

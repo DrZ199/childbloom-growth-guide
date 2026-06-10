@@ -410,7 +410,7 @@ function BabySleepGuideArticle() {
               <li><strong>Gradual:</strong> Reduce ounces/minutes every 2–3 nights</li>
               <li><strong>Cold turkey:</strong> Offer water/comfort instead; expect 3–5 tough nights</li>
               <li><strong>Dream feed:</strong> Optional 10–11 PM feed to shift calories earlier</li>
-              <li><strong>Consult pediatrician</strong> if: <10th percentile weight, medical issues, <6 months</li>
+              <li><strong>Consult pediatrician</strong> if: &lt;10th percentile weight, medical issues, &lt;6 months</li>
             </ul>
           </section>
 
@@ -424,7 +424,7 @@ function BabySleepGuideArticle() {
               </div>
 
               <div className="rounded-2xl border border-border bg-muted p-5">
-                <h3 className="font-semibold text-lg">Early Morning Waking (<6 AM)</h3>
+                <h3 className="font-semibold text-lg">Early Morning Waking (&lt;6 AM)</h3>
                 <p className="text-sm text-muted-foreground mt-2"><strong>Causes:</strong> Light leak, too early bedtime, too much day sleep, hunger, habit. <strong>Fix:</strong> Blackout curtains, white noise, adjust bedtime 15 min later, cap naps, ok-to-wake clock (2.5+ yr).</p>
               </div>
 
