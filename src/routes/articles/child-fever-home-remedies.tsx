@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { seo } from 'src/lib/seo'
-import ReadingProgress from 'src/components/articles/reading-progress'
-import BackToTop from 'src/components/articles/back-to-top'
-import TableOfContents from 'src/components/articles/table-of-contents'
-import RelatedArticles from 'src/components/articles/related-articles'
+import { seo } from '@/lib/seo'
+import ReadingProgress from '@/components/articles/reading-progress'
+import BackToTop from '@/components/articles/back-to-top'
+import TableOfContents from '@/components/articles/table-of-contents'
+import RelatedArticles from '@/components/articles/related-articles'
 
 export const Route = createFileRoute('/articles/child-fever-home-remedies')({
   component: ChildFeverHomeRemedies,
