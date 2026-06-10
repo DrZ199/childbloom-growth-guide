@@ -3,6 +3,54 @@
  */
 
 /**
+ * Generate SEO metadata for TanStack Router head function.
+ */
+export function seo(options: {
+  title: string;
+  description: string;
+  url: string;
+  type?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  image?: string;
+}) {
+  const meta = [
+    { name: 'description', content: options.description },
+    { property: 'og:title', content: options.title },
+    { property: 'og:description', content: options.description },
+    { property: 'og:url', content: options.url },
+    { property: 'og:type', content: options.type || 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: options.title },
+    { name: 'twitter:description', content: options.description },
+  ];
+
+  if (options.image) {
+    meta.push({ property: 'og:image', content: options.image });
+    meta.push({ name: 'twitter:image', content: options.image });
+  }
+
+  if (options.publishedTime) {
+    meta.push({ property: 'article:published_time', content: options.publishedTime });
+  }
+
+  if (options.modifiedTime) {
+    meta.push({ property: 'article:modified_time', content: options.modifiedTime });
+  }
+
+  if (options.author) {
+    meta.push({ property: 'article:author', content: options.author });
+  }
+
+  return {
+    title: options.title,
+    meta,
+    link: [{ rel: 'canonical', href: options.url }],
+  };
+}
+
+/**
  * Generate a URL-safe slug from a title string.
  * Lowercases, strips non-alphanumeric characters (except hyphens/spaces),
  * collapses whitespace and hyphens to single hyphens, trims hyphens.

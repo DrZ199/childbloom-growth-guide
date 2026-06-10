@@ -90,7 +90,7 @@ function ChildFeverGuideArticle() {
               <li><strong>Bacterial infections</strong> — ear infections, strep throat, UTIs, pneumonia</li>
               <li><strong>Post-vaccination</strong> — low-grade fever after immunizations is normal</li>
               <li><strong>Overheating</strong> — too many layers, hot environment (especially in infants)</li>
-              <li><strong>Teething</strong> — may cause slight temperature elevation, but not true fever (>100.4°F)</li>
+              <li><strong>Teething</strong> — may cause slight temperature elevation, but not true fever (&gt;100.4°F)</li>
             </ul>
           </section>
 
@@ -121,12 +121,12 @@ function ChildFeverGuideArticle() {
                   <tr className="border-b border-border/50">
                     <td className="p-3 font-medium">6–24 months</td>
                     <td className="p-3">≥102°F (38.9°C)</td>
-                    <td className="p-3">Call if fever >24 hrs or with other symptoms</td>
+                    <td className="p-3">Call if fever &gt;24 hrs or with other symptoms</td>
                   </tr>
                   <tr className="border-b border-border/50">
                     <td className="p-3 font-medium">2+ years</td>
                     <td className="p-3">≥102°F (38.9°C)</td>
-                    <td className="p-3">Call if fever >3 days or with concerning symptoms</td>
+                    <td className="p-3">Call if fever &gt;3 days or with concerning symptoms</td>
                   </tr>
                 </tbody>
               </table>
@@ -150,7 +150,7 @@ function ChildFeverGuideArticle() {
             <ul className="list-disc space-y-2 pl-6">
               <li>Fever in baby &lt;3 months (any temperature ≥100.4°F rectal)</li>
               <li>Fever ≥104°F (40°C) that doesn't respond to medication</li>
-              <li>Fever lasting >3 days (72 hours)</li>
+              <li>Fever lasting &gt;3 days (72 hours)</li>
               <li>Child looks very ill, unusually drowsy, or difficult to wake</li>
               <li>Signs of dehydration: dry mouth, no tears, no urine 8+ hours, sunken fontanelle</li>
               <li>Stiff neck, severe headache, or sensitivity to light</li>
@@ -163,7 +163,7 @@ function ChildFeverGuideArticle() {
             <h3 className="text-xl font-semibold text-amber-700">Call Within 24 Hours</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Fever in child 3–6 months ≥101°F</li>
-              <li>Fever >102°F in child 6–24 months lasting >24 hours</li>
+              <li>Fever &gt;102°F in child 6–24 months lasting &gt;24 hours</li>
               <li>Fever with specific complaints: ear pain, sore throat, pain with urination</li>
               <li>Fever that went away and returned after 24+ hours</li>
               <li>Recent travel to areas with endemic diseases (malaria, dengue, etc.)</li>
@@ -176,7 +176,7 @@ function ChildFeverGuideArticle() {
             <ul className="list-disc space-y-3 pl-6">
               <li><strong>Difficulty breathing:</strong> Retractions (skin pulling in around ribs), grunting, blue lips</li>
               <li><strong>Unresponsiveness:</strong> Won't wake up, limp, not making eye contact</li>
-              <li><strong>Seizure lasting >5 minutes</strong> or repeated seizures</li>
+              <li><strong>Seizure lasting &gt;5 minutes</strong> or repeated seizures</li>
               <li><strong>Signs of meningitis:</strong> Stiff neck, severe headache, light sensitivity, vomiting</li>
               <li><strong>Severe dehydration:</strong> Sunken eyes, no urine 12+ hours, very dry mouth</li>
               <li><strong>Purple/red rash that doesn't fade</strong> when you press a glass against it</li>
@@ -318,11 +318,11 @@ function ChildFeverGuideArticle() {
               </div>
               <div>
                 <dt className="font-semibold text-foreground">Does a high fever cause brain damage?</dt>
-                <dd className="mt-2">No. Fevers from illness don't cause brain damage. Only extreme hyperthermia (heat stroke, >107°F) from external heat can cause neurological injury.</dd>
+                <dd className="mt-2">No. Fevers from illness don't cause brain damage. Only extreme hyperthermia (heat stroke, &gt;107°F) from external heat can cause neurological injury.</dd>
               </div>
               <div>
                 <dt className="font-semibold text-foreground">What's a febrile seizure? Should I worry?</dt>
-                <dd className="mt-2">Febrile seizures occur in 2–5% of children 6 months–5 years during rapid temperature rise. They're frightening but usually harmless. Call 911 if >5 minutes.</dd>
+                <dd className="mt-2">Febrile seizures occur in 2–5% of children 6 months–5 years during rapid temperature rise. They're frightening but usually harmless. Call 911 if &gt;5 minutes.</dd>
               </div>
             </dl>
           </section>

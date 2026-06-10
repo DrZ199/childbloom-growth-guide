@@ -533,8 +533,8 @@ function VaccinationGuideArticle() {
             <div className="rounded-2xl border border-red-200 bg-red-50 p-5">
               <ul className="list-disc space-y-2 pl-6 text-sm text-red-700">
                 <li>Fever ≥104°F (40°C) or any fever in baby &lt;3 months</li>
-                <li>Fever lasting >48 hours post-vaccination</li>
-                <li>Crying inconsolably >3 hours (high-pitched)</li>
+                <li>Fever lasting &gt;48 hours post-vaccination</li>
+                <li>Crying inconsolably &gt;3 hours (high-pitched)</li>
                 <li>Seizure (febrile or otherwise)</li>
                 <li>Signs of allergic reaction: hives, swelling face/lips, difficulty breathing, pale/limp</li>
                 <li>Unusual behavior: very sleepy, difficult to wake, not responding</li>
@@ -624,7 +624,7 @@ function VaccinationGuideArticle() {
               <li><strong>Anaphylaxis to prior dose or component:</strong> Contraindication to that vaccine</li>
               <li><strong>Pregnancy:</strong> No live vaccines; Tdap, Flu (inactivated), COVID, RSV recommended</li>
               <li><strong>Premature infants:</strong> Vaccinate on chronological age (not corrected), except HepB &lt;2000g at birth</li>
-              <li><strong>Antibiotics/steroids:</strong> Not a contraindication (except high-dose steroids >2 weeks)</li>
+              <li><strong>Antibiotics/steroids:</strong> Not a contraindication (except high-dose steroids &gt;2 weeks)</li>
             </ul>
 
             <h3 className="text-xl font-semibold">Catch-Up Schedules</h3>

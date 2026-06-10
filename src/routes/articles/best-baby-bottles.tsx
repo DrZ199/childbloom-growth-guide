@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { seo } from '@/lib/seo'
-import ReadingProgress from '@/components/articles/reading-progress'
-import BackToTop from '@/components/articles/back-to-top'
-import TableOfContents from '@/components/articles/table-of-contents'
-import RelatedArticles from '@/components/articles/related-articles'
+import { ReadingProgress } from '@/components/content/reading-progress'
+import { BackToTop } from '@/components/content/back-to-top'
+import { TableOfContents } from '@/components/content/table-of-contents'
+import { RelatedArticles } from '@/components/content/related-articles'
 
 export const Route = createFileRoute('/articles/best-baby-bottles')({
   component: BestBabyBottles,
@@ -377,7 +377,7 @@ function BestBabyBottles() {
                   </div>
                   <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">Signs to Change Flow Rate</h3>
                   <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                    <li><strong>Go faster:</strong> Baby sucks hard, gets frustrated, takes >20 minutes, falls asleep mid-feed</li>
+                    <li><strong>Go faster:</strong> Baby sucks hard, gets frustrated, takes &gt;20 minutes, falls asleep mid-feed</li>
                     <li><strong>Go slower:</strong> Baby chokes, coughs, gulps, milk dribbles out, gets gassy</li>
                     <li><strong>Just right:</strong> Steady sucking, comfortable pace, finishes in 10-20 minutes</li>
                   </ul>

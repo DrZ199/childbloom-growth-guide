@@ -585,7 +585,7 @@ function ChildDevelopmentMilestonesArticle() {
               </div>
               <div>
                 <dt className="font-semibold text-foreground">Is it normal for my 3-year-old to stutter?</dt>
-                <dd className="mt-2">Developmental stuttering (repetitions, prolongations) affects 5% of children 2–5 years. Most outgrow it in 6–12 months. Don't finish sentences; maintain eye contact; slow your own speech. If persists >6 months or has tension/struggle, see an SLP.</dd>
+                <dd className="mt-2">Developmental stuttering (repetitions, prolongations) affects 5% of children 2–5 years. Most outgrow it in 6–12 months. Don't finish sentences; maintain eye contact; slow your own speech. If persists &gt;6 months or has tension/struggle, see an SLP.</dd>
               </div>
               <div>
                 <dt className="font-semibold text-foreground">My child skips crawling and goes straight to walking. Is that bad?</dt>

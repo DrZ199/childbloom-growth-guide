@@ -566,7 +566,7 @@ function BabySleepGuideArticle() {
               </div>
               <div>
                 <dt className="font-semibold text-foreground">What about the "cry it out" method? Is it harmful?</dt>
-                <dd className="mt-2">Research shows no long-term harm to attachment or emotional development when done appropriately (age 6+ months, with prerequisites met). It's stressful short-term. Choose a method you can be consistent with—consistency > method.</dd>
+                <dd className="mt-2">Research shows no long-term harm to attachment or emotional development when done appropriately (age 6+ months, with prerequisites met). It's stressful short-term. Choose a method you can be consistent with—consistency &gt; method.</dd>
               </div>
               <div>
                 <dt className="font-semibold text-foreground">My toddler climbs out of the crib. Now what?</dt>
