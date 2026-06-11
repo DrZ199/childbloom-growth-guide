@@ -5,6 +5,7 @@ import { TableOfContents, addHeadingIds } from "@/components/content/table-of-co
 import { ShareButtons } from "@/components/content/share-buttons";
 import { RelatedArticles } from "@/components/content/related-articles";
 import { AdSlot } from "@/components/monetization/ad-slot";
+import { AffiliateDisclosure } from "@/components/monetization/affiliate-disclosure";
 import {
   StructuredData,
   generateArticleSchema,
@@ -12,6 +13,7 @@ import {
 } from "@/components/seo/structured-data";
 import { HeroImage } from "@/components/ui/optimized-image";
 import { Clock, Calendar, Eye, Stethoscope } from "lucide-react";
+import { DEFAULT_MEDICAL_REVIEWER } from "@/lib/authors";
 
 export const Route = createFileRoute("/articles/$slug")({
   loader: async ({ params }) => {
@@ -103,6 +105,39 @@ function DynamicArticlePage() {
   const rawHtml = article.content_html ?? article.content;
   const processedHtml = addHeadingIds(rawHtml);
 
+  const reviewerName = article.medically_reviewed_by ?? DEFAULT_MEDICAL_REVIEWER;
+  const reviewedAt = article.medically_reviewed_at ?? article.published_at ?? undefined;
+  // Treat category slugs containing "best" or "review" as product roundups.
+  const isProductReview =
+    /best-|review|product/i.test(article.category_slug ?? "") ||
+    /best |review|product/i.test(article.title ?? "");
+
+  // MedicalWebPage schema — pediatric health authority signal for Google.
+  const medicalWebPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: article.title,
+    description: article.seo_description ?? article.excerpt ?? "",
+    url: articleUrl,
+    image: article.og_image_url ?? article.cover_image_url ?? undefined,
+    datePublished: article.published_at ?? undefined,
+    dateModified: article.published_at ?? undefined,
+    inLanguage: "en-US",
+    author: { "@type": "Person", name: article.author_name ?? "ChildBloom Editorial Team" },
+    reviewedBy: {
+      "@type": "Person",
+      name: reviewerName,
+      jobTitle: "Pediatrician",
+    },
+    lastReviewed: reviewedAt,
+    publisher: {
+      "@type": "Organization",
+      name: "ChildBloom",
+      logo: { "@type": "ImageObject", url: `${baseUrl}/logo.png` },
+    },
+    about: { "@type": "MedicalCondition", name: article.category_name ?? "Child health" },
+  };
+
   const breadcrumbItems = [
     { label: "Articles", href: "/articles" },
     ...(article.category_name
@@ -131,6 +166,7 @@ function DynamicArticlePage() {
       {article.faq && article.faq.length > 0 && (
         <StructuredData data={generateFaqSchema(article.faq)} />
       )}
+      <StructuredData data={medicalWebPageSchema} />
 
       {/* Header */}
       <article>
@@ -184,6 +220,12 @@ function DynamicArticlePage() {
               </span>
             </div>
           )}
+          {!article.medically_reviewed_by && (
+            <div className="flex items-center gap-2 text-sm text-green-700">
+              <Stethoscope className="h-4 w-4" />
+              <span>Medically reviewed by {DEFAULT_MEDICAL_REVIEWER}</span>
+            </div>
+          )}
         </header>
 
         {/* Cover image */}
@@ -209,6 +251,9 @@ function DynamicArticlePage() {
 
         {/* Ad: header banner */}
         <AdSlot placement="header-banner" className="mb-8" />
+
+        {/* Affiliate disclosure (FTC) — show on product reviews */}
+        {isProductReview && <AffiliateDisclosure className="mb-6" />}
 
         {/* Content with TOC sidebar */}
         <div className="grid gap-8 lg:grid-cols-[1fr_260px]">

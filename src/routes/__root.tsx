@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Expert guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "/og-image.png" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "ChildBloom — Helping Children Grow, Learn, and Thrive" },
       {
@@ -106,13 +106,45 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Expert guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews.",
       },
-      { name: "twitter:image", content: "/og-image.png" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
       { name: "p:domain_verify", content: "0f57af0769c37ae9cd4b9d83f49a3800" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "ChildBloom",
+          url: "https://childbloom.site",
+          logo: "https://childbloom.site/logo.png",
+          description:
+            "Evidence-based guidance on child health, parenting, newborn care, nutrition, and development.",
+          sameAs: [
+            "https://www.pinterest.com/childbloom",
+            "https://www.facebook.com/childbloom",
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "ChildBloom",
+          url: "https://childbloom.site",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://childbloom.site/search?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
