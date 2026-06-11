@@ -1,32 +1,66 @@
 # ChildBloom Growth Guide
 
-ChildBloom is a modern, mobile-first parenting and child health website built for scalability and SEO performance.
+**ChildBloom** is a modern, mobile-first parenting and child health website built for scalability, SEO performance, and affiliate monetization.
+
+> **Current Status (June 2026):** 31 high-quality articles published across 7 core pillars with full Pinterest automation and affiliate tracking.
+
+---
 
 ## Project Overview
 
-ChildBloom is designed to be a scalable authority website covering:
+ChildBloom is designed to be a scalable authority site covering:
 
-- Child health
-- Parenting
-- Newborn care
-- Nutrition
-- Development milestones
-- Product reviews
+- **Child Health** — Fever, vaccines, teething, wellness
+- **Newborn Care** — Sleep, feeding, diapering, first 3 months
+- **Nutrition** — Starting solids, toddler feeding, formula & bottles
+- **Development** — Milestones, speech, educational toys
+- **Parenting** — Survival guides, sleep training, hacks
+- **Product Reviews** — Car seats, strollers, carriers, monitors, and more
 
-The site is optimized for SEO, readability, and clean mobile-first layout.
+The site is optimized for:
+- SEO (schema markup, meta tags, sitemaps)
+- Readability (mobile-first, clean typography)
+- Monetization (Amazon affiliate links with proper `rel="sponsored"` tracking)
+
+---
+
+## Content Highlights
+
+### 7 Pillar Articles (2000–3000 words each)
+| Article | Category |
+|---------|----------|
+| Newborn Care Guide | Newborn Care |
+| Child Development Milestones | Development |
+| Vaccination Guide | Child Health |
+| Baby Sleep Guide | Newborn Care |
+| Parenting Survival Guide | Parenting |
+
+### 24 Supporting Articles
+- **Fever Cluster**: Thermometers, fever treatment, teething, home remedies
+- **Nutrition Cluster**: Bottles, formula, toddler tips, starting solids, food makers
+- **Development Cluster**: Educational toys, monthly milestones, speech development, baby books
+- **Sleep Cluster**: Sleep products, training methods, toddler sleep problems
+- **Gear Cluster**: Car seats, strollers, diaper bags, baby carriers
+- **General**: Newborn essentials checklist, parenting hacks
+
+**Total:** 31 articles with FAQ sections, internal linking, medical disclaimers, and affiliate opportunities.
+
+---
 
 ## Tech Stack
 
 - **Frontend:** React 19, TypeScript, TanStack Start, TanStack Router
-- **Styling:** Tailwind CSS 4, shadcn/ui (Radix UI primitives)
-- **Backend:** Supabase (PostgreSQL, Auth, RLS, Full-text search)
-- **Build:** Vite 7, Nitro (SSR)
+- **Styling:** Tailwind CSS 4, shadcn/ui
+- **Backend:** Supabase (PostgreSQL, Auth, RLS)
+- **Build:** Vite 7 + Nitro (SSR)
 - **Hosting:** Vercel
+- **Affiliates:** Amazon Associates with custom `/go/` tracking
+
+---
 
 ## Getting Started
 
 ### Prerequisites
-
 - Node.js 20+
 - npm 10+
 
@@ -38,13 +72,9 @@ npm install
 
 ### Environment Setup
 
-Copy the example environment file and fill in your values:
-
 ```bash
 cp .env.example .env
 ```
-
-See `.env.example` for all required environment variables.
 
 ### Development
 
@@ -52,9 +82,9 @@ See `.env.example` for all required environment variables.
 npm run dev
 ```
 
-Open the site at `http://localhost:3000`.
+Open http://localhost:3000
 
-### Build
+### Build & Preview
 
 ```bash
 npm run build
@@ -68,44 +98,92 @@ npm run lint
 npm run format
 ```
 
+---
+
+## New Scripts (Content & Pinterest Automation)
+
+| Command | Description |
+|---------|-------------|
+| `npm run migrate:content` | Migrate articles from `site-data.ts` to Supabase |
+| `npx tsx scripts/generate-pins.ts` | Generate Pinterest pin titles, descriptions & prompts |
+| `npx tsx scripts/generate-pinterest-images.ts` | Prepare image generation for all pins |
+| `npx tsx scripts/create-placeholder-pins.ts` | Create SVG placeholder images |
+
+**Pinterest Images:** 31 optimized images available in `public/pinterest-pins/` (10 AI-generated + 21 SVG placeholders).
+
+---
+
 ## Project Structure
 
 ```
 src/
-├── assets/                 # Static assets (images, fonts)
-├── components/ui/          # shadcn/ui components
-├── hooks/                  # Custom React hooks
-├── integrations/supabase/  # Supabase clients and auth
-├── lib/                    # Shared utilities, config, site data
-├── routes/                 # File-based routes (TanStack Router)
-├── router.tsx              # Router configuration
-├── server.ts               # SSR server entry
-├── start.ts                # TanStack Start configuration
-└── styles.css              # Global styles and design tokens
+├── routes/
+│   ├── articles/              # 31 article routes
+│   │   ├── best-baby-books.tsx
+│   │   ├── speech-development-guide.tsx
+│   │   ├── best-car-seats.tsx
+│   │   ├── ... (28 more)
+│   │   └── $slug.tsx          # Dynamic fallback
+│   └── go/
+│       └── $slug.tsx          # Enhanced affiliate redirect + tracking
+├── lib/
+│   └── site-data.ts           # Central article registry (31 articles)
+├── scripts/
+│   ├── generate-pins.ts
+│   ├── generate-pinterest-images.ts
+│   └── create-placeholder-pins.ts
+└── components/
+    └── content/               # ReadingProgress, BackToTop, TOC, etc.
 ```
+
+---
+
+## Affiliate & Monetization
+
+- All product review articles include Amazon affiliate links
+- Centralized redirect handler at `/go/$slug`
+- Proper `rel="sponsored nofollow"` attributes
+- Built-in click tracking and sponsored badge display
+- Disclosure: *"ChildBloom earns a small commission from qualifying purchases at no extra cost to you."*
+
+---
+
+## Pinterest Automation
+
+The project includes a complete Pinterest content pipeline:
+
+1. Run `generate-pins.ts` → creates titles, descriptions, and image prompts
+2. Run image generation (AI or placeholders)
+3. Images stored in `public/pinterest-pins/`
+4. Ready for bulk pinning or scheduling
+
+---
 
 ## Database
 
-Supabase migrations are in `supabase/migrations/`. The schema includes:
+Supabase schema includes:
+- `articles` (full-text search enabled)
+- `categories` & `tags`
+- `profiles`, `user_roles`
+- Newsletter & contact forms
 
-- **articles** — CMS-driven content with full-text search
-- **categories / tags** — Content organization
-- **profiles** — Author profiles linked to Supabase Auth
-- **user_roles** — Role-based access (admin, editor, author)
-- **newsletter_subscribers** — Email subscribers with confirmation tokens
-- **contact_messages** — Contact form submissions
-
-## Scripts
-
-| Command             | Description              |
-| ------------------- | ------------------------ |
-| `npm run dev`       | Start development server |
-| `npm run build`     | Production build         |
-| `npm run build:dev` | Development build        |
-| `npm run preview`   | Preview production build |
-| `npm run lint`      | Run ESLint               |
-| `npm run format`    | Format with Prettier     |
+---
 
 ## License
 
 MIT
+
+---
+
+## Recent Milestones (June 2026)
+
+- ✅ Implemented full 30+ article content plan
+- ✅ Added 11 new pillar & supporting articles
+- ✅ Enhanced affiliate tracking system
+- ✅ Built Pinterest pin generation & image pipeline
+- ✅ All articles include schema, FAQ, internal links, and disclaimers
+- ✅ Pushed complete implementation to GitHub
+
+---
+
+**Built with ❤️ for modern parents.**
