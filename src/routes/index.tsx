@@ -31,23 +31,11 @@ export const Route = createFileRoute("/")({
           "Expert guidance on child health, parenting, newborn care, nutrition, development, and trusted product reviews.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: heroImg },
+      { property: "og:image", content: `https://childbloom.site${heroImg}` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `https://childbloom.site${heroImg}` },
     ],
-    links: [{ rel: "canonical", href: "/" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "ChildBloom",
-          url: "/",
-          logo: "/favicon.ico",
-          description: "Helping Children Grow, Learn, and Thrive.",
-        }),
-      },
-    ],
+    links: [{ rel: "canonical", href: "https://childbloom.site/" }],
   }),
   component: Index,
 });
@@ -343,6 +331,14 @@ function PopularArticles() {
     "Gentle ways to night-wean a toddler",
     "Screen time guidelines that actually work",
   ];
+  const popularLinks = [
+    "/articles/baby-sleep-guide",
+    "/articles/toddler-nutrition-tips",
+    "/articles/child-fever-guide",
+    "/articles/best-baby-monitors",
+    "/articles/sleep-training-methods",
+    "/articles/parenting-hacks",
+  ];
   return (
     <section className="bg-muted/40 py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -351,7 +347,7 @@ function PopularArticles() {
           {popular.map((title, i) => (
             <li key={title}>
               <a
-                href="#"
+                href={popularLinks[i]}
                 className="group flex items-start gap-4 rounded-xl p-3 transition hover:bg-card"
               >
                 <span
@@ -384,11 +380,12 @@ function Footer() {
     Company: [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
-      { label: "Authors", href: "/about" },
+      { label: "Authors", href: "/authors" },
       { label: "Editorial Policy", href: "/terms" },
     ],
     Legal: [
       { label: "Privacy Policy", href: "/privacy" },
+      { label: "Cookie Policy", href: "/cookie-policy" },
       { label: "Terms of Service", href: "/terms" },
       { label: "Affiliate Disclosure", href: "/affiliate-disclosure" },
       { label: "Medical Disclaimer", href: "/medical-disclaimer" },
