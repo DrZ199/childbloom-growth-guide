@@ -10,6 +10,7 @@ import {
   generateArticleSchema,
   generateFaqSchema,
 } from "@/components/seo/structured-data";
+import { HeroImage } from "@/components/ui/optimized-image";
 import { Clock, Calendar, Eye, Stethoscope } from "lucide-react";
 
 export const Route = createFileRoute("/articles/$slug")({
@@ -173,10 +174,9 @@ function DynamicArticlePage() {
         {/* Cover image */}
         {article.cover_image_url && (
           <div className="my-8 overflow-hidden rounded-2xl">
-            <img
+            <HeroImage
               src={article.cover_image_url}
               alt={article.cover_image_alt ?? article.title}
-              className="w-full object-cover"
               width={1200}
               height={630}
             />

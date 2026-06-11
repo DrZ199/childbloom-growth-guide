@@ -240,7 +240,7 @@ function Categories() {
         {categories.map(({ name, desc, Icon, tone }) => (
           <a
             key={name}
-            href="#"
+            href="/categories"
             className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
           >
             <div
@@ -268,7 +268,7 @@ function LatestArticles() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-end justify-between gap-6">
           <SectionHeader eyebrow="Latest" title="Fresh from the journal" />
-          <a href="#" className="hidden text-sm font-medium text-primary hover:underline sm:inline">
+          <a href="/articles" className="hidden text-sm font-medium text-primary hover:underline sm:inline">
             View all →
           </a>
         </div>
@@ -311,7 +311,7 @@ function FeaturedGuides() {
         {guides.map((g, i) => (
           <a
             key={g.title}
-            href="#"
+            href="/articles"
             className="relative flex h-56 flex-col justify-end overflow-hidden rounded-2xl border border-border p-6 text-primary-foreground shadow-[var(--shadow-card)] transition hover:shadow-[var(--shadow-soft)]"
             style={{
               background:

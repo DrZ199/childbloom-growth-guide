@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { captureException } from "@/lib/error-monitor";
 
 const BASE_URL = "https://childbloom.site";
 
@@ -79,7 +80,7 @@ export const Route = createFileRoute("/sitemap.xml")({
             });
           }
         } catch (err) {
-          console.error("[sitemap] failed to load dynamic entries", err);
+          captureException(err, { action: "sitemap_dynamic_entries_fetch" });
         }
 
         const entries = [...staticEntries, ...dynamicEntries];
