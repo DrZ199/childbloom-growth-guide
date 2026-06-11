@@ -121,7 +121,7 @@ function DynamicArticlePage() {
     url: articleUrl,
     image: article.og_image_url ?? article.cover_image_url ?? undefined,
     datePublished: article.published_at ?? undefined,
-    dateModified: article.updated_at ?? article.published_at ?? undefined,
+    dateModified: article.published_at ?? undefined,
     inLanguage: "en-US",
     author: { "@type": "Person", name: article.author_name ?? "ChildBloom Editorial Team" },
     reviewedBy: {
