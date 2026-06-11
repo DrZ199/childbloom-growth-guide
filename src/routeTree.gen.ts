@@ -14,6 +14,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as MedicalDisclaimerRouteImport } from './routes/medical-disclaimer'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as ArticlesRouteImport } from './routes/articles'
@@ -21,9 +22,11 @@ import { Route as AffiliateDisclosureRouteImport } from './routes/affiliate-disc
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AdminRouteRouteImport } from './routes/admin/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthorsIndexRouteImport } from './routes/authors/index'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as GoSlugRouteImport } from './routes/go/$slug'
 import { Route as CategoriesSlugRouteImport } from './routes/categories/$slug'
+import { Route as AuthorsSlugRouteImport } from './routes/authors/$slug'
 import { Route as ArticlesVaccinationGuideRouteImport } from './routes/articles/vaccination-guide'
 import { Route as ArticlesToddlerTantrumsRouteImport } from './routes/articles/toddler-tantrums'
 import { Route as ArticlesToddlerSleepRegressionRouteImport } from './routes/articles/toddler-sleep-regression'
@@ -119,6 +122,11 @@ const MedicalDisclaimerRoute = MedicalDisclaimerRouteImport.update({
   path: '/medical-disclaimer',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -154,6 +162,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthorsIndexRoute = AuthorsIndexRouteImport.update({
+  id: '/authors/',
+  path: '/authors/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -168,6 +181,11 @@ const CategoriesSlugRoute = CategoriesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => CategoriesRoute,
+} as any)
+const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
+  id: '/authors/$slug',
+  path: '/authors/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ArticlesVaccinationGuideRoute =
   ArticlesVaccinationGuideRouteImport.update({
@@ -563,6 +581,7 @@ export interface FileRoutesByFullPath {
   '/articles': typeof ArticlesRouteWithChildren
   '/categories': typeof CategoriesRouteWithChildren
   '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/medical-disclaimer': typeof MedicalDisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/search': typeof SearchRoute
@@ -633,9 +652,11 @@ export interface FileRoutesByFullPath {
   '/articles/toddler-sleep-regression': typeof ArticlesToddlerSleepRegressionRoute
   '/articles/toddler-tantrums': typeof ArticlesToddlerTantrumsRoute
   '/articles/vaccination-guide': typeof ArticlesVaccinationGuideRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
   '/admin/': typeof AdminIndexRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/admin/articles/$id': typeof AdminArticlesIdRoute
   '/admin/articles/new': typeof AdminArticlesNewRoute
   '/admin/articles/': typeof AdminArticlesIndexRoute
@@ -647,6 +668,7 @@ export interface FileRoutesByTo {
   '/articles': typeof ArticlesRouteWithChildren
   '/categories': typeof CategoriesRouteWithChildren
   '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/medical-disclaimer': typeof MedicalDisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/search': typeof SearchRoute
@@ -717,9 +739,11 @@ export interface FileRoutesByTo {
   '/articles/toddler-sleep-regression': typeof ArticlesToddlerSleepRegressionRoute
   '/articles/toddler-tantrums': typeof ArticlesToddlerTantrumsRoute
   '/articles/vaccination-guide': typeof ArticlesVaccinationGuideRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
   '/admin': typeof AdminIndexRoute
+  '/authors': typeof AuthorsIndexRoute
   '/admin/articles/$id': typeof AdminArticlesIdRoute
   '/admin/articles/new': typeof AdminArticlesNewRoute
   '/admin/articles': typeof AdminArticlesIndexRoute
@@ -733,6 +757,7 @@ export interface FileRoutesById {
   '/articles': typeof ArticlesRouteWithChildren
   '/categories': typeof CategoriesRouteWithChildren
   '/contact': typeof ContactRoute
+  '/cookie-policy': typeof CookiePolicyRoute
   '/medical-disclaimer': typeof MedicalDisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/search': typeof SearchRoute
@@ -804,9 +829,11 @@ export interface FileRoutesById {
   '/articles/toddler-sleep-regression': typeof ArticlesToddlerSleepRegressionRoute
   '/articles/toddler-tantrums': typeof ArticlesToddlerTantrumsRoute
   '/articles/vaccination-guide': typeof ArticlesVaccinationGuideRoute
+  '/authors/$slug': typeof AuthorsSlugRoute
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
   '/admin/': typeof AdminIndexRoute
+  '/authors/': typeof AuthorsIndexRoute
   '/admin/articles/$id': typeof AdminArticlesIdRoute
   '/admin/articles/new': typeof AdminArticlesNewRoute
   '/admin/articles/': typeof AdminArticlesIndexRoute
@@ -821,6 +848,7 @@ export interface FileRouteTypes {
     | '/articles'
     | '/categories'
     | '/contact'
+    | '/cookie-policy'
     | '/medical-disclaimer'
     | '/privacy'
     | '/search'
@@ -891,9 +919,11 @@ export interface FileRouteTypes {
     | '/articles/toddler-sleep-regression'
     | '/articles/toddler-tantrums'
     | '/articles/vaccination-guide'
+    | '/authors/$slug'
     | '/categories/$slug'
     | '/go/$slug'
     | '/admin/'
+    | '/authors/'
     | '/admin/articles/$id'
     | '/admin/articles/new'
     | '/admin/articles/'
@@ -905,6 +935,7 @@ export interface FileRouteTypes {
     | '/articles'
     | '/categories'
     | '/contact'
+    | '/cookie-policy'
     | '/medical-disclaimer'
     | '/privacy'
     | '/search'
@@ -975,9 +1006,11 @@ export interface FileRouteTypes {
     | '/articles/toddler-sleep-regression'
     | '/articles/toddler-tantrums'
     | '/articles/vaccination-guide'
+    | '/authors/$slug'
     | '/categories/$slug'
     | '/go/$slug'
     | '/admin'
+    | '/authors'
     | '/admin/articles/$id'
     | '/admin/articles/new'
     | '/admin/articles'
@@ -990,6 +1023,7 @@ export interface FileRouteTypes {
     | '/articles'
     | '/categories'
     | '/contact'
+    | '/cookie-policy'
     | '/medical-disclaimer'
     | '/privacy'
     | '/search'
@@ -1061,9 +1095,11 @@ export interface FileRouteTypes {
     | '/articles/toddler-sleep-regression'
     | '/articles/toddler-tantrums'
     | '/articles/vaccination-guide'
+    | '/authors/$slug'
     | '/categories/$slug'
     | '/go/$slug'
     | '/admin/'
+    | '/authors/'
     | '/admin/articles/$id'
     | '/admin/articles/new'
     | '/admin/articles/'
@@ -1077,12 +1113,15 @@ export interface RootRouteChildren {
   ArticlesRoute: typeof ArticlesRouteWithChildren
   CategoriesRoute: typeof CategoriesRouteWithChildren
   ContactRoute: typeof ContactRoute
+  CookiePolicyRoute: typeof CookiePolicyRoute
   MedicalDisclaimerRoute: typeof MedicalDisclaimerRoute
   PrivacyRoute: typeof PrivacyRoute
   SearchRoute: typeof SearchRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
+  AuthorsSlugRoute: typeof AuthorsSlugRoute
   GoSlugRoute: typeof GoSlugRoute
+  AuthorsIndexRoute: typeof AuthorsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1120,6 +1159,13 @@ declare module '@tanstack/react-router' {
       path: '/medical-disclaimer'
       fullPath: '/medical-disclaimer'
       preLoaderRoute: typeof MedicalDisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -1171,6 +1217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/authors/': {
+      id: '/authors/'
+      path: '/authors'
+      fullPath: '/authors/'
+      preLoaderRoute: typeof AuthorsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/': {
       id: '/admin/'
       path: '/'
@@ -1191,6 +1244,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/categories/$slug'
       preLoaderRoute: typeof CategoriesSlugRouteImport
       parentRoute: typeof CategoriesRoute
+    }
+    '/authors/$slug': {
+      id: '/authors/$slug'
+      path: '/authors/$slug'
+      fullPath: '/authors/$slug'
+      preLoaderRoute: typeof AuthorsSlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/articles/vaccination-guide': {
       id: '/articles/vaccination-guide'
@@ -1862,12 +1922,15 @@ const rootRouteChildren: RootRouteChildren = {
   ArticlesRoute: ArticlesRouteWithChildren,
   CategoriesRoute: CategoriesRouteWithChildren,
   ContactRoute: ContactRoute,
+  CookiePolicyRoute: CookiePolicyRoute,
   MedicalDisclaimerRoute: MedicalDisclaimerRoute,
   PrivacyRoute: PrivacyRoute,
   SearchRoute: SearchRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
+  AuthorsSlugRoute: AuthorsSlugRoute,
   GoSlugRoute: GoSlugRoute,
+  AuthorsIndexRoute: AuthorsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
