@@ -2,6 +2,8 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { checkRateLimit, RATE_LIMIT_NEWSLETTER, RATE_LIMIT_CONTACT } from "../rate-limiter";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import { sendWelcomeEmail } from "@/lib/email/resend";
+import { captureException } from "@/lib/error-monitor";
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -14,10 +16,24 @@ import { supabaseAdmin } from "@/integrations/supabase/client.server";
 function getClientIp(): string {
   try {
     // In TanStack Start / Nitro, headers are available via globalThis or request context.
-    // Fall back to a generic key if not available.
-    return "server";
+    // We use a safe fallback to prevent rate limiter bypass.
+    const headers = typeof globalThis !== 'undefined' && 'headers' in globalThis 
+      ? (globalThis as Record<string, unknown>).headers 
+      : {};
+    
+    const forwarded = (headers as Record<string, string>)['x-forwarded-for'];
+    if (forwarded) {
+      return forwarded.split(',')[0].trim();
+    }
+    
+    const realIp = (headers as Record<string, string>)['x-real-ip'];
+    if (realIp) {
+      return realIp.trim();
+    }
+    
+    return "unknown-client";
   } catch {
-    return "unknown";
+    return "unknown-client";
   }
 }
 
@@ -63,14 +79,21 @@ export const subscribeNewsletter = createServerFn({ method: "POST" })
         if (error.code === "23505") {
           return { success: true, message: "You're already subscribed!" };
         }
-        console.error("[newsletter] insert error:", error);
+        captureException(error, { action: "newsletter_insert", extra: { email: data.email } });
         return { error: "Something went wrong. Please try again." };
       }
 
-      // TODO: Send confirmation email via Resend/SendGrid
+      // Send confirmation email via Resend
+      try {
+        await sendWelcomeEmail({ to: data.email.toLowerCase().trim() });
+      } catch (emailErr) {
+        captureException(emailErr, { action: "newsletter_welcome_email", extra: { email: data.email } });
+        // Don't fail the signup if email fails, but log it
+      }
+
       return { success: true, message: "Check your inbox to confirm your subscription." };
     } catch (err) {
-      console.error("[newsletter] unexpected error:", err);
+      captureException(err, { action: "newsletter_unexpected_error", extra: { email: data.email } });
       return { error: "Something went wrong. Please try again." };
     }
   });
@@ -109,13 +132,13 @@ export const submitContactForm = createServerFn({ method: "POST" })
       });
 
       if (error) {
-        console.error("[contact] insert error:", error);
+        captureException(error, { action: "contact_insert", extra: { email: data.email } });
         return { error: "Something went wrong. Please try again." };
       }
 
       return { success: true, message: "Message sent. We'll respond within 1–2 business days." };
     } catch (err) {
-      console.error("[contact] unexpected error:", err);
+      captureException(err, { action: "contact_unexpected_error", extra: { email: data.email } });
       return { error: "Something went wrong. Please try again." };
     }
   });

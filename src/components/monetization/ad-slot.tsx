@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { env } from "@/lib/config";
 
 type AdPlacement = "header-banner" | "in-article" | "sidebar" | "footer" | "between-sections";
 
@@ -7,17 +8,17 @@ interface AdSlotProps {
   className?: string;
 }
 
-const ADSENSE_PUB_ID =
-  typeof window !== "undefined"
-    ? ((window as unknown as Record<string, string>).__ADSENSE_CA_PUB ?? "")
-    : "";
+// Use environment variable for AdSense Publisher ID, fallback to empty string if not set
+const ADSENSE_PUB_ID = env.VITE_ADSENSE_PUBLISHER_ID ?? "";
 
+// These should be configured via environment variables or a config file in production
+// For now, we use placeholder values that will be overridden by the real ad unit IDs
 const SLOT_IDS: Record<AdPlacement, string> = {
-  "header-banner": "1234567890",
-  "in-article": "2345678901",
-  sidebar: "3456789012",
-  footer: "4567890123",
-  "between-sections": "5678901234",
+  "header-banner": import.meta.env.VITE_ADSENSE_SLOT_HEADER ?? "1234567890",
+  "in-article": import.meta.env.VITE_ADSENSE_SLOT_IN_ARTICLE ?? "2345678901",
+  sidebar: import.meta.env.VITE_ADSENSE_SLOT_SIDEBAR ?? "3456789012",
+  footer: import.meta.env.VITE_ADSENSE_SLOT_FOOTER ?? "4567890123",
+  "between-sections": import.meta.env.VITE_ADSENSE_SLOT_BETWEEN ?? "5678901234",
 };
 
 const SLOT_FORMATS: Record<AdPlacement, string> = {
@@ -63,9 +64,10 @@ export function AdSlot({ placement, className = "" }: AdSlotProps) {
         pushAd();
         return;
       }
+      if (!ADSENSE_PUB_ID) return; // Don't load if no publisher ID is configured
+      
       const script = document.createElement("script");
-      script.src =
-        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxx";
+      script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUB_ID}`;
       script.async = true;
       script.crossOrigin = "anonymous";
       script.onload = pushAd;

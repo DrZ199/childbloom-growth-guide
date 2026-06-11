@@ -37,18 +37,20 @@ function rateMetric(name: VitalMetric["name"], value: number): VitalMetric["rati
 
 const defaultReporter: ReportCallback = (metric) => {
   // Send to analytics endpoint or error monitoring
-  if (typeof window !== "undefined" && "gtag" in window) {
-    (
-      window as unknown as Record<
-        string,
-        (cmd: string, event: string, params: Record<string, unknown>) => void
-      >
-    ).gtag("event", metric.name, {
-      value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value),
-      event_category: "Web Vitals",
-      metric_rating: rateMetric(metric.name, metric.value),
-      non_interaction: true,
-    });
+  if (typeof window !== "undefined") {
+    const w = window as unknown as Record<string, unknown>;
+    if (typeof w.gtag === "function") {
+      (w.gtag as (cmd: string, event: string, params: Record<string, unknown>) => void)(
+        "event",
+        metric.name,
+        {
+          value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value),
+          event_category: "Web Vitals",
+          metric_rating: rateMetric(metric.name, metric.value),
+          non_interaction: true,
+        }
+      );
+    }
   }
 
   // Log for debugging in development

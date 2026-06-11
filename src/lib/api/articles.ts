@@ -2,6 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
 import type { ArticleSummary, ArticleDetail, PaginatedResponse } from "@/types/article";
+import { captureException } from "@/lib/error-monitor";
 
 // ---------------------------------------------------------------------------
 // GET /api/articles — list with pagination, filtering, sorting
@@ -48,7 +49,7 @@ export const listArticles = createServerFn({ method: "GET" })
 
     const { data: rows, count, error } = await query.range(from, to);
     if (error) {
-      console.error("[api/articles] query error:", error);
+      captureException(error, { action: "list_articles_query", extra: { category, sort, page } });
       return {
         data: [],
         total: 0,
@@ -113,8 +114,11 @@ export const getArticleBySlug = createServerFn({ method: "GET" })
       .eq("status", "published")
       .maybeSingle();
 
-    if (error || !row) {
-      console.error("[api/article] not found or error:", error);
+    if (error) {
+      captureException(error, { action: "get_article_by_slug_query", extra: { slug } });
+      return null;
+    }
+    if (!row) {
       return null;
     }
 

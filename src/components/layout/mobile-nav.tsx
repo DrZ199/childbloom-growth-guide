@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { Menu, X, Search, Sparkles } from "lucide-react";
 import { ThemeToggleCompact } from "./theme-toggle";
 import { cn } from "@/lib/utils";
@@ -157,13 +157,15 @@ export function MobileNav() {
  */
 function SearchOverlay({ onClose }: { onClose: () => void }) {
   const [query, setQuery] = useState("");
+  const navigate = useNavigate();
 
   function handleKeyDown(e: React.KeyboardEvent) {
     if (e.key === "Escape") {
       onClose();
     }
     if (e.key === "Enter" && query.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(query)}`;
+      navigate({ to: "/search", search: { q: query.trim() } });
+      onClose();
     }
   }
 
