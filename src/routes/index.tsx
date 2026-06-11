@@ -137,7 +137,10 @@ function Header() {
             ChildBloom
           </span>
         </a>
-        <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground lg:flex" aria-label="Main navigation">
+        <nav
+          className="hidden items-center gap-7 text-sm font-medium text-muted-foreground lg:flex"
+          aria-label="Main navigation"
+        >
           {links.map((link) => (
             <a key={link.href} href={link.href} className="transition-colors hover:text-foreground">
               {link.label}

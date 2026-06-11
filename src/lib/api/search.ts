@@ -21,18 +21,19 @@ export const searchArticles = createServerFn({ method: "GET" })
     }
 
     // Use Supabase full-text search via search_tsv tsvector column
-    const { data: rows, error } = await supabaseAdmin.rpc("search_articles_fts" as never, {
-      search_query: q,
-      result_limit: limit,
-    } as never);
+    const { data: rows, error } = await supabaseAdmin.rpc(
+      "search_articles_fts" as never,
+      {
+        search_query: q,
+        result_limit: limit,
+      } as never,
+    );
 
     // If RPC doesn't exist, fall back to ilike search
     if (error || !rows) {
       const { data: fallbackRows, error: fallbackError } = await supabaseAdmin
         .from("articles")
-        .select(
-          `id, title, slug, excerpt, categories(name)`,
-        )
+        .select(`id, title, slug, excerpt, categories(name)`)
         .eq("status", "published")
         .or(`title.ilike.%${q}%,excerpt.ilike.%${q}%`)
         .order("published_at", { ascending: false })

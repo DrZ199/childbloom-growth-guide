@@ -56,8 +56,14 @@ export const getAnalyticsOverview = createServerFn({ method: "GET" })
       affiliateClicksRes,
     ] = await Promise.all([
       supabaseAdmin.from("articles").select("id", { count: "exact", head: true }),
-      supabaseAdmin.from("articles").select("id", { count: "exact", head: true }).eq("status", "published"),
-      supabaseAdmin.from("articles").select("id", { count: "exact", head: true }).eq("status", "draft"),
+      supabaseAdmin
+        .from("articles")
+        .select("id", { count: "exact", head: true })
+        .eq("status", "published"),
+      supabaseAdmin
+        .from("articles")
+        .select("id", { count: "exact", head: true })
+        .eq("status", "draft"),
       supabaseAdmin.from("newsletter_subscribers").select("id", { count: "exact", head: true }),
       supabaseAdmin
         .from("newsletter_subscribers")
@@ -174,9 +180,7 @@ export const getCategoryPerformance = createServerFn({ method: "GET" })
 
     if (error || !rows) return [];
 
-    const { data: categories } = await supabaseAdmin
-      .from("categories")
-      .select("id, name, slug");
+    const { data: categories } = await supabaseAdmin.from("categories").select("id, name, slug");
 
     const categoryMap = new Map<string, string>();
     for (const c of categories ?? []) {

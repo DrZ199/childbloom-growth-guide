@@ -53,7 +53,9 @@ function extractLinks(html: string): string[] {
 /**
  * Check if a URL is reachable (returns non-error status).
  */
-async function checkUrl(url: string): Promise<{ ok: boolean; status: number | "unreachable"; error?: string }> {
+async function checkUrl(
+  url: string,
+): Promise<{ ok: boolean; status: number | "unreachable"; error?: string }> {
   try {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 10_000);

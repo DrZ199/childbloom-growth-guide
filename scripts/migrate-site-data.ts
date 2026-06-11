@@ -28,7 +28,9 @@ const FORCE = process.env.FORCE === "true";
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
   console.error("Error: SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required.");
-  console.error("Usage: SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... npx tsx scripts/migrate-site-data.ts");
+  console.error(
+    "Usage: SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... npx tsx scripts/migrate-site-data.ts",
+  );
   process.exit(1);
 }
 
@@ -190,10 +192,7 @@ async function migrateArticles(categoryIds: Map<string, string>): Promise<Migrat
     }
 
     if (existing && FORCE) {
-      const { error } = await supabase
-        .from("articles")
-        .update(record)
-        .eq("slug", article.slug);
+      const { error } = await supabase.from("articles").update(record).eq("slug", article.slug);
 
       if (error) {
         results.push({ slug: article.slug, status: "error", error: error.message });

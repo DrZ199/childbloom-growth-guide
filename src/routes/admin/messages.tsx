@@ -23,7 +23,9 @@ function AdminMessages() {
     }
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => {
+    load();
+  }, []);
 
   async function toggleHandled(id: string, current: boolean) {
     await adminMarkMessageHandled({ data: { id, handled: !current } });
@@ -60,10 +62,11 @@ function AdminMessages() {
                 <div>
                   <div className="flex items-center gap-2">
                     <MessageSquare className="h-4 w-4 text-muted-foreground" />
-                    <span className="font-medium">{m.subject as string ?? "No subject"}</span>
+                    <span className="font-medium">{(m.subject as string) ?? "No subject"}</span>
                   </div>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    From {m.name as string} ({m.email as string}) — {new Date(m.created_at as string).toLocaleString()}
+                    From {m.name as string} ({m.email as string}) —{" "}
+                    {new Date(m.created_at as string).toLocaleString()}
                   </p>
                   <p className="mt-3 text-sm">{m.message as string}</p>
                 </div>
@@ -75,7 +78,9 @@ function AdminMessages() {
                       : "bg-green-100 text-green-700 hover:bg-green-200"
                   }`}
                 >
-                  {m.handled ? "Mark unread" : (
+                  {m.handled ? (
+                    "Mark unread"
+                  ) : (
                     <span className="flex items-center gap-1">
                       <Check className="h-3 w-3" /> Mark handled
                     </span>

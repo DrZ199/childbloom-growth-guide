@@ -39,8 +39,8 @@ function StartingSolidsArticle() {
           </div>
           <div className="space-y-6 text-sm leading-7 text-muted-foreground">
             <p>
-              Introducing solids is an exciting step. Choose iron-rich, easy-to-digest foods and keep
-              the experience relaxed.
+              Introducing solids is an exciting step. Choose iron-rich, easy-to-digest foods and
+              keep the experience relaxed.
             </p>
             <h2 className="text-2xl font-semibold">Top first-food picks</h2>
             <ol className="list-decimal space-y-3 pl-6 text-sm text-muted-foreground">

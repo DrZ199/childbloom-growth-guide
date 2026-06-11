@@ -25,24 +25,35 @@ import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as GoSlugRouteImport } from './routes/go/$slug'
 import { Route as CategoriesSlugRouteImport } from './routes/categories/$slug'
 import { Route as ArticlesVaccinationGuideRouteImport } from './routes/articles/vaccination-guide'
+import { Route as ArticlesToddlerSleepProblemsRouteImport } from './routes/articles/toddler-sleep-problems'
 import { Route as ArticlesToddlerNutritionTipsRouteImport } from './routes/articles/toddler-nutrition-tips'
 import { Route as ArticlesStartingSolidsGuideRouteImport } from './routes/articles/starting-solids-guide'
 import { Route as ArticlesStartingSolidsRouteImport } from './routes/articles/starting-solids'
 import { Route as ArticlesSpeechMilestonesRouteImport } from './routes/articles/speech-milestones'
+import { Route as ArticlesSpeechDevelopmentGuideRouteImport } from './routes/articles/speech-development-guide'
+import { Route as ArticlesSleepTrainingMethodsRouteImport } from './routes/articles/sleep-training-methods'
 import { Route as ArticlesParentingSurvivalGuideRouteImport } from './routes/articles/parenting-survival-guide'
+import { Route as ArticlesParentingHacksRouteImport } from './routes/articles/parenting-hacks'
 import { Route as ArticlesNewbornSleepRouteImport } from './routes/articles/newborn-sleep'
+import { Route as ArticlesNewbornEssentialsChecklistRouteImport } from './routes/articles/newborn-essentials-checklist'
 import { Route as ArticlesNewbornCareGuideRouteImport } from './routes/articles/newborn-care-guide'
 import { Route as ArticlesFeverInChildrenRouteImport } from './routes/articles/fever-in-children'
 import { Route as ArticlesChildNutritionGuideRouteImport } from './routes/articles/child-nutrition-guide'
 import { Route as ArticlesChildFeverHomeRemediesRouteImport } from './routes/articles/child-fever-home-remedies'
 import { Route as ArticlesChildFeverGuideRouteImport } from './routes/articles/child-fever-guide'
 import { Route as ArticlesChildDevelopmentMilestonesRouteImport } from './routes/articles/child-development-milestones'
+import { Route as ArticlesBestStrollersRouteImport } from './routes/articles/best-strollers'
 import { Route as ArticlesBestEducationalToysRouteImport } from './routes/articles/best-educational-toys'
+import { Route as ArticlesBestDiaperBagsRouteImport } from './routes/articles/best-diaper-bags'
+import { Route as ArticlesBestCarSeatsRouteImport } from './routes/articles/best-car-seats'
 import { Route as ArticlesBestBabyThermometersRouteImport } from './routes/articles/best-baby-thermometers'
+import { Route as ArticlesBestBabySleepProductsRouteImport } from './routes/articles/best-baby-sleep-products'
 import { Route as ArticlesBestBabyMonitorsRouteImport } from './routes/articles/best-baby-monitors'
 import { Route as ArticlesBestBabyFormulaRouteImport } from './routes/articles/best-baby-formula'
 import { Route as ArticlesBestBabyFoodMakersRouteImport } from './routes/articles/best-baby-food-makers'
+import { Route as ArticlesBestBabyCarriersRouteImport } from './routes/articles/best-baby-carriers'
 import { Route as ArticlesBestBabyBottlesRouteImport } from './routes/articles/best-baby-bottles'
+import { Route as ArticlesBestBabyBooksRouteImport } from './routes/articles/best-baby-books'
 import { Route as ArticlesBabyTeethingSymptomsRouteImport } from './routes/articles/baby-teething-symptoms'
 import { Route as ArticlesBabySleepGuideRouteImport } from './routes/articles/baby-sleep-guide'
 import { Route as ArticlesBabyMilestonesByMonthRouteImport } from './routes/articles/baby-milestones-by-month'
@@ -138,6 +149,12 @@ const ArticlesVaccinationGuideRoute =
     path: '/vaccination-guide',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesToddlerSleepProblemsRoute =
+  ArticlesToddlerSleepProblemsRouteImport.update({
+    id: '/toddler-sleep-problems',
+    path: '/toddler-sleep-problems',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
 const ArticlesToddlerNutritionTipsRoute =
   ArticlesToddlerNutritionTipsRouteImport.update({
     id: '/toddler-nutrition-tips',
@@ -161,17 +178,40 @@ const ArticlesSpeechMilestonesRoute =
     path: '/speech-milestones',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesSpeechDevelopmentGuideRoute =
+  ArticlesSpeechDevelopmentGuideRouteImport.update({
+    id: '/speech-development-guide',
+    path: '/speech-development-guide',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
+const ArticlesSleepTrainingMethodsRoute =
+  ArticlesSleepTrainingMethodsRouteImport.update({
+    id: '/sleep-training-methods',
+    path: '/sleep-training-methods',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
 const ArticlesParentingSurvivalGuideRoute =
   ArticlesParentingSurvivalGuideRouteImport.update({
     id: '/parenting-survival-guide',
     path: '/parenting-survival-guide',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesParentingHacksRoute = ArticlesParentingHacksRouteImport.update({
+  id: '/parenting-hacks',
+  path: '/parenting-hacks',
+  getParentRoute: () => ArticlesRoute,
+} as any)
 const ArticlesNewbornSleepRoute = ArticlesNewbornSleepRouteImport.update({
   id: '/newborn-sleep',
   path: '/newborn-sleep',
   getParentRoute: () => ArticlesRoute,
 } as any)
+const ArticlesNewbornEssentialsChecklistRoute =
+  ArticlesNewbornEssentialsChecklistRouteImport.update({
+    id: '/newborn-essentials-checklist',
+    path: '/newborn-essentials-checklist',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
 const ArticlesNewbornCareGuideRoute =
   ArticlesNewbornCareGuideRouteImport.update({
     id: '/newborn-care-guide',
@@ -206,16 +246,37 @@ const ArticlesChildDevelopmentMilestonesRoute =
     path: '/child-development-milestones',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesBestStrollersRoute = ArticlesBestStrollersRouteImport.update({
+  id: '/best-strollers',
+  path: '/best-strollers',
+  getParentRoute: () => ArticlesRoute,
+} as any)
 const ArticlesBestEducationalToysRoute =
   ArticlesBestEducationalToysRouteImport.update({
     id: '/best-educational-toys',
     path: '/best-educational-toys',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesBestDiaperBagsRoute = ArticlesBestDiaperBagsRouteImport.update({
+  id: '/best-diaper-bags',
+  path: '/best-diaper-bags',
+  getParentRoute: () => ArticlesRoute,
+} as any)
+const ArticlesBestCarSeatsRoute = ArticlesBestCarSeatsRouteImport.update({
+  id: '/best-car-seats',
+  path: '/best-car-seats',
+  getParentRoute: () => ArticlesRoute,
+} as any)
 const ArticlesBestBabyThermometersRoute =
   ArticlesBestBabyThermometersRouteImport.update({
     id: '/best-baby-thermometers',
     path: '/best-baby-thermometers',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
+const ArticlesBestBabySleepProductsRoute =
+  ArticlesBestBabySleepProductsRouteImport.update({
+    id: '/best-baby-sleep-products',
+    path: '/best-baby-sleep-products',
     getParentRoute: () => ArticlesRoute,
   } as any)
 const ArticlesBestBabyMonitorsRoute =
@@ -235,9 +296,20 @@ const ArticlesBestBabyFoodMakersRoute =
     path: '/best-baby-food-makers',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesBestBabyCarriersRoute =
+  ArticlesBestBabyCarriersRouteImport.update({
+    id: '/best-baby-carriers',
+    path: '/best-baby-carriers',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
 const ArticlesBestBabyBottlesRoute = ArticlesBestBabyBottlesRouteImport.update({
   id: '/best-baby-bottles',
   path: '/best-baby-bottles',
+  getParentRoute: () => ArticlesRoute,
+} as any)
+const ArticlesBestBabyBooksRoute = ArticlesBestBabyBooksRouteImport.update({
+  id: '/best-baby-books',
+  path: '/best-baby-books',
   getParentRoute: () => ArticlesRoute,
 } as any)
 const ArticlesBabyTeethingSymptomsRoute =
@@ -329,24 +401,35 @@ export interface FileRoutesByFullPath {
   '/articles/baby-milestones-by-month': typeof ArticlesBabyMilestonesByMonthRoute
   '/articles/baby-sleep-guide': typeof ArticlesBabySleepGuideRoute
   '/articles/baby-teething-symptoms': typeof ArticlesBabyTeethingSymptomsRoute
+  '/articles/best-baby-books': typeof ArticlesBestBabyBooksRoute
   '/articles/best-baby-bottles': typeof ArticlesBestBabyBottlesRoute
+  '/articles/best-baby-carriers': typeof ArticlesBestBabyCarriersRoute
   '/articles/best-baby-food-makers': typeof ArticlesBestBabyFoodMakersRoute
   '/articles/best-baby-formula': typeof ArticlesBestBabyFormulaRoute
   '/articles/best-baby-monitors': typeof ArticlesBestBabyMonitorsRoute
+  '/articles/best-baby-sleep-products': typeof ArticlesBestBabySleepProductsRoute
   '/articles/best-baby-thermometers': typeof ArticlesBestBabyThermometersRoute
+  '/articles/best-car-seats': typeof ArticlesBestCarSeatsRoute
+  '/articles/best-diaper-bags': typeof ArticlesBestDiaperBagsRoute
   '/articles/best-educational-toys': typeof ArticlesBestEducationalToysRoute
+  '/articles/best-strollers': typeof ArticlesBestStrollersRoute
   '/articles/child-development-milestones': typeof ArticlesChildDevelopmentMilestonesRoute
   '/articles/child-fever-guide': typeof ArticlesChildFeverGuideRoute
   '/articles/child-fever-home-remedies': typeof ArticlesChildFeverHomeRemediesRoute
   '/articles/child-nutrition-guide': typeof ArticlesChildNutritionGuideRoute
   '/articles/fever-in-children': typeof ArticlesFeverInChildrenRoute
   '/articles/newborn-care-guide': typeof ArticlesNewbornCareGuideRoute
+  '/articles/newborn-essentials-checklist': typeof ArticlesNewbornEssentialsChecklistRoute
   '/articles/newborn-sleep': typeof ArticlesNewbornSleepRoute
+  '/articles/parenting-hacks': typeof ArticlesParentingHacksRoute
   '/articles/parenting-survival-guide': typeof ArticlesParentingSurvivalGuideRoute
+  '/articles/sleep-training-methods': typeof ArticlesSleepTrainingMethodsRoute
+  '/articles/speech-development-guide': typeof ArticlesSpeechDevelopmentGuideRoute
   '/articles/speech-milestones': typeof ArticlesSpeechMilestonesRoute
   '/articles/starting-solids': typeof ArticlesStartingSolidsRoute
   '/articles/starting-solids-guide': typeof ArticlesStartingSolidsGuideRoute
   '/articles/toddler-nutrition-tips': typeof ArticlesToddlerNutritionTipsRoute
+  '/articles/toddler-sleep-problems': typeof ArticlesToddlerSleepProblemsRoute
   '/articles/vaccination-guide': typeof ArticlesVaccinationGuideRoute
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
@@ -376,24 +459,35 @@ export interface FileRoutesByTo {
   '/articles/baby-milestones-by-month': typeof ArticlesBabyMilestonesByMonthRoute
   '/articles/baby-sleep-guide': typeof ArticlesBabySleepGuideRoute
   '/articles/baby-teething-symptoms': typeof ArticlesBabyTeethingSymptomsRoute
+  '/articles/best-baby-books': typeof ArticlesBestBabyBooksRoute
   '/articles/best-baby-bottles': typeof ArticlesBestBabyBottlesRoute
+  '/articles/best-baby-carriers': typeof ArticlesBestBabyCarriersRoute
   '/articles/best-baby-food-makers': typeof ArticlesBestBabyFoodMakersRoute
   '/articles/best-baby-formula': typeof ArticlesBestBabyFormulaRoute
   '/articles/best-baby-monitors': typeof ArticlesBestBabyMonitorsRoute
+  '/articles/best-baby-sleep-products': typeof ArticlesBestBabySleepProductsRoute
   '/articles/best-baby-thermometers': typeof ArticlesBestBabyThermometersRoute
+  '/articles/best-car-seats': typeof ArticlesBestCarSeatsRoute
+  '/articles/best-diaper-bags': typeof ArticlesBestDiaperBagsRoute
   '/articles/best-educational-toys': typeof ArticlesBestEducationalToysRoute
+  '/articles/best-strollers': typeof ArticlesBestStrollersRoute
   '/articles/child-development-milestones': typeof ArticlesChildDevelopmentMilestonesRoute
   '/articles/child-fever-guide': typeof ArticlesChildFeverGuideRoute
   '/articles/child-fever-home-remedies': typeof ArticlesChildFeverHomeRemediesRoute
   '/articles/child-nutrition-guide': typeof ArticlesChildNutritionGuideRoute
   '/articles/fever-in-children': typeof ArticlesFeverInChildrenRoute
   '/articles/newborn-care-guide': typeof ArticlesNewbornCareGuideRoute
+  '/articles/newborn-essentials-checklist': typeof ArticlesNewbornEssentialsChecklistRoute
   '/articles/newborn-sleep': typeof ArticlesNewbornSleepRoute
+  '/articles/parenting-hacks': typeof ArticlesParentingHacksRoute
   '/articles/parenting-survival-guide': typeof ArticlesParentingSurvivalGuideRoute
+  '/articles/sleep-training-methods': typeof ArticlesSleepTrainingMethodsRoute
+  '/articles/speech-development-guide': typeof ArticlesSpeechDevelopmentGuideRoute
   '/articles/speech-milestones': typeof ArticlesSpeechMilestonesRoute
   '/articles/starting-solids': typeof ArticlesStartingSolidsRoute
   '/articles/starting-solids-guide': typeof ArticlesStartingSolidsGuideRoute
   '/articles/toddler-nutrition-tips': typeof ArticlesToddlerNutritionTipsRoute
+  '/articles/toddler-sleep-problems': typeof ArticlesToddlerSleepProblemsRoute
   '/articles/vaccination-guide': typeof ArticlesVaccinationGuideRoute
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
@@ -426,24 +520,35 @@ export interface FileRoutesById {
   '/articles/baby-milestones-by-month': typeof ArticlesBabyMilestonesByMonthRoute
   '/articles/baby-sleep-guide': typeof ArticlesBabySleepGuideRoute
   '/articles/baby-teething-symptoms': typeof ArticlesBabyTeethingSymptomsRoute
+  '/articles/best-baby-books': typeof ArticlesBestBabyBooksRoute
   '/articles/best-baby-bottles': typeof ArticlesBestBabyBottlesRoute
+  '/articles/best-baby-carriers': typeof ArticlesBestBabyCarriersRoute
   '/articles/best-baby-food-makers': typeof ArticlesBestBabyFoodMakersRoute
   '/articles/best-baby-formula': typeof ArticlesBestBabyFormulaRoute
   '/articles/best-baby-monitors': typeof ArticlesBestBabyMonitorsRoute
+  '/articles/best-baby-sleep-products': typeof ArticlesBestBabySleepProductsRoute
   '/articles/best-baby-thermometers': typeof ArticlesBestBabyThermometersRoute
+  '/articles/best-car-seats': typeof ArticlesBestCarSeatsRoute
+  '/articles/best-diaper-bags': typeof ArticlesBestDiaperBagsRoute
   '/articles/best-educational-toys': typeof ArticlesBestEducationalToysRoute
+  '/articles/best-strollers': typeof ArticlesBestStrollersRoute
   '/articles/child-development-milestones': typeof ArticlesChildDevelopmentMilestonesRoute
   '/articles/child-fever-guide': typeof ArticlesChildFeverGuideRoute
   '/articles/child-fever-home-remedies': typeof ArticlesChildFeverHomeRemediesRoute
   '/articles/child-nutrition-guide': typeof ArticlesChildNutritionGuideRoute
   '/articles/fever-in-children': typeof ArticlesFeverInChildrenRoute
   '/articles/newborn-care-guide': typeof ArticlesNewbornCareGuideRoute
+  '/articles/newborn-essentials-checklist': typeof ArticlesNewbornEssentialsChecklistRoute
   '/articles/newborn-sleep': typeof ArticlesNewbornSleepRoute
+  '/articles/parenting-hacks': typeof ArticlesParentingHacksRoute
   '/articles/parenting-survival-guide': typeof ArticlesParentingSurvivalGuideRoute
+  '/articles/sleep-training-methods': typeof ArticlesSleepTrainingMethodsRoute
+  '/articles/speech-development-guide': typeof ArticlesSpeechDevelopmentGuideRoute
   '/articles/speech-milestones': typeof ArticlesSpeechMilestonesRoute
   '/articles/starting-solids': typeof ArticlesStartingSolidsRoute
   '/articles/starting-solids-guide': typeof ArticlesStartingSolidsGuideRoute
   '/articles/toddler-nutrition-tips': typeof ArticlesToddlerNutritionTipsRoute
+  '/articles/toddler-sleep-problems': typeof ArticlesToddlerSleepProblemsRoute
   '/articles/vaccination-guide': typeof ArticlesVaccinationGuideRoute
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
@@ -476,24 +581,35 @@ export interface FileRouteTypes {
     | '/articles/baby-milestones-by-month'
     | '/articles/baby-sleep-guide'
     | '/articles/baby-teething-symptoms'
+    | '/articles/best-baby-books'
     | '/articles/best-baby-bottles'
+    | '/articles/best-baby-carriers'
     | '/articles/best-baby-food-makers'
     | '/articles/best-baby-formula'
     | '/articles/best-baby-monitors'
+    | '/articles/best-baby-sleep-products'
     | '/articles/best-baby-thermometers'
+    | '/articles/best-car-seats'
+    | '/articles/best-diaper-bags'
     | '/articles/best-educational-toys'
+    | '/articles/best-strollers'
     | '/articles/child-development-milestones'
     | '/articles/child-fever-guide'
     | '/articles/child-fever-home-remedies'
     | '/articles/child-nutrition-guide'
     | '/articles/fever-in-children'
     | '/articles/newborn-care-guide'
+    | '/articles/newborn-essentials-checklist'
     | '/articles/newborn-sleep'
+    | '/articles/parenting-hacks'
     | '/articles/parenting-survival-guide'
+    | '/articles/sleep-training-methods'
+    | '/articles/speech-development-guide'
     | '/articles/speech-milestones'
     | '/articles/starting-solids'
     | '/articles/starting-solids-guide'
     | '/articles/toddler-nutrition-tips'
+    | '/articles/toddler-sleep-problems'
     | '/articles/vaccination-guide'
     | '/categories/$slug'
     | '/go/$slug'
@@ -523,24 +639,35 @@ export interface FileRouteTypes {
     | '/articles/baby-milestones-by-month'
     | '/articles/baby-sleep-guide'
     | '/articles/baby-teething-symptoms'
+    | '/articles/best-baby-books'
     | '/articles/best-baby-bottles'
+    | '/articles/best-baby-carriers'
     | '/articles/best-baby-food-makers'
     | '/articles/best-baby-formula'
     | '/articles/best-baby-monitors'
+    | '/articles/best-baby-sleep-products'
     | '/articles/best-baby-thermometers'
+    | '/articles/best-car-seats'
+    | '/articles/best-diaper-bags'
     | '/articles/best-educational-toys'
+    | '/articles/best-strollers'
     | '/articles/child-development-milestones'
     | '/articles/child-fever-guide'
     | '/articles/child-fever-home-remedies'
     | '/articles/child-nutrition-guide'
     | '/articles/fever-in-children'
     | '/articles/newborn-care-guide'
+    | '/articles/newborn-essentials-checklist'
     | '/articles/newborn-sleep'
+    | '/articles/parenting-hacks'
     | '/articles/parenting-survival-guide'
+    | '/articles/sleep-training-methods'
+    | '/articles/speech-development-guide'
     | '/articles/speech-milestones'
     | '/articles/starting-solids'
     | '/articles/starting-solids-guide'
     | '/articles/toddler-nutrition-tips'
+    | '/articles/toddler-sleep-problems'
     | '/articles/vaccination-guide'
     | '/categories/$slug'
     | '/go/$slug'
@@ -572,24 +699,35 @@ export interface FileRouteTypes {
     | '/articles/baby-milestones-by-month'
     | '/articles/baby-sleep-guide'
     | '/articles/baby-teething-symptoms'
+    | '/articles/best-baby-books'
     | '/articles/best-baby-bottles'
+    | '/articles/best-baby-carriers'
     | '/articles/best-baby-food-makers'
     | '/articles/best-baby-formula'
     | '/articles/best-baby-monitors'
+    | '/articles/best-baby-sleep-products'
     | '/articles/best-baby-thermometers'
+    | '/articles/best-car-seats'
+    | '/articles/best-diaper-bags'
     | '/articles/best-educational-toys'
+    | '/articles/best-strollers'
     | '/articles/child-development-milestones'
     | '/articles/child-fever-guide'
     | '/articles/child-fever-home-remedies'
     | '/articles/child-nutrition-guide'
     | '/articles/fever-in-children'
     | '/articles/newborn-care-guide'
+    | '/articles/newborn-essentials-checklist'
     | '/articles/newborn-sleep'
+    | '/articles/parenting-hacks'
     | '/articles/parenting-survival-guide'
+    | '/articles/sleep-training-methods'
+    | '/articles/speech-development-guide'
     | '/articles/speech-milestones'
     | '/articles/starting-solids'
     | '/articles/starting-solids-guide'
     | '/articles/toddler-nutrition-tips'
+    | '/articles/toddler-sleep-problems'
     | '/articles/vaccination-guide'
     | '/categories/$slug'
     | '/go/$slug'
@@ -729,6 +867,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesVaccinationGuideRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/toddler-sleep-problems': {
+      id: '/articles/toddler-sleep-problems'
+      path: '/toddler-sleep-problems'
+      fullPath: '/articles/toddler-sleep-problems'
+      preLoaderRoute: typeof ArticlesToddlerSleepProblemsRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/toddler-nutrition-tips': {
       id: '/articles/toddler-nutrition-tips'
       path: '/toddler-nutrition-tips'
@@ -757,6 +902,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesSpeechMilestonesRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/speech-development-guide': {
+      id: '/articles/speech-development-guide'
+      path: '/speech-development-guide'
+      fullPath: '/articles/speech-development-guide'
+      preLoaderRoute: typeof ArticlesSpeechDevelopmentGuideRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/sleep-training-methods': {
+      id: '/articles/sleep-training-methods'
+      path: '/sleep-training-methods'
+      fullPath: '/articles/sleep-training-methods'
+      preLoaderRoute: typeof ArticlesSleepTrainingMethodsRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/parenting-survival-guide': {
       id: '/articles/parenting-survival-guide'
       path: '/parenting-survival-guide'
@@ -764,11 +923,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesParentingSurvivalGuideRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/parenting-hacks': {
+      id: '/articles/parenting-hacks'
+      path: '/parenting-hacks'
+      fullPath: '/articles/parenting-hacks'
+      preLoaderRoute: typeof ArticlesParentingHacksRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/newborn-sleep': {
       id: '/articles/newborn-sleep'
       path: '/newborn-sleep'
       fullPath: '/articles/newborn-sleep'
       preLoaderRoute: typeof ArticlesNewbornSleepRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/newborn-essentials-checklist': {
+      id: '/articles/newborn-essentials-checklist'
+      path: '/newborn-essentials-checklist'
+      fullPath: '/articles/newborn-essentials-checklist'
+      preLoaderRoute: typeof ArticlesNewbornEssentialsChecklistRouteImport
       parentRoute: typeof ArticlesRoute
     }
     '/articles/newborn-care-guide': {
@@ -813,6 +986,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesChildDevelopmentMilestonesRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/best-strollers': {
+      id: '/articles/best-strollers'
+      path: '/best-strollers'
+      fullPath: '/articles/best-strollers'
+      preLoaderRoute: typeof ArticlesBestStrollersRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/best-educational-toys': {
       id: '/articles/best-educational-toys'
       path: '/best-educational-toys'
@@ -820,11 +1000,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesBestEducationalToysRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/best-diaper-bags': {
+      id: '/articles/best-diaper-bags'
+      path: '/best-diaper-bags'
+      fullPath: '/articles/best-diaper-bags'
+      preLoaderRoute: typeof ArticlesBestDiaperBagsRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/best-car-seats': {
+      id: '/articles/best-car-seats'
+      path: '/best-car-seats'
+      fullPath: '/articles/best-car-seats'
+      preLoaderRoute: typeof ArticlesBestCarSeatsRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/best-baby-thermometers': {
       id: '/articles/best-baby-thermometers'
       path: '/best-baby-thermometers'
       fullPath: '/articles/best-baby-thermometers'
       preLoaderRoute: typeof ArticlesBestBabyThermometersRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/best-baby-sleep-products': {
+      id: '/articles/best-baby-sleep-products'
+      path: '/best-baby-sleep-products'
+      fullPath: '/articles/best-baby-sleep-products'
+      preLoaderRoute: typeof ArticlesBestBabySleepProductsRouteImport
       parentRoute: typeof ArticlesRoute
     }
     '/articles/best-baby-monitors': {
@@ -848,11 +1049,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesBestBabyFoodMakersRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/best-baby-carriers': {
+      id: '/articles/best-baby-carriers'
+      path: '/best-baby-carriers'
+      fullPath: '/articles/best-baby-carriers'
+      preLoaderRoute: typeof ArticlesBestBabyCarriersRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/best-baby-bottles': {
       id: '/articles/best-baby-bottles'
       path: '/best-baby-bottles'
       fullPath: '/articles/best-baby-bottles'
       preLoaderRoute: typeof ArticlesBestBabyBottlesRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/best-baby-books': {
+      id: '/articles/best-baby-books'
+      path: '/best-baby-books'
+      fullPath: '/articles/best-baby-books'
+      preLoaderRoute: typeof ArticlesBestBabyBooksRouteImport
       parentRoute: typeof ArticlesRoute
     }
     '/articles/baby-teething-symptoms': {
@@ -983,24 +1198,35 @@ interface ArticlesRouteChildren {
   ArticlesBabyMilestonesByMonthRoute: typeof ArticlesBabyMilestonesByMonthRoute
   ArticlesBabySleepGuideRoute: typeof ArticlesBabySleepGuideRoute
   ArticlesBabyTeethingSymptomsRoute: typeof ArticlesBabyTeethingSymptomsRoute
+  ArticlesBestBabyBooksRoute: typeof ArticlesBestBabyBooksRoute
   ArticlesBestBabyBottlesRoute: typeof ArticlesBestBabyBottlesRoute
+  ArticlesBestBabyCarriersRoute: typeof ArticlesBestBabyCarriersRoute
   ArticlesBestBabyFoodMakersRoute: typeof ArticlesBestBabyFoodMakersRoute
   ArticlesBestBabyFormulaRoute: typeof ArticlesBestBabyFormulaRoute
   ArticlesBestBabyMonitorsRoute: typeof ArticlesBestBabyMonitorsRoute
+  ArticlesBestBabySleepProductsRoute: typeof ArticlesBestBabySleepProductsRoute
   ArticlesBestBabyThermometersRoute: typeof ArticlesBestBabyThermometersRoute
+  ArticlesBestCarSeatsRoute: typeof ArticlesBestCarSeatsRoute
+  ArticlesBestDiaperBagsRoute: typeof ArticlesBestDiaperBagsRoute
   ArticlesBestEducationalToysRoute: typeof ArticlesBestEducationalToysRoute
+  ArticlesBestStrollersRoute: typeof ArticlesBestStrollersRoute
   ArticlesChildDevelopmentMilestonesRoute: typeof ArticlesChildDevelopmentMilestonesRoute
   ArticlesChildFeverGuideRoute: typeof ArticlesChildFeverGuideRoute
   ArticlesChildFeverHomeRemediesRoute: typeof ArticlesChildFeverHomeRemediesRoute
   ArticlesChildNutritionGuideRoute: typeof ArticlesChildNutritionGuideRoute
   ArticlesFeverInChildrenRoute: typeof ArticlesFeverInChildrenRoute
   ArticlesNewbornCareGuideRoute: typeof ArticlesNewbornCareGuideRoute
+  ArticlesNewbornEssentialsChecklistRoute: typeof ArticlesNewbornEssentialsChecklistRoute
   ArticlesNewbornSleepRoute: typeof ArticlesNewbornSleepRoute
+  ArticlesParentingHacksRoute: typeof ArticlesParentingHacksRoute
   ArticlesParentingSurvivalGuideRoute: typeof ArticlesParentingSurvivalGuideRoute
+  ArticlesSleepTrainingMethodsRoute: typeof ArticlesSleepTrainingMethodsRoute
+  ArticlesSpeechDevelopmentGuideRoute: typeof ArticlesSpeechDevelopmentGuideRoute
   ArticlesSpeechMilestonesRoute: typeof ArticlesSpeechMilestonesRoute
   ArticlesStartingSolidsRoute: typeof ArticlesStartingSolidsRoute
   ArticlesStartingSolidsGuideRoute: typeof ArticlesStartingSolidsGuideRoute
   ArticlesToddlerNutritionTipsRoute: typeof ArticlesToddlerNutritionTipsRoute
+  ArticlesToddlerSleepProblemsRoute: typeof ArticlesToddlerSleepProblemsRoute
   ArticlesVaccinationGuideRoute: typeof ArticlesVaccinationGuideRoute
 }
 
@@ -1010,12 +1236,18 @@ const ArticlesRouteChildren: ArticlesRouteChildren = {
   ArticlesBabyMilestonesByMonthRoute: ArticlesBabyMilestonesByMonthRoute,
   ArticlesBabySleepGuideRoute: ArticlesBabySleepGuideRoute,
   ArticlesBabyTeethingSymptomsRoute: ArticlesBabyTeethingSymptomsRoute,
+  ArticlesBestBabyBooksRoute: ArticlesBestBabyBooksRoute,
   ArticlesBestBabyBottlesRoute: ArticlesBestBabyBottlesRoute,
+  ArticlesBestBabyCarriersRoute: ArticlesBestBabyCarriersRoute,
   ArticlesBestBabyFoodMakersRoute: ArticlesBestBabyFoodMakersRoute,
   ArticlesBestBabyFormulaRoute: ArticlesBestBabyFormulaRoute,
   ArticlesBestBabyMonitorsRoute: ArticlesBestBabyMonitorsRoute,
+  ArticlesBestBabySleepProductsRoute: ArticlesBestBabySleepProductsRoute,
   ArticlesBestBabyThermometersRoute: ArticlesBestBabyThermometersRoute,
+  ArticlesBestCarSeatsRoute: ArticlesBestCarSeatsRoute,
+  ArticlesBestDiaperBagsRoute: ArticlesBestDiaperBagsRoute,
   ArticlesBestEducationalToysRoute: ArticlesBestEducationalToysRoute,
+  ArticlesBestStrollersRoute: ArticlesBestStrollersRoute,
   ArticlesChildDevelopmentMilestonesRoute:
     ArticlesChildDevelopmentMilestonesRoute,
   ArticlesChildFeverGuideRoute: ArticlesChildFeverGuideRoute,
@@ -1023,12 +1255,18 @@ const ArticlesRouteChildren: ArticlesRouteChildren = {
   ArticlesChildNutritionGuideRoute: ArticlesChildNutritionGuideRoute,
   ArticlesFeverInChildrenRoute: ArticlesFeverInChildrenRoute,
   ArticlesNewbornCareGuideRoute: ArticlesNewbornCareGuideRoute,
+  ArticlesNewbornEssentialsChecklistRoute:
+    ArticlesNewbornEssentialsChecklistRoute,
   ArticlesNewbornSleepRoute: ArticlesNewbornSleepRoute,
+  ArticlesParentingHacksRoute: ArticlesParentingHacksRoute,
   ArticlesParentingSurvivalGuideRoute: ArticlesParentingSurvivalGuideRoute,
+  ArticlesSleepTrainingMethodsRoute: ArticlesSleepTrainingMethodsRoute,
+  ArticlesSpeechDevelopmentGuideRoute: ArticlesSpeechDevelopmentGuideRoute,
   ArticlesSpeechMilestonesRoute: ArticlesSpeechMilestonesRoute,
   ArticlesStartingSolidsRoute: ArticlesStartingSolidsRoute,
   ArticlesStartingSolidsGuideRoute: ArticlesStartingSolidsGuideRoute,
   ArticlesToddlerNutritionTipsRoute: ArticlesToddlerNutritionTipsRoute,
+  ArticlesToddlerSleepProblemsRoute: ArticlesToddlerSleepProblemsRoute,
   ArticlesVaccinationGuideRoute: ArticlesVaccinationGuideRoute,
 }
 

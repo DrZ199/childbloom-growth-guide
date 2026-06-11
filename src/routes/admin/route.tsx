@@ -1,5 +1,13 @@
 import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
-import { FileText, Users, LayoutDashboard, Tags, MessageSquare, LogOut, BarChart3 } from "lucide-react";
+import {
+  FileText,
+  Users,
+  LayoutDashboard,
+  Tags,
+  MessageSquare,
+  LogOut,
+  BarChart3,
+} from "lucide-react";
 
 export const Route = createFileRoute("/admin")({
   component: AdminLayout,

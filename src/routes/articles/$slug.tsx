@@ -46,7 +46,10 @@ export const Route = createFileRoute("/articles/$slug")({
         { property: "og:title", content: article.seo_title ?? article.title },
         { property: "og:description", content: article.seo_description ?? article.excerpt ?? "" },
         { property: "og:type", content: "article" },
-        { property: "og:image", content: article.og_image_url ?? article.cover_image_url ?? "/og-image.png" },
+        {
+          property: "og:image",
+          content: article.og_image_url ?? article.cover_image_url ?? "/og-image.png",
+        },
         { property: "og:url", content: url },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: article.seo_title ?? article.title },
@@ -63,7 +66,10 @@ export const Route = createFileRoute("/articles/$slug")({
         <p className="mt-2 text-muted-foreground">
           The article you're looking for doesn't exist or has been removed.
         </p>
-        <a href="/articles" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+        <a
+          href="/articles"
+          className="mt-4 inline-block text-sm font-medium text-primary hover:underline"
+        >
           Browse all articles
         </a>
       </div>
@@ -179,7 +185,11 @@ function DynamicArticlePage() {
 
         {/* Share buttons */}
         <div className="my-6">
-          <ShareButtons title={article.title} url={articleUrl} imageUrl={article.cover_image_url ?? undefined} />
+          <ShareButtons
+            title={article.title}
+            url={articleUrl}
+            imageUrl={article.cover_image_url ?? undefined}
+          />
         </div>
 
         {/* Ad: header banner */}

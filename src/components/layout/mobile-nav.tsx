@@ -72,11 +72,7 @@ export function MobileNav() {
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-border">
-            <Link
-              to="/"
-              className="flex items-center gap-2"
-              onClick={() => setIsOpen(false)}
-            >
+            <Link to="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
               <span
                 className="grid h-9 w-9 place-items-center rounded-xl text-primary-foreground"
                 style={{ background: "var(--gradient-primary)" }}
@@ -151,9 +147,7 @@ export function MobileNav() {
       </div>
 
       {/* Search overlay */}
-      {searchOpen && (
-        <SearchOverlay onClose={() => setSearchOpen(false)} />
-      )}
+      {searchOpen && <SearchOverlay onClose={() => setSearchOpen(false)} />}
     </>
   );
 }

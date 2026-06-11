@@ -97,14 +97,14 @@ Supabase migrations are in `supabase/migrations/`. The schema includes:
 
 ## Scripts
 
-| Command          | Description                       |
-| ---------------- | --------------------------------- |
-| `npm run dev`    | Start development server          |
-| `npm run build`  | Production build                  |
-| `npm run build:dev` | Development build              |
-| `npm run preview`| Preview production build          |
-| `npm run lint`   | Run ESLint                        |
-| `npm run format` | Format with Prettier              |
+| Command             | Description              |
+| ------------------- | ------------------------ |
+| `npm run dev`       | Start development server |
+| `npm run build`     | Production build         |
+| `npm run build:dev` | Development build        |
+| `npm run preview`   | Preview production build |
+| `npm run lint`      | Run ESLint               |
+| `npm run format`    | Format with Prettier     |
 
 ## License
 

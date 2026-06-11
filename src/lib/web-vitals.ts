@@ -38,21 +38,24 @@ function rateMetric(name: VitalMetric["name"], value: number): VitalMetric["rati
 const defaultReporter: ReportCallback = (metric) => {
   // Send to analytics endpoint or error monitoring
   if (typeof window !== "undefined" && "gtag" in window) {
-    (window as unknown as Record<string, (cmd: string, event: string, params: Record<string, unknown>) => void>).gtag(
-      "event",
-      metric.name,
-      {
-        value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value),
-        event_category: "Web Vitals",
-        metric_rating: rateMetric(metric.name, metric.value),
-        non_interaction: true,
-      },
-    );
+    (
+      window as unknown as Record<
+        string,
+        (cmd: string, event: string, params: Record<string, unknown>) => void
+      >
+    ).gtag("event", metric.name, {
+      value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value),
+      event_category: "Web Vitals",
+      metric_rating: rateMetric(metric.name, metric.value),
+      non_interaction: true,
+    });
   }
 
   // Log for debugging in development
   if (process.env.NODE_ENV === "development") {
-    console.info(`[WebVitals] ${metric.name}: ${metric.value.toFixed(2)} (${rateMetric(metric.name, metric.value)})`);
+    console.info(
+      `[WebVitals] ${metric.name}: ${metric.value.toFixed(2)} (${rateMetric(metric.name, metric.value)})`,
+    );
   }
 };
 
@@ -76,7 +79,9 @@ export function initWebVitals(onReport: ReportCallback = defaultReporter): void 
     },
     () => {
       // web-vitals package not installed — silently skip
-      console.warn("[WebVitals] web-vitals package not found. Install with: npm install web-vitals");
+      console.warn(
+        "[WebVitals] web-vitals package not found. Install with: npm install web-vitals",
+      );
     },
   );
 }

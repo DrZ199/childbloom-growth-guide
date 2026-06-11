@@ -7,8 +7,8 @@ import type { CategorySummary, CategoryDetail, ArticleSummary } from "@/types/ar
 // GET /api/categories — list with article counts
 // ---------------------------------------------------------------------------
 
-export const listCategories = createServerFn({ method: "GET" })
-  .handler(async (): Promise<CategorySummary[]> => {
+export const listCategories = createServerFn({ method: "GET" }).handler(
+  async (): Promise<CategorySummary[]> => {
     const { data: categories, error } = await supabaseAdmin
       .from("categories")
       .select("id, name, slug, description, icon, color")
@@ -37,7 +37,8 @@ export const listCategories = createServerFn({ method: "GET" })
       color: c.color as string | null,
       article_count: countMap.get(c.id as string) ?? 0,
     }));
-  });
+  },
+);
 
 // ---------------------------------------------------------------------------
 // GET /api/categories/:slug — category with articles

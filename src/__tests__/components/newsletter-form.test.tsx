@@ -55,11 +55,7 @@ describe("NewsletterForm", () => {
 
   it("renders custom heading and description when provided", () => {
     render(
-      <NewsletterForm
-        heading="Custom Title"
-        description="Custom description"
-        source="article"
-      />,
+      <NewsletterForm heading="Custom Title" description="Custom description" source="article" />,
     );
     expect(screen.getByText("Custom Title")).toBeInTheDocument();
     expect(screen.getByText("Custom description")).toBeInTheDocument();

@@ -92,9 +92,7 @@ test.describe("Newsletter signup", () => {
     const submitBtn = page.locator('button[type="submit"]').first();
     await submitBtn.click();
     // Browser should show validation error for invalid email
-    const isInvalid = await emailInput.evaluate(
-      (el: HTMLInputElement) => el.validity.typeMismatch,
-    );
+    const isInvalid = await emailInput.evaluate((el: HTMLInputElement) => el.validity.typeMismatch);
     expect(isInvalid).toBe(true);
   });
 });

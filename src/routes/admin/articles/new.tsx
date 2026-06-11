@@ -72,7 +72,13 @@ function AdminNewArticle() {
             <input
               type="text"
               value={form.title}
-              onChange={(e) => setForm({ ...form, title: e.target.value, slug: form.slug || generateSlug(e.target.value) })}
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  title: e.target.value,
+                  slug: form.slug || generateSlug(e.target.value),
+                })
+              }
               className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               required
             />

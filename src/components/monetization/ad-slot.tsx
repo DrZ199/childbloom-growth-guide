@@ -1,20 +1,16 @@
 import { useEffect, useRef } from "react";
 
-type AdPlacement =
-  | "header-banner"
-  | "in-article"
-  | "sidebar"
-  | "footer"
-  | "between-sections";
+type AdPlacement = "header-banner" | "in-article" | "sidebar" | "footer" | "between-sections";
 
 interface AdSlotProps {
   placement: AdPlacement;
   className?: string;
 }
 
-const ADSENSE_PUB_ID = typeof window !== "undefined"
-  ? (window as unknown as Record<string, string>).__ADSENSE_CA_PUB ?? ""
-  : "";
+const ADSENSE_PUB_ID =
+  typeof window !== "undefined"
+    ? ((window as unknown as Record<string, string>).__ADSENSE_CA_PUB ?? "")
+    : "";
 
 const SLOT_IDS: Record<AdPlacement, string> = {
   "header-banner": "1234567890",
@@ -51,8 +47,8 @@ export function AdSlot({ placement, className = "" }: AdSlotProps) {
     const pushAd = () => {
       if (ref.current && (window as unknown as Record<string, unknown[]>).adsbygoogle) {
         try {
-          ((window as unknown as Record<string, unknown[]>).adsbygoogle =
-            (window as unknown as Record<string, unknown[]>).adsbygoogle || []);
+          (window as unknown as Record<string, unknown[]>).adsbygoogle =
+            (window as unknown as Record<string, unknown[]>).adsbygoogle || [];
           (window as unknown as Record<string, unknown[]>).adsbygoogle.push({});
           loadedRef.current = true;
         } catch {
@@ -68,7 +64,8 @@ export function AdSlot({ placement, className = "" }: AdSlotProps) {
         return;
       }
       const script = document.createElement("script");
-      script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxx";
+      script.src =
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxx";
       script.async = true;
       script.crossOrigin = "anonymous";
       script.onload = pushAd;

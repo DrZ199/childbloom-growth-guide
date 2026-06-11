@@ -156,10 +156,7 @@ export const advanceWorkflow = createServerFn({ method: "POST" })
       updateData.published_at = new Date().toISOString();
     }
 
-    const { error } = await supabaseAdmin
-      .from("articles")
-      .update(updateData)
-      .eq("id", id);
+    const { error } = await supabaseAdmin.from("articles").update(updateData).eq("id", id);
 
     if (error) return { error: error.message };
 

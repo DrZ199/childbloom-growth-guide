@@ -25,9 +25,7 @@ export function addHeadingIds(html: string): string {
   let counter = 0;
   return html.replace(/<h([23])([^>]*)>(.*?)<\/h\1>/gi, (_match, level, attrs, content) => {
     const existingId = /id="([^"]*)"/.exec(attrs);
-    const id = existingId
-      ? existingId[1]
-      : `section-${++counter}`;
+    const id = existingId ? existingId[1] : `section-${++counter}`;
     const cleanAttrs = attrs.replace(/\s*id="[^"]*"/, "");
     return `<h${level}${cleanAttrs} id="${id}">${content}</h${level}>`;
   });

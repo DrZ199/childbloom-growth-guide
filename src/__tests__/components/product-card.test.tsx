@@ -77,7 +77,10 @@ describe("ProductCard", () => {
 
 describe("ComparisonTable", () => {
   it("renders product names in table", () => {
-    const products = [makeProduct({ id: "1", name: "Monitor A" }), makeProduct({ id: "2", name: "Monitor B" })];
+    const products = [
+      makeProduct({ id: "1", name: "Monitor A" }),
+      makeProduct({ id: "2", name: "Monitor B" }),
+    ];
     render(<ComparisonTable products={products} />);
     expect(screen.getByText("Monitor A")).toBeInTheDocument();
     expect(screen.getByText("Monitor B")).toBeInTheDocument();

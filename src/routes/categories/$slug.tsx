@@ -6,7 +6,9 @@ import { Clock } from "lucide-react";
 
 export const Route = createFileRoute("/categories/$slug")({
   loader: async ({ params }) => {
-    const category = await getCategoryBySlug({ data: { slug: params.slug, page: 1, pageSize: 12 } });
+    const category = await getCategoryBySlug({
+      data: { slug: params.slug, page: 1, pageSize: 12 },
+    });
     if (!category) {
       throw new Error("Category not found");
     }
@@ -23,7 +25,10 @@ export const Route = createFileRoute("/categories/$slug")({
           content: category.seo_description ?? category.description ?? "",
         },
         { property: "og:title", content: category.seo_title ?? category.name },
-        { property: "og:description", content: category.seo_description ?? category.description ?? "" },
+        {
+          property: "og:description",
+          content: category.seo_description ?? category.description ?? "",
+        },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
@@ -35,7 +40,10 @@ export const Route = createFileRoute("/categories/$slug")({
       <div className="rounded-3xl border border-border bg-card p-8 text-center">
         <h1 className="text-2xl font-semibold">Category not found</h1>
         <p className="mt-2 text-muted-foreground">This category doesn't exist.</p>
-        <a href="/categories" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+        <a
+          href="/categories"
+          className="mt-4 inline-block text-sm font-medium text-primary hover:underline"
+        >
           Browse all categories
         </a>
       </div>
@@ -48,10 +56,7 @@ function DynamicCategoryPage() {
   const { category } = Route.useLoaderData();
   const baseUrl = "https://childbloom.site";
 
-  const breadcrumbItems = [
-    { label: "Categories", href: "/categories" },
-    { label: category.name },
-  ];
+  const breadcrumbItems = [{ label: "Categories", href: "/categories" }, { label: category.name }];
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6">

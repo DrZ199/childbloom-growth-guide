@@ -100,15 +100,11 @@ describe("absoluteUrl", () => {
   });
 
   it("strips trailing slash from base", () => {
-    expect(absoluteUrl("https://childbloom.site/", "/about")).toBe(
-      "https://childbloom.site/about",
-    );
+    expect(absoluteUrl("https://childbloom.site/", "/about")).toBe("https://childbloom.site/about");
   });
 
   it("adds leading slash to path if missing", () => {
-    expect(absoluteUrl("https://childbloom.site", "about")).toBe(
-      "https://childbloom.site/about",
-    );
+    expect(absoluteUrl("https://childbloom.site", "about")).toBe("https://childbloom.site/about");
   });
 });
 

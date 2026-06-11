@@ -16,37 +16,37 @@ export function seo(options: {
   image?: string;
 }) {
   const meta = [
-    { name: 'description', content: options.description },
-    { property: 'og:title', content: options.title },
-    { property: 'og:description', content: options.description },
-    { property: 'og:url', content: options.url },
-    { property: 'og:type', content: options.type || 'website' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: options.title },
-    { name: 'twitter:description', content: options.description },
+    { name: "description", content: options.description },
+    { property: "og:title", content: options.title },
+    { property: "og:description", content: options.description },
+    { property: "og:url", content: options.url },
+    { property: "og:type", content: options.type || "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: options.title },
+    { name: "twitter:description", content: options.description },
   ];
 
   if (options.image) {
-    meta.push({ property: 'og:image', content: options.image });
-    meta.push({ name: 'twitter:image', content: options.image });
+    meta.push({ property: "og:image", content: options.image });
+    meta.push({ name: "twitter:image", content: options.image });
   }
 
   if (options.publishedTime) {
-    meta.push({ property: 'article:published_time', content: options.publishedTime });
+    meta.push({ property: "article:published_time", content: options.publishedTime });
   }
 
   if (options.modifiedTime) {
-    meta.push({ property: 'article:modified_time', content: options.modifiedTime });
+    meta.push({ property: "article:modified_time", content: options.modifiedTime });
   }
 
   if (options.author) {
-    meta.push({ property: 'article:author', content: options.author });
+    meta.push({ property: "article:author", content: options.author });
   }
 
   return {
     title: options.title,
     meta,
-    link: [{ rel: 'canonical', href: options.url }],
+    link: [{ rel: "canonical", href: options.url }],
   };
 }
 
@@ -123,10 +123,7 @@ export function buildOrganizationSchema(siteUrl: string, siteName: string) {
     name: siteName,
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
-    sameAs: [
-      "https://www.pinterest.com/childbloom",
-      "https://www.facebook.com/childbloom",
-    ],
+    sameAs: ["https://www.pinterest.com/childbloom", "https://www.facebook.com/childbloom"],
   };
 }
 
@@ -171,9 +168,7 @@ export function buildArticleSchema(params: {
     url,
     image: params.coverImageUrl ?? undefined,
     datePublished: params.publishedAt ?? undefined,
-    author: params.authorName
-      ? { "@type": "Person", name: params.authorName }
-      : undefined,
+    author: params.authorName ? { "@type": "Person", name: params.authorName } : undefined,
     publisher: {
       "@type": "Organization",
       name: params.siteName,
@@ -188,10 +183,7 @@ export function buildArticleSchema(params: {
 /**
  * Generate FAQPage JSON-LD structured data.
  */
-export function buildFaqSchema(
-  faq: Array<{ question: string; answer: string }>,
-  pageUrl: string,
-) {
+export function buildFaqSchema(faq: Array<{ question: string; answer: string }>, pageUrl: string) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",

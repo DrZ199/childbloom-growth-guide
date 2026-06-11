@@ -22,13 +22,7 @@ function AdminSubscribers() {
     const header = "Email,Confirmed,Source,Subscribed At,Unsubscribed At\n";
     const rows = subscribers
       .map((s) =>
-        [
-          s.email,
-          s.confirmed,
-          s.source ?? "",
-          s.created_at,
-          s.unsubscribed_at ?? "",
-        ].join(","),
+        [s.email, s.confirmed, s.source ?? "", s.created_at, s.unsubscribed_at ?? ""].join(","),
       )
       .join("\n");
     const blob = new Blob([header + rows], { type: "text/csv" });
@@ -45,7 +39,9 @@ function AdminSubscribers() {
       <div className="mb-8 flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-semibold tracking-tight">Subscribers</h1>
-          <p className="mt-1 text-sm text-muted-foreground">{subscribers.length} newsletter subscribers</p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {subscribers.length} newsletter subscribers
+          </p>
         </div>
         <button
           onClick={exportCsv}
@@ -83,11 +79,17 @@ function AdminSubscribers() {
                   </td>
                   <td className="p-3">
                     {s.unsubscribed_at ? (
-                      <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs text-red-700">Unsubscribed</span>
+                      <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs text-red-700">
+                        Unsubscribed
+                      </span>
                     ) : s.confirmed ? (
-                      <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700">Confirmed</span>
+                      <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700">
+                        Confirmed
+                      </span>
                     ) : (
-                      <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs text-amber-700">Pending</span>
+                      <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs text-amber-700">
+                        Pending
+                      </span>
                     )}
                   </td>
                   <td className="p-3 text-muted-foreground">{(s.source as string) ?? "—"}</td>

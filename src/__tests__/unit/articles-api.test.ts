@@ -4,9 +4,7 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 // Use vi.hoisted() so mock refs are available when vi.mock factory runs
 // ---------------------------------------------------------------------------
 
-const {
-  mockFrom,
-} = vi.hoisted(() => {
+const { mockFrom } = vi.hoisted(() => {
   const mockFrom = vi.fn();
   return { mockFrom };
 });

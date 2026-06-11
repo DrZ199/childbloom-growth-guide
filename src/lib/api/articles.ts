@@ -49,7 +49,13 @@ export const listArticles = createServerFn({ method: "GET" })
     const { data: rows, count, error } = await query.range(from, to);
     if (error) {
       console.error("[api/articles] query error:", error);
-      return { data: [], total: 0, page, pageSize, hasMore: false } as PaginatedResponse<ArticleSummary>;
+      return {
+        data: [],
+        total: 0,
+        page,
+        pageSize,
+        hasMore: false,
+      } as PaginatedResponse<ArticleSummary>;
     }
 
     const articles: ArticleSummary[] = (rows ?? []).map((r: Record<string, unknown>) => ({
@@ -130,7 +136,7 @@ export const getArticleBySlug = createServerFn({ method: "GET" })
       published_at: r.published_at as string | null,
       category_name: cat?.name as string | undefined,
       category_slug: cat?.slug as string | undefined,
-      tags: tagRows.map((t) => ((t.tags as Record<string, unknown>)?.name as string)).filter(Boolean),
+      tags: tagRows.map((t) => (t.tags as Record<string, unknown>)?.name as string).filter(Boolean),
       is_featured: r.is_featured as boolean,
       is_pillar: r.is_pillar as boolean,
       view_count: r.view_count as number,
@@ -190,8 +196,8 @@ export const getPopularArticles = createServerFn({ method: "GET" })
 // GET /api/featured — featured/pillar articles
 // ---------------------------------------------------------------------------
 
-export const getFeaturedArticles = createServerFn({ method: "GET" })
-  .handler(async (): Promise<ArticleSummary[]> => {
+export const getFeaturedArticles = createServerFn({ method: "GET" }).handler(
+  async (): Promise<ArticleSummary[]> => {
     const { data: rows, error } = await supabaseAdmin
       .from("articles")
       .select(
@@ -223,7 +229,8 @@ export const getFeaturedArticles = createServerFn({ method: "GET" })
       seo_title: r.seo_title as string | null,
       seo_description: r.seo_description as string | null,
     }));
-  });
+  },
+);
 
 // ---------------------------------------------------------------------------
 // Related articles engine — match by category, then tags

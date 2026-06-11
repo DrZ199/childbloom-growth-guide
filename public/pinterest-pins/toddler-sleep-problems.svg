@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="900" viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E3F2FD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="900" fill="url(#grad)"/>
+  
+  <!-- Decorative circle -->
+  <circle cx="300" cy="350" r="120" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- Category badge -->
+  <rect x="40" y="60" width="180" height="36" rx="18" fill="#FFFFFF" opacity="0.9"/>
+  <text x="50" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#374151">ChildBloom</text>
+  
+  <!-- Main title -->
+  <text x="300" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#1F2937" text-anchor="middle" dominant-baseline="middle">
+    Toddler Sleep Problems
+  </text>
+  <text x="300" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#1F2937" text-anchor="middle" dominant-baseline="middle">
+    
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="300" y="620" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6B7280" text-anchor="middle">Expert Parenting Guide</text>
+  
+  <!-- Bottom branding -->
+  <rect x="0" y="820" width="600" height="80" fill="#FFFFFF" opacity="0.9"/>
+  <text x="300" y="870" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#374151" text-anchor="middle">childbloom.site</text>
+</svg>

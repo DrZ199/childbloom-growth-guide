@@ -38,8 +38,8 @@ function SpeechMilestonesArticle() {
           </div>
           <div className="space-y-6 text-sm leading-7 text-muted-foreground">
             <p>
-              Every toddler grows language differently. These milestones show what is typical at each
-              stage.
+              Every toddler grows language differently. These milestones show what is typical at
+              each stage.
             </p>
             <h2 className="text-2xl font-semibold">Typical speech progress</h2>
             <ul className="list-disc space-y-3 pl-6">
@@ -49,8 +49,8 @@ function SpeechMilestonesArticle() {
             </ul>
             <h2 className="text-2xl font-semibold">Language-building habits</h2>
             <p>
-              Talk through daily routines, repeat words clearly, and read books together every day to
-              give your toddler the strongest start.
+              Talk through daily routines, repeat words clearly, and read books together every day
+              to give your toddler the strongest start.
             </p>
           </div>
         </article>

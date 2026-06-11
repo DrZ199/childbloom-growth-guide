@@ -140,10 +140,7 @@ export const adminUpdateArticle = createServerFn({ method: "POST" })
     if (data.isFeatured !== undefined) updateData.is_featured = data.isFeatured;
     if (data.isPillar !== undefined) updateData.is_pillar = data.isPillar;
 
-    const { error } = await supabaseAdmin
-      .from("articles")
-      .update(updateData)
-      .eq("id", data.id);
+    const { error } = await supabaseAdmin.from("articles").update(updateData).eq("id", data.id);
 
     if (error) {
       console.error("[admin/update-article]", error);

@@ -70,9 +70,11 @@ src/
 ### Task 3: Create Article Template
 
 **Files:**
+
 - Create: `src/routes/articles/_template.tsx` (reference template)
 
 **Article Structure Requirements (every article must have):**
+
 1. ✅ Main keyword in title/H1
 2. ✅ FAQ section with schema markup
 3. ✅ Internal links to related articles
@@ -93,9 +95,11 @@ src/
 ### Task 4.1: Create newborn-care-guide.tsx (Pillar 3)
 
 **Files:**
+
 - Create: `src/routes/articles/newborn-care-guide.tsx`
 
 **Content Outline:**
+
 - Understanding Newborn Needs (0-3 months)
 - Feeding: Breastfeeding & Formula
 - Sleep Patterns & Safe Sleep
@@ -113,9 +117,11 @@ src/
 ### Task 4.2: Create child-development-milestones.tsx (Pillar 4)
 
 **Files:**
+
 - Create: `src/routes/articles/child-development-milestones.tsx`
 
 **Content Outline:**
+
 - Development Domains Overview
 - 0-3 Months Milestones
 - 4-6 Months Milestones
@@ -135,9 +141,11 @@ src/
 ### Task 4.3: Create vaccination-guide.tsx (Pillar 5)
 
 **Files:**
+
 - Create: `src/routes/articles/vaccination-guide.tsx`
 
 **Content Outline:**
+
 - How Vaccines Work
 - Recommended Schedule (Birth-18 Years)
 - Vaccine Safety & Side Effects
@@ -154,9 +162,11 @@ src/
 ### Task 4.4: Create baby-sleep-guide.tsx (Pillar 6)
 
 **Files:**
+
 - Create: `src/routes/articles/baby-sleep-guide.tsx`
 
 **Content Outline:**
+
 - Sleep Science Basics
 - Newborn Sleep (0-3 months)
 - 4-6 Month Sleep Changes
@@ -174,9 +184,11 @@ src/
 ### Task 4.5: Create parenting-survival-guide.tsx (Pillar 7)
 
 **Files:**
+
 - Create: `src/routes/articles/parenting-survival-guide.tsx`
 
 **Content Outline:**
+
 - The Fourth Trimester Survival
 - Managing Sleep Deprivation
 - Feeding Challenges
@@ -198,6 +210,7 @@ src/
 ### Task 5.1: Create best-baby-thermometers.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-baby-thermometers.tsx`
 
 **Content:** Product review with comparison table, pros/cons, affiliate links
@@ -206,6 +219,7 @@ src/
 ### Task 5.2: Create fever-in-children.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/fever-in-children.tsx`
 
 **Content:** Comprehensive fever guide (complements pillar)
@@ -214,6 +228,7 @@ src/
 ### Task 5.3: Create baby-teething-symptoms.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/baby-teething-symptoms.tsx`
 
 **Content:** Teething signs, remedies, timeline
@@ -222,6 +237,7 @@ src/
 ### Task 5.4: Create child-fever-home-remedies.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/child-fever-home-remedies.tsx`
 
 **Content:** Natural comfort measures, hydration, what to avoid
@@ -234,6 +250,7 @@ src/
 ### Task 5.5: Create best-baby-bottles.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-baby-bottles.tsx`
 
 **Keywords:** best baby bottles, baby bottle reviews, anti-colic bottles
@@ -241,6 +258,7 @@ src/
 ### Task 5.6: Create best-baby-formula.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-baby-formula.tsx`
 
 **Keywords:** best baby formula, formula reviews, infant formula comparison
@@ -248,6 +266,7 @@ src/
 ### Task 5.7: Create toddler-nutrition-tips.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/toddler-nutrition-tips.tsx`
 
 **Keywords:** toddler nutrition, toddler feeding tips, picky eater toddler
@@ -255,6 +274,7 @@ src/
 ### Task 5.8: Create starting-solids-guide.tsx (expand existing)
 
 **Files:**
+
 - Create: `src/routes/articles/starting-solids-guide.tsx`
 
 **Keywords:** starting solids guide, baby first foods, baby led weaning
@@ -262,6 +282,7 @@ src/
 ### Task 5.9: Create best-baby-food-makers.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-baby-food-makers.tsx`
 
 **Keywords:** best baby food maker, baby food maker reviews, homemade baby food
@@ -273,6 +294,7 @@ src/
 ### Task 5.10: Create best-educational-toys.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-educational-toys.tsx`
 
 **Keywords:** best educational toys, learning toys for toddlers, developmental toys
@@ -280,6 +302,7 @@ src/
 ### Task 5.11: Create baby-milestones-by-month.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/baby-milestones-by-month.tsx`
 
 **Keywords:** baby milestones by month, monthly baby milestones, infant development
@@ -287,6 +310,7 @@ src/
 ### Task 5.12: Create speech-development-guide.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/speech-development-guide.tsx`
 
 **Keywords:** speech development, toddler speech milestones, late talker
@@ -294,6 +318,7 @@ src/
 ### Task 5.13: Create best-baby-books.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-baby-books.tsx`
 
 **Keywords:** best baby books, board books for babies, baby book recommendations
@@ -305,6 +330,7 @@ src/
 ### Task 5.14: Create best-baby-sleep-products.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-baby-sleep-products.tsx`
 
 **Keywords:** best baby sleep products, sleep sacks, white noise machine
@@ -312,6 +338,7 @@ src/
 ### Task 5.15: Create sleep-training-methods.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/sleep-training-methods.tsx`
 
 **Keywords:** sleep training methods, cry it out, ferber method, gentle sleep training
@@ -319,6 +346,7 @@ src/
 ### Task 5.16: Create toddler-sleep-problems.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/toddler-sleep-problems.tsx`
 
 **Keywords:** toddler sleep problems, toddler won't sleep, sleep regression
@@ -330,6 +358,7 @@ src/
 ### Task 5.17: Create best-car-seats.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-car-seats.tsx`
 
 **Keywords:** best car seats, car seat reviews, infant car seat, convertible car seat
@@ -337,6 +366,7 @@ src/
 ### Task 5.18: Create best-strollers.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-strollers.tsx`
 
 **Keywords:** best strollers, stroller reviews, jogging stroller, travel system
@@ -344,6 +374,7 @@ src/
 ### Task 5.19: Create best-diaper-bags.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-diaper-bags.tsx`
 
 **Keywords:** best diaper bags, diaper bag reviews, backpack diaper bag
@@ -351,6 +382,7 @@ src/
 ### Task 5.20: Create best-baby-carriers.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/best-baby-carriers.tsx`
 
 **Keywords:** best baby carriers, baby carrier reviews, ergonomic baby carrier
@@ -362,6 +394,7 @@ src/
 ### Task 5.21: Create newborn-essentials-checklist.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/newborn-essentials-checklist.tsx`
 
 **Keywords:** newborn essentials checklist, baby registry must haves, newborn checklist
@@ -369,6 +402,7 @@ src/
 ### Task 5.22: Create parenting-hacks.tsx
 
 **Files:**
+
 - Create: `src/routes/articles/parenting-hacks.tsx`
 
 **Keywords:** parenting hacks, new parent hacks, baby hacks
@@ -380,6 +414,7 @@ src/
 ### Task 6: Update site-data.ts with All 30 Articles
 
 **Files:**
+
 - Modify: `src/lib/site-data.ts`
 
 **Action:** Add all 30 articles to the `articles` array with proper metadata (title, slug, category, description, excerpt, readTime, publishedAt, tags, seoTitle, metaDescription, hero, content, affiliateUrl, pros, cons, keyFeatures)
@@ -391,6 +426,7 @@ src/
 ### Task 7.1: Add FAQ Schema to All Articles
 
 **Files:**
+
 - Modify: Each article route file
 
 **Action:** Ensure every article has proper FAQ schema in the JSON-LD script tag
@@ -398,6 +434,7 @@ src/
 ### Task 7.2: Add Breadcrumb Schema
 
 **Files:**
+
 - Modify: Each article route file
 
 **Action:** Add BreadcrumbList schema for better SERP appearance
@@ -405,6 +442,7 @@ src/
 ### Task 7.3: Add Product Schema for Review Articles
 
 **Files:**
+
 - Modify: Product review articles
 
 **Action:** Add Product/Review schema for affiliate articles
@@ -412,6 +450,7 @@ src/
 ### Task 7.4: Optimize Internal Linking
 
 **Files:**
+
 - Modify: Each article route file
 
 **Action:** Ensure each article links to 3-5 related articles with descriptive anchor text
@@ -423,6 +462,7 @@ src/
 ### Task 8.1: Create Affiliate Link Structure
 
 **Files:**
+
 - Modify: `src/routes/go/$slug.tsx`
 
 **Action:** Set up redirect tracking for Amazon Associates and software affiliates
@@ -430,6 +470,7 @@ src/
 ### Task 8.2: Add Affiliate Links to Product Articles
 
 **Files:**
+
 - Modify: All product review articles
 
 **Action:** Add Amazon affiliate links with proper `rel="sponsored nofollow"` and `/go/` redirects
@@ -437,6 +478,7 @@ src/
 ### Task 8.3: Add Software Affiliate Links
 
 **Files:**
+
 - Modify: Relevant articles (parenting blog, design tools)
 
 **Action:** Add Canva/Hostinger affiliate links contextually
@@ -448,6 +490,7 @@ src/
 ### Task 9.1: Create Pin Generation Script
 
 **Files:**
+
 - Create: `scripts/generate-pins.ts`
 
 **Action:** Build script that generates pin titles, descriptions, and image prompts for each article
@@ -455,6 +498,7 @@ src/
 ### Task 9.2: Create Pin Templates
 
 **Files:**
+
 - Create: `scripts/pin-templates.ts`
 
 **Action:** Define templates for different article types (guide, review, listicle, FAQ)
@@ -462,6 +506,7 @@ src/
 ### Task 9.3: Schedule Pin Creation
 
 **Files:**
+
 - Create: `scripts/schedule-pins.ts`
 
 **Action:** Set up daily pin scheduling (10-20 pins/day)
@@ -473,6 +518,7 @@ src/
 ### Task 10.1: Verify Sitemap Generation
 
 **Files:**
+
 - Verify: `src/routes/sitemap[.]xml.ts`
 
 **Action:** Ensure all 30 articles are included in sitemap
@@ -484,6 +530,7 @@ src/
 ### Task 10.3: Set Up Analytics
 
 **Files:**
+
 - Modify: `.env` and `src/integrations/supabase/`
 
 **Action:** Configure Google Analytics and Search Console verification
@@ -526,6 +573,7 @@ npm run check:links
 ## Commit Strategy
 
 Each article creation = 1 commit with message format:
+
 ```
 feat(articles): add {slug} article
 

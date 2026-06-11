@@ -36,9 +36,7 @@ export function ThemeProvider({
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     function resolve() {
-      const resolved = theme === "system"
-        ? (mediaQuery.matches ? "dark" : "light")
-        : theme;
+      const resolved = theme === "system" ? (mediaQuery.matches ? "dark" : "light") : theme;
       setResolvedTheme(resolved);
     }
 

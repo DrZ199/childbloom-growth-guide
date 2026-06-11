@@ -8,10 +8,18 @@ export const Route = createFileRoute("/articles/child-development-milestones")({
       { title: "Child Development Milestones: Complete Month-by-Month Guide | ChildBloom" },
       {
         name: "description",
-        content: "Track your child's development from birth to 5 years with our comprehensive milestone guide. Motor, language, social, and cognitive milestones plus red flags and when to seek help.",
+        content:
+          "Track your child's development from birth to 5 years with our comprehensive milestone guide. Motor, language, social, and cognitive milestones plus red flags and when to seek help.",
       },
-      { property: "og:title", content: "Child Development Milestones: Complete Month-by-Month Guide | ChildBloom" },
-      { property: "og:description", content: "Track your child's development from birth to 5 years with our comprehensive milestone guide. Motor, language, social, and cognitive milestones plus red flags." },
+      {
+        property: "og:title",
+        content: "Child Development Milestones: Complete Month-by-Month Guide | ChildBloom",
+      },
+      {
+        property: "og:description",
+        content:
+          "Track your child's development from birth to 5 years with our comprehensive milestone guide. Motor, language, social, and cognitive milestones plus red flags.",
+      },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -23,7 +31,8 @@ export const Route = createFileRoute("/articles/child-development-milestones")({
           "@context": "https://schema.org",
           "@type": "Article",
           headline: "Child Development Milestones: Complete Month-by-Month Guide",
-          description: "Track your child's development from birth to 5 years with our comprehensive milestone guide. Motor, language, social, and cognitive milestones plus red flags.",
+          description:
+            "Track your child's development from birth to 5 years with our comprehensive milestone guide. Motor, language, social, and cognitive milestones plus red flags.",
           author: { "@type": "Person", name: "Dr. Emma Lane" },
           publisher: { "@type": "Organization", name: "ChildBloom" },
           mainEntityOfPage: { "@type": "WebPage", "@id": "/articles/child-development-milestones" },
@@ -38,8 +47,18 @@ export const Route = createFileRoute("/articles/child-development-milestones")({
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://childbloom.site" },
-            { "@type": "ListItem", position: 2, name: "Articles", item: "https://childbloom.site/articles" },
-            { "@type": "ListItem", position: 3, name: "Child Development Milestones", item: "https://childbloom.site/articles/child-development-milestones" },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Articles",
+              item: "https://childbloom.site/articles",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: "Child Development Milestones",
+              item: "https://childbloom.site/articles/child-development-milestones",
+            },
           ],
         }),
       },
@@ -61,68 +80,143 @@ function ChildDevelopmentMilestonesArticle() {
             <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
               Child Development Milestones: Complete Month-by-Month Guide
             </h1>
-            <p className="text-sm text-muted-foreground">22 min read • Published January 18, 2026 • Medically reviewed by Dr. Emma Lane, MD</p>
+            <p className="text-sm text-muted-foreground">
+              22 min read • Published January 18, 2026 • Medically reviewed by Dr. Emma Lane, MD
+            </p>
           </div>
 
-          <nav className="rounded-2xl border border-border bg-muted p-5 text-sm" aria-label="Table of contents">
+          <nav
+            className="rounded-2xl border border-border bg-muted p-5 text-sm"
+            aria-label="Table of contents"
+          >
             <h2 className="font-semibold mb-3">In This Guide</h2>
             <ol className="space-y-2">
-              <li><a href="#development-domains" className="text-primary hover:underline">Understanding Development Domains</a></li>
-              <li><a href="#0-3-months" className="text-primary hover:underline">0–3 Months</a></li>
-              <li><a href="#4-6-months" className="text-primary hover:underline">4–6 Months</a></li>
-              <li><a href="#7-9-months" className="text-primary hover:underline">7–9 Months</a></li>
-              <li><a href="#10-12-months" className="text-primary hover:underline">10–12 Months</a></li>
-              <li><a href="#12-18-months" className="text-primary hover:underline">12–18 Months</a></li>
-              <li><a href="#18-24-months" className="text-primary hover:underline">18–24 Months</a></li>
-              <li><a href="#2-3-years" className="text-primary hover:underline">2–3 Years</a></li>
-              <li><a href="#3-5-years" className="text-primary hover:underline">3–5 Years</a></li>
-              <li><a href="#red-flags" className="text-primary hover:underline">Red Flags: When to Seek Evaluation</a></li>
-              <li><a href="#supporting-development" className="text-primary hover:underline">Supporting Development at Home</a></li>
-              <li><a href="#faq" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+              <li>
+                <a href="#development-domains" className="text-primary hover:underline">
+                  Understanding Development Domains
+                </a>
+              </li>
+              <li>
+                <a href="#0-3-months" className="text-primary hover:underline">
+                  0–3 Months
+                </a>
+              </li>
+              <li>
+                <a href="#4-6-months" className="text-primary hover:underline">
+                  4–6 Months
+                </a>
+              </li>
+              <li>
+                <a href="#7-9-months" className="text-primary hover:underline">
+                  7–9 Months
+                </a>
+              </li>
+              <li>
+                <a href="#10-12-months" className="text-primary hover:underline">
+                  10–12 Months
+                </a>
+              </li>
+              <li>
+                <a href="#12-18-months" className="text-primary hover:underline">
+                  12–18 Months
+                </a>
+              </li>
+              <li>
+                <a href="#18-24-months" className="text-primary hover:underline">
+                  18–24 Months
+                </a>
+              </li>
+              <li>
+                <a href="#2-3-years" className="text-primary hover:underline">
+                  2–3 Years
+                </a>
+              </li>
+              <li>
+                <a href="#3-5-years" className="text-primary hover:underline">
+                  3–5 Years
+                </a>
+              </li>
+              <li>
+                <a href="#red-flags" className="text-primary hover:underline">
+                  Red Flags: When to Seek Evaluation
+                </a>
+              </li>
+              <li>
+                <a href="#supporting-development" className="text-primary hover:underline">
+                  Supporting Development at Home
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="text-primary hover:underline">
+                  Frequently Asked Questions
+                </a>
+              </li>
             </ol>
           </nav>
 
-          <section id="development-domains" className="space-y-6 text-sm leading-7 text-muted-foreground">
+          <section
+            id="development-domains"
+            className="space-y-6 text-sm leading-7 text-muted-foreground"
+          >
             <h2 className="text-2xl font-semibold">Understanding Development Domains</h2>
             <p>
-              Development isn't a single ladder—it's four interconnected domains that progress at their own pace. 
-              A child might walk early but talk later, or have advanced fine motor skills but struggle with social interaction. 
-              All are normal variations.
+              Development isn't a single ladder—it's four interconnected domains that progress at
+              their own pace. A child might walk early but talk later, or have advanced fine motor
+              skills but struggle with social interaction. All are normal variations.
             </p>
-            
+
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <h3 className="font-semibold text-lg mb-2">🏃 Gross Motor</h3>
-                <p className="text-sm text-muted-foreground">Large movements: rolling, sitting, crawling, walking, running, jumping, climbing</p>
+                <p className="text-sm text-muted-foreground">
+                  Large movements: rolling, sitting, crawling, walking, running, jumping, climbing
+                </p>
               </div>
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <h3 className="font-semibold text-lg mb-2">✍️ Fine Motor</h3>
-                <p className="text-sm text-muted-foreground">Small movements: grasping, pinching, stacking, drawing, self-feeding, buttoning</p>
+                <p className="text-sm text-muted-foreground">
+                  Small movements: grasping, pinching, stacking, drawing, self-feeding, buttoning
+                </p>
               </div>
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <h3 className="font-semibold text-lg mb-2">🗣️ Language & Communication</h3>
-                <p className="text-sm text-muted-foreground">Receptive (understanding) and expressive (speaking): cooing, babbling, words, sentences, conversation</p>
+                <p className="text-sm text-muted-foreground">
+                  Receptive (understanding) and expressive (speaking): cooing, babbling, words,
+                  sentences, conversation
+                </p>
               </div>
               <div className="rounded-2xl border border-border bg-muted p-5">
                 <h3 className="font-semibold text-lg mb-2">🧠 Social-Emotional & Cognitive</h3>
-                <p className="text-sm text-muted-foreground">Attachment, empathy, play, problem-solving, memory, attention, self-awareness</p>
+                <p className="text-sm text-muted-foreground">
+                  Attachment, empathy, play, problem-solving, memory, attention, self-awareness
+                </p>
               </div>
             </div>
 
             <div className="rounded-2xl border border-border bg-muted p-5">
               <h3 className="font-semibold text-lg mb-2">Important Reminders</h3>
               <ul className="list-disc space-y-1 pl-6 text-sm text-muted-foreground">
-                <li><strong>Range is normal:</strong> Milestones have wide windows (e.g., walking 9–18 months)</li>
-                <li><strong>Prematurity adjustment:</strong> Correct for gestational age until 2 years (subtract weeks early)</li>
-                <li><strong>Progress over perfection:</strong> Look for trajectory, not exact dates</li>
-                <li><strong>Clusters matter:</strong> Multiple delays in one domain warrant evaluation</li>
+                <li>
+                  <strong>Range is normal:</strong> Milestones have wide windows (e.g., walking 9–18
+                  months)
+                </li>
+                <li>
+                  <strong>Prematurity adjustment:</strong> Correct for gestational age until 2 years
+                  (subtract weeks early)
+                </li>
+                <li>
+                  <strong>Progress over perfection:</strong> Look for trajectory, not exact dates
+                </li>
+                <li>
+                  <strong>Clusters matter:</strong> Multiple delays in one domain warrant evaluation
+                </li>
               </ul>
             </div>
           </section>
 
           <section id="0-3-months" className="space-y-6 text-sm leading-7 text-muted-foreground">
             <h2 className="text-2xl font-semibold">0–3 Months: The Fourth Trimester</h2>
-            
+
             <h3 className="text-xl font-semibold">Gross Motor</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Lifts head briefly during tummy time (by 1 month)</li>
@@ -142,7 +236,9 @@ function ChildDevelopmentMilestonesArticle() {
             <h3 className="text-xl font-semibold">Language & Communication</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Makes eye contact; tracks faces (by 1 month)</li>
-              <li><strong>Social smile</strong> in response to caregiver (by 2 months) ★</li>
+              <li>
+                <strong>Social smile</strong> in response to caregiver (by 2 months) ★
+              </li>
               <li>Coos, gurgles, vowel sounds "ah," "oh" (by 2 months)</li>
               <li>Turns head toward sound/voice (by 3 months)</li>
               <li>Distinct cries for different needs</li>
@@ -159,7 +255,7 @@ function ChildDevelopmentMilestonesArticle() {
 
           <section id="4-6-months" className="space-y-6 text-sm leading-7 text-muted-foreground">
             <h2 className="text-2xl font-semibold">4–6 Months: Exploring the World</h2>
-            
+
             <h3 className="text-xl font-semibold">Gross Motor</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Rolls tummy-to-back (4–5 months), back-to-tummy (5–6 months)</li>
@@ -197,7 +293,7 @@ function ChildDevelopmentMilestonesArticle() {
 
           <section id="7-9-months" className="space-y-6 text-sm leading-7 text-muted-foreground">
             <h2 className="text-2xl font-semibold">7–9 Months: On the Move</h2>
-            
+
             <h3 className="text-xl font-semibold">Gross Motor</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Sits independently without support</li>
@@ -237,11 +333,13 @@ function ChildDevelopmentMilestonesArticle() {
 
           <section id="10-12-months" className="space-y-6 text-sm leading-7 text-muted-foreground">
             <h2 className="text-2xl font-semibold">10–12 Months: First Steps & Words</h2>
-            
+
             <h3 className="text-xl font-semibold">Gross Motor</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Stands alone well</li>
-              <li><strong>First independent steps</strong> (9–15 months is normal range) ★</li>
+              <li>
+                <strong>First independent steps</strong> (9–15 months is normal range) ★
+              </li>
               <li>Crawls up stairs</li>
               <li>Throws ball (flinging motion)</li>
             </ul>
@@ -257,7 +355,9 @@ function ChildDevelopmentMilestonesArticle() {
 
             <h3 className="text-xl font-semibold">Language & Communication</h3>
             <ul className="list-disc space-y-2 pl-6">
-              <li><strong>1–3 meaningful words</strong> (besides mama/dada) ★</li>
+              <li>
+                <strong>1–3 meaningful words</strong> (besides mama/dada) ★
+              </li>
               <li>Understands 50+ words (receptive language leads expressive)</li>
               <li>Follows simple one-step commands</li>
               <li>Shakes head "no"; waves "bye-bye"</li>
@@ -276,7 +376,7 @@ function ChildDevelopmentMilestonesArticle() {
 
           <section id="12-18-months" className="space-y-6 text-sm leading-7 text-muted-foreground">
             <h2 className="text-2xl font-semibold">12–18 Months: Toddler Explosion</h2>
-            
+
             <h3 className="text-xl font-semibold">Gross Motor</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Walks well; starts running (stiff, wide-based)</li>
@@ -297,7 +397,9 @@ function ChildDevelopmentMilestonesArticle() {
 
             <h3 className="text-xl font-semibold">Language & Communication</h3>
             <ul className="list-disc space-y-2 pl-6">
-              <li><strong>5–20+ words</strong> by 18 months ★</li>
+              <li>
+                <strong>5–20+ words</strong> by 18 months ★
+              </li>
               <li>Combines 2 words: "more milk," "mama up" (by 18 months)</li>
               <li>Points to pictures in books when named</li>
               <li>Follows 2-step commands: "get shoes and bring them"</li>
@@ -317,7 +419,7 @@ function ChildDevelopmentMilestonesArticle() {
 
           <section id="18-24-months" className="space-y-6 text-sm leading-7 text-muted-foreground">
             <h2 className="text-2xl font-semibold">18–24 Months: Language Leap</h2>
-            
+
             <h3 className="text-xl font-semibold">Gross Motor</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Runs well; walks up/down stairs with hand held</li>
@@ -338,8 +440,12 @@ function ChildDevelopmentMilestonesArticle() {
 
             <h3 className="text-xl font-semibold">Language & Communication</h3>
             <ul className="list-disc space-y-2 pl-6">
-              <li><strong>50+ words</strong> by 24 months ★</li>
-              <li><strong>2-word phrases consistently</strong> ★</li>
+              <li>
+                <strong>50+ words</strong> by 24 months ★
+              </li>
+              <li>
+                <strong>2-word phrases consistently</strong> ★
+              </li>
               <li>Follows 2–3 step commands</li>
               <li>Names familiar objects in books</li>
               <li>Uses pronouns: "me," "mine," "you" (often incorrectly)</li>
@@ -359,7 +465,7 @@ function ChildDevelopmentMilestonesArticle() {
 
           <section id="2-3-years" className="space-y-6 text-sm leading-7 text-muted-foreground">
             <h2 className="text-2xl font-semibold">2–3 Years: Preschool Foundations</h2>
-            
+
             <h3 className="text-xl font-semibold">Gross Motor</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Runs, jumps, climbs confidently</li>
@@ -380,8 +486,12 @@ function ChildDevelopmentMilestonesArticle() {
 
             <h3 className="text-xl font-semibold">Language & Communication</h3>
             <ul className="list-disc space-y-2 pl-6">
-              <li><strong>200–1000+ words</strong> by 3 years</li>
-              <li><strong>3–4 word sentences</strong>; asks "why?" constantly</li>
+              <li>
+                <strong>200–1000+ words</strong> by 3 years
+              </li>
+              <li>
+                <strong>3–4 word sentences</strong>; asks "why?" constantly
+              </li>
               <li>75% intelligible to strangers by 3 years</li>
               <li>Uses plurals, past tense, pronouns correctly (mostly)</li>
               <li>Tells simple stories; knows name, age, gender</li>
@@ -401,7 +511,7 @@ function ChildDevelopmentMilestonesArticle() {
 
           <section id="3-5-years" className="space-y-6 text-sm leading-7 text-muted-foreground">
             <h2 className="text-2xl font-semibold">3–5 Years: School Readiness</h2>
-            
+
             <h3 className="text-xl font-semibold">Gross Motor (3–4 Years)</h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Hops on one foot; gallops; skips (by 5)</li>
@@ -466,21 +576,53 @@ function ChildDevelopmentMilestonesArticle() {
 
           <section id="red-flags" className="space-y-6 text-sm leading-7 text-muted-foreground">
             <h2 className="text-2xl font-semibold">Red Flags: When to Seek Evaluation</h2>
-            <p>Trust your instincts. Early intervention makes a profound difference. Discuss with your pediatrician if you notice:</p>
-            
+            <p>
+              Trust your instincts. Early intervention makes a profound difference. Discuss with
+              your pediatrician if you notice:
+            </p>
+
             <div className="rounded-2xl border border-red-200 bg-red-50 p-5">
               <h3 className="font-semibold text-red-800 mb-3">By Age — Seek Evaluation If:</h3>
               <ul className="list-disc space-y-2 pl-6 text-sm text-red-700">
-                <li><strong>2 months:</strong> No social smile, doesn't track objects, no response to loud sounds</li>
-                <li><strong>4 months:</strong> No cooing, doesn't bring hands to mouth, no head control</li>
-                <li><strong>6 months:</strong> No laughter, doesn't reach for objects, no rolling</li>
-                <li><strong>9 months:</strong> No babbling, no back-and-forth gestures, no sitting independently</li>
-                <li><strong>12 months:</strong> No pointing, no words, no crawling/standing with support</li>
-<li><strong>18 months:</strong> &lt;5 words, no pointing to show interest, doesn't know familiar object functions</li>
-<li><strong>24 months:</strong> &lt;50 words, no 2-word phrases, doesn't follow simple commands</li>
-<li><strong>3 years:</strong> &lt;200 words, 50% unintelligible, no pretend play, no interest in peers</li>
-                <li><strong>4 years:</strong> Can't tell simple story, doesn't follow 3-step commands, unclear speech</li>
-                <li><strong>Any age:</strong> Loss of previously acquired skills (regression) — urgent evaluation needed</li>
+                <li>
+                  <strong>2 months:</strong> No social smile, doesn't track objects, no response to
+                  loud sounds
+                </li>
+                <li>
+                  <strong>4 months:</strong> No cooing, doesn't bring hands to mouth, no head
+                  control
+                </li>
+                <li>
+                  <strong>6 months:</strong> No laughter, doesn't reach for objects, no rolling
+                </li>
+                <li>
+                  <strong>9 months:</strong> No babbling, no back-and-forth gestures, no sitting
+                  independently
+                </li>
+                <li>
+                  <strong>12 months:</strong> No pointing, no words, no crawling/standing with
+                  support
+                </li>
+                <li>
+                  <strong>18 months:</strong> &lt;5 words, no pointing to show interest, doesn't
+                  know familiar object functions
+                </li>
+                <li>
+                  <strong>24 months:</strong> &lt;50 words, no 2-word phrases, doesn't follow simple
+                  commands
+                </li>
+                <li>
+                  <strong>3 years:</strong> &lt;200 words, 50% unintelligible, no pretend play, no
+                  interest in peers
+                </li>
+                <li>
+                  <strong>4 years:</strong> Can't tell simple story, doesn't follow 3-step commands,
+                  unclear speech
+                </li>
+                <li>
+                  <strong>Any age:</strong> Loss of previously acquired skills (regression) — urgent
+                  evaluation needed
+                </li>
               </ul>
             </div>
 
@@ -493,7 +635,9 @@ function ChildDevelopmentMilestonesArticle() {
               <li>Frequent falls, clumsiness interfering with play</li>
             </ul>
 
-            <h3 className="text-xl font-semibold">Social-Communication Red Flags (Autism Screening)</h3>
+            <h3 className="text-xl font-semibold">
+              Social-Communication Red Flags (Autism Screening)
+            </h3>
             <ul className="list-disc space-y-2 pl-6">
               <li>Limited eye contact; doesn't share enjoyment (showing toys)</li>
               <li>No response to name by 12 months</li>
@@ -505,19 +649,45 @@ function ChildDevelopmentMilestonesArticle() {
             </ul>
           </section>
 
-          <section id="supporting-development" className="space-y-6 text-sm leading-7 text-muted-foreground">
+          <section
+            id="supporting-development"
+            className="space-y-6 text-sm leading-7 text-muted-foreground"
+          >
             <h2 className="text-2xl font-semibold">Supporting Development at Home</h2>
-            
+
             <h3 className="text-xl font-semibold">The Basics That Matter Most</h3>
             <ul className="list-disc space-y-3 pl-6">
-              <li><strong>Talk, talk, talk:</strong> Narrate your day, describe what you see, ask questions. Language input = language output.</li>
-              <li><strong>Read daily:</strong> 15 minutes from birth. Point to pictures, ask "where's the...?", let them turn pages.</li>
-              <li><strong>Play on the floor:</strong> Tummy time, then crawling, then building. Floor play builds core strength and motor planning.</li>
-              <li><strong>Follow their lead:</strong> Join their play, expand on it. If they're banging blocks, show stacking.</li>
-              <li><strong>Limit screens:</strong> AAP: no screens &lt;18 months (except video chat); 18–24 months: high-quality only with caregiver; 2–5 years: 1 hour/day max.</li>
-              <li><strong>Safe exploration:</strong> Baby-proof so you can say "yes" more than "no."</li>
-              <li><strong>Routines build security:</strong> Predictable meals, naps, bedtime = cognitive bandwidth for learning.</li>
-              <li><strong>Social opportunities:</strong> Playgroups, library storytime, park—even parallel play builds skills.</li>
+              <li>
+                <strong>Talk, talk, talk:</strong> Narrate your day, describe what you see, ask
+                questions. Language input = language output.
+              </li>
+              <li>
+                <strong>Read daily:</strong> 15 minutes from birth. Point to pictures, ask "where's
+                the...?", let them turn pages.
+              </li>
+              <li>
+                <strong>Play on the floor:</strong> Tummy time, then crawling, then building. Floor
+                play builds core strength and motor planning.
+              </li>
+              <li>
+                <strong>Follow their lead:</strong> Join their play, expand on it. If they're
+                banging blocks, show stacking.
+              </li>
+              <li>
+                <strong>Limit screens:</strong> AAP: no screens &lt;18 months (except video chat);
+                18–24 months: high-quality only with caregiver; 2–5 years: 1 hour/day max.
+              </li>
+              <li>
+                <strong>Safe exploration:</strong> Baby-proof so you can say "yes" more than "no."
+              </li>
+              <li>
+                <strong>Routines build security:</strong> Predictable meals, naps, bedtime =
+                cognitive bandwidth for learning.
+              </li>
+              <li>
+                <strong>Social opportunities:</strong> Playgroups, library storytime, park—even
+                parallel play builds skills.
+              </li>
             </ul>
 
             <h3 className="text-xl font-semibold">Age-Appropriate Activities</h3>
@@ -572,36 +742,84 @@ function ChildDevelopmentMilestonesArticle() {
 
             <dl className="space-y-6">
               <div>
-                <dt className="font-semibold text-foreground">My child isn't walking at 15 months. Should I worry?</dt>
-                <dd className="mt-2">Walking anywhere from 9–18 months is normal. If your child is pulling to stand, cruising, and has good muscle tone, they're likely fine. Mention it at the 15-month checkup for reassurance.</dd>
+                <dt className="font-semibold text-foreground">
+                  My child isn't walking at 15 months. Should I worry?
+                </dt>
+                <dd className="mt-2">
+                  Walking anywhere from 9–18 months is normal. If your child is pulling to stand,
+                  cruising, and has good muscle tone, they're likely fine. Mention it at the
+                  15-month checkup for reassurance.
+                </dd>
               </div>
               <div>
-                <dt className="font-semibold text-foreground">My 2-year-old only says 20 words. Is this a delay?</dt>
-                <dd className="mt-2">50 words by 24 months is the typical benchmark. However, if they understand well, follow commands, and use gestures, they may be a "late talker." Still, request a speech evaluation—early intervention is most effective.</dd>
+                <dt className="font-semibold text-foreground">
+                  My 2-year-old only says 20 words. Is this a delay?
+                </dt>
+                <dd className="mt-2">
+                  50 words by 24 months is the typical benchmark. However, if they understand well,
+                  follow commands, and use gestures, they may be a "late talker." Still, request a
+                  speech evaluation—early intervention is most effective.
+                </dd>
               </div>
               <div>
-                <dt className="font-semibold text-foreground">Should I correct my toddler's grammar mistakes?</dt>
-                <dd className="mt-2">Model correct language instead: Child: "I goed!" You: "Yes, you WENT to the park!" Direct correction can discourage talking. Recasting naturally is more effective.</dd>
+                <dt className="font-semibold text-foreground">
+                  Should I correct my toddler's grammar mistakes?
+                </dt>
+                <dd className="mt-2">
+                  Model correct language instead: Child: "I goed!" You: "Yes, you WENT to the park!"
+                  Direct correction can discourage talking. Recasting naturally is more effective.
+                </dd>
               </div>
               <div>
-                <dt className="font-semibold text-foreground">Is it normal for my 3-year-old to stutter?</dt>
-                <dd className="mt-2">Developmental stuttering (repetitions, prolongations) affects 5% of children 2–5 years. Most outgrow it in 6–12 months. Don't finish sentences; maintain eye contact; slow your own speech. If persists &gt;6 months or has tension/struggle, see an SLP.</dd>
+                <dt className="font-semibold text-foreground">
+                  Is it normal for my 3-year-old to stutter?
+                </dt>
+                <dd className="mt-2">
+                  Developmental stuttering (repetitions, prolongations) affects 5% of children 2–5
+                  years. Most outgrow it in 6–12 months. Don't finish sentences; maintain eye
+                  contact; slow your own speech. If persists &gt;6 months or has tension/struggle,
+                  see an SLP.
+                </dd>
               </div>
               <div>
-                <dt className="font-semibold text-foreground">My child skips crawling and goes straight to walking. Is that bad?</dt>
-                <dd className="mt-2">Not necessarily! Some babies skip crawling. What matters is they develop reciprocal movement patterns (crawling, climbing, cross-lateral activities) later. Encourage tunnels, animal walks, and playground climbing.</dd>
+                <dt className="font-semibold text-foreground">
+                  My child skips crawling and goes straight to walking. Is that bad?
+                </dt>
+                <dd className="mt-2">
+                  Not necessarily! Some babies skip crawling. What matters is they develop
+                  reciprocal movement patterns (crawling, climbing, cross-lateral activities) later.
+                  Encourage tunnels, animal walks, and playground climbing.
+                </dd>
               </div>
               <div>
-                <dt className="font-semibold text-foreground">How much screen time is okay for my 18-month-old?</dt>
-                <dd className="mt-2">AAP recommends no screens (except video chat) under 18 months. 18–24 months: only high-quality programming with you co-viewing. Real-world interaction builds brains far better than any app.</dd>
+                <dt className="font-semibold text-foreground">
+                  How much screen time is okay for my 18-month-old?
+                </dt>
+                <dd className="mt-2">
+                  AAP recommends no screens (except video chat) under 18 months. 18–24 months: only
+                  high-quality programming with you co-viewing. Real-world interaction builds brains
+                  far better than any app.
+                </dd>
               </div>
               <div>
-                <dt className="font-semibold text-foreground">When should my child know colors/shapes/letters?</dt>
-                <dd className="mt-2">Colors: names 1–2 by 3 years, most by 4. Shapes: matches by 2, names by 3–4. Letters: recognizes some (especially in name) by 4, most by 5. Play-based exposure works best—no flashcards needed.</dd>
+                <dt className="font-semibold text-foreground">
+                  When should my child know colors/shapes/letters?
+                </dt>
+                <dd className="mt-2">
+                  Colors: names 1–2 by 3 years, most by 4. Shapes: matches by 2, names by 3–4.
+                  Letters: recognizes some (especially in name) by 4, most by 5. Play-based exposure
+                  works best—no flashcards needed.
+                </dd>
               </div>
               <div>
-                <dt className="font-semibold text-foreground">What if my child loses skills they had?</dt>
-                <dd className="mt-2"><strong>Regression at any age warrants immediate evaluation.</strong> Loss of words, social skills, or motor abilities can signal neurological or developmental conditions. Contact your pediatrician today.</dd>
+                <dt className="font-semibold text-foreground">
+                  What if my child loses skills they had?
+                </dt>
+                <dd className="mt-2">
+                  <strong>Regression at any age warrants immediate evaluation.</strong> Loss of
+                  words, social skills, or motor abilities can signal neurological or developmental
+                  conditions. Contact your pediatrician today.
+                </dd>
               </div>
             </dl>
           </section>
@@ -609,20 +827,29 @@ function ChildDevelopmentMilestonesArticle() {
           <div className="rounded-2xl border border-border bg-muted p-6 pt-10">
             <h3 className="text-lg font-semibold text-center mb-2">Related Articles</h3>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="/articles/baby-milestones-by-month" className="text-primary hover:underline">Baby Milestones by Month</a>
+              <a href="/articles/baby-milestones-by-month" className="text-primary hover:underline">
+                Baby Milestones by Month
+              </a>
               <span className="text-muted-foreground">•</span>
-              <a href="/articles/speech-development-guide" className="text-primary hover:underline">Speech Development Guide</a>
+              <a href="/articles/speech-development-guide" className="text-primary hover:underline">
+                Speech Development Guide
+              </a>
               <span className="text-muted-foreground">•</span>
-              <a href="/articles/best-educational-toys" className="text-primary hover:underline">Best Educational Toys</a>
+              <a href="/articles/best-educational-toys" className="text-primary hover:underline">
+                Best Educational Toys
+              </a>
               <span className="text-muted-foreground">•</span>
-              <a href="/articles/newborn-care-guide" className="text-primary hover:underline">Newborn Care Guide</a>
+              <a href="/articles/newborn-care-guide" className="text-primary hover:underline">
+                Newborn Care Guide
+              </a>
             </div>
           </div>
 
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center">
             <p className="text-sm text-muted-foreground">
-              <strong>Medical Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. 
-              Always consult your pediatrician or healthcare provider for concerns about your child's development.
+              <strong>Medical Disclaimer:</strong> This article is for educational purposes only and
+              does not constitute medical advice. Always consult your pediatrician or healthcare
+              provider for concerns about your child's development.
             </p>
           </div>
         </article>

@@ -41,9 +41,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <span className="ml-1 text-xs text-muted-foreground">{product.rating}/5</span>
           </div>
         )}
-        {price && (
-          <p className="mt-2 text-lg font-bold text-foreground">{price}</p>
-        )}
+        {price && <p className="mt-2 text-lg font-bold text-foreground">{price}</p>}
         {product.description && (
           <p className="mt-2 text-sm text-muted-foreground line-clamp-3">{product.description}</p>
         )}
@@ -121,9 +119,7 @@ export function ComparisonTable({ products }: ComparisonTableProps) {
           {products.map((p) => (
             <tr key={p.id} className="border-b border-border/50">
               <td className="p-3 font-medium">{p.name}</td>
-              <td className="p-3 text-center">
-                {p.rating ? `${p.rating}/5` : "—"}
-              </td>
+              <td className="p-3 text-center">{p.rating ? `${p.rating}/5` : "—"}</td>
               <td className="p-3 text-center">
                 {p.price_cents != null
                   ? `${p.currency === "USD" ? "$" : p.currency}${(p.price_cents / 100).toFixed(2)}`

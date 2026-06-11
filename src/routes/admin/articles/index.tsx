@@ -25,7 +25,9 @@ function AdminArticlesList() {
     }
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => {
+    load();
+  }, []);
 
   async function handleDelete(id: string) {
     if (!confirm("Are you sure you want to delete this article?")) return;
@@ -93,9 +95,7 @@ function AdminArticlesList() {
                     <td className="p-3 text-muted-foreground">{(cat?.name as string) ?? "—"}</td>
                     <td className="p-3 text-muted-foreground">{(a.view_count as number) ?? 0}</td>
                     <td className="p-3 text-muted-foreground">
-                      {a.updated_at
-                        ? new Date(a.updated_at as string).toLocaleDateString()
-                        : "—"}
+                      {a.updated_at ? new Date(a.updated_at as string).toLocaleDateString() : "—"}
                     </td>
                     <td className="p-3">
                       <div className="flex items-center justify-end gap-2">

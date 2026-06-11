@@ -25,9 +25,9 @@ export function initSentryClient(): void {
 
   const dsn =
     typeof window !== "undefined"
-      ? (window as unknown as Record<string, string>).__SENTRY_DSN ??
+      ? ((window as unknown as Record<string, string>).__SENTRY_DSN ??
         import.meta.env.VITE_SENTRY_DSN ??
-        ""
+        "")
       : "";
 
   if (!dsn) return;
@@ -67,10 +67,12 @@ export function captureException(error: unknown, context?: ErrorContext): void {
 
   const message = error instanceof Error ? error.message : String(error);
   const stack = error instanceof Error ? error.stack : undefined;
-  console.error(
-    `[ErrorMonitor]${context?.component ? ` [${context.component}]` : ""} ${message}`,
-    { action: context?.action, userId: context?.userId, extra: context?.extra, stack },
-  );
+  console.error(`[ErrorMonitor]${context?.component ? ` [${context.component}]` : ""} ${message}`, {
+    action: context?.action,
+    userId: context?.userId,
+    extra: context?.extra,
+    stack,
+  });
 }
 
 export function captureMessage(message: string, context?: ErrorContext): void {

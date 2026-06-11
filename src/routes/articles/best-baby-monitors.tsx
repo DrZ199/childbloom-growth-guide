@@ -9,7 +9,8 @@ export const Route = createFileRoute("/articles/best-baby-monitors")({
       { title: "Best Baby Monitors 2026 | ChildBloom" },
       {
         name: "description",
-        content: "Trusted baby monitor reviews with pros, cons, and buying advice for nursery safety.",
+        content:
+          "Trusted baby monitor reviews with pros, cons, and buying advice for nursery safety.",
       },
       { property: "og:title", content: "Best Baby Monitors 2026 | ChildBloom" },
       { property: "og:description", content: siteDescription },
@@ -38,8 +39,8 @@ function BabyMonitorsArticle() {
           </div>
           <div className="space-y-6 text-sm leading-7 text-muted-foreground">
             <p>
-              We tested top baby monitors for picture quality, alerts, and reliability so parents can
-              choose with confidence.
+              We tested top baby monitors for picture quality, alerts, and reliability so parents
+              can choose with confidence.
             </p>
             <h2 className="text-2xl font-semibold">What to look for</h2>
             <p>

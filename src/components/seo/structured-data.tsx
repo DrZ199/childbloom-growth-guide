@@ -4,10 +4,7 @@ interface StructuredDataProps {
 
 export function StructuredData({ data }: StructuredDataProps) {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
 }
 
@@ -53,9 +50,7 @@ export function generateArticleSchema(params: {
     image: params.imageUrl,
     datePublished: params.publishedAt,
     dateModified: params.modifiedAt ?? params.publishedAt,
-    author: params.authorName
-      ? { "@type": "Person", name: params.authorName }
-      : undefined,
+    author: params.authorName ? { "@type": "Person", name: params.authorName } : undefined,
     publisher: {
       "@type": "Organization",
       name: "ChildBloom",

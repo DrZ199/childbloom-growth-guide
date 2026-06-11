@@ -51,15 +51,18 @@ export const getProductBySlug = createServerFn({ method: "GET" })
 export const trackAffiliateClick = createServerFn({ method: "POST" })
   .validator(z.object({ productId: z.string().uuid() }))
   .handler(async ({ data }) => {
-    const { error } = await supabaseAdmin.rpc("increment_affiliate_click" as never, {
-      product_id: data.productId,
-    } as never);
+    const { error } = await supabaseAdmin.rpc(
+      "increment_affiliate_click" as never,
+      {
+        product_id: data.productId,
+      } as never,
+    );
 
     // If RPC doesn't exist, fall back to direct update
     if (error) {
       await supabaseAdmin
         .from("affiliate_products" as never)
-        .update({ click_count: (0 as unknown) as never } as never)
+        .update({ click_count: 0 as unknown as never } as never)
         .eq("id" as never, data.productId)
         .select("click_count");
     }

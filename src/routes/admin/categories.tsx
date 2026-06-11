@@ -23,7 +23,9 @@ function AdminCategories() {
     }
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => {
+    load();
+  }, []);
 
   async function handleCreate(e: React.FormEvent) {
     e.preventDefault();

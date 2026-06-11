@@ -38,8 +38,18 @@ export const Route = createFileRoute("/articles/_template")({
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://childbloom.site" },
-            { "@type": "ListItem", position: 2, name: "Articles", item: "https://childbloom.site/articles" },
-            { "@type": "ListItem", position: 3, name: "Article Title", item: "https://childbloom.site/articles/article-slug" },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Articles",
+              item: "https://childbloom.site/articles",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: "Article Title",
+              item: "https://childbloom.site/articles/article-slug",
+            },
           ],
         }),
       },
@@ -61,17 +71,42 @@ function TemplateArticle() {
             <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
               Article Title with Main Keyword
             </h1>
-            <p className="text-sm text-muted-foreground">XX min read • Published Month Day, Year • Medically reviewed by Dr. Emma Lane, MD</p>
+            <p className="text-sm text-muted-foreground">
+              XX min read • Published Month Day, Year • Medically reviewed by Dr. Emma Lane, MD
+            </p>
           </div>
 
-          <nav className="rounded-2xl border border-border bg-muted p-5 text-sm" aria-label="Table of contents">
+          <nav
+            className="rounded-2xl border border-border bg-muted p-5 text-sm"
+            aria-label="Table of contents"
+          >
             <h2 className="font-semibold mb-3">In This Guide</h2>
             <ol className="space-y-2">
-              <li><a href="#section-1" className="text-primary hover:underline">Section 1</a></li>
-              <li><a href="#section-2" className="text-primary hover:underline">Section 2</a></li>
-              <li><a href="#section-3" className="text-primary hover:underline">Section 3</a></li>
-              <li><a href="#section-4" className="text-primary hover:underline">Section 4</a></li>
-              <li><a href="#faq" className="text-primary hover:underline">Frequently Asked Questions</a></li>
+              <li>
+                <a href="#section-1" className="text-primary hover:underline">
+                  Section 1
+                </a>
+              </li>
+              <li>
+                <a href="#section-2" className="text-primary hover:underline">
+                  Section 2
+                </a>
+              </li>
+              <li>
+                <a href="#section-3" className="text-primary hover:underline">
+                  Section 3
+                </a>
+              </li>
+              <li>
+                <a href="#section-4" className="text-primary hover:underline">
+                  Section 4
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="text-primary hover:underline">
+                  Frequently Asked Questions
+                </a>
+              </li>
             </ol>
           </nav>
 
@@ -118,11 +153,35 @@ function TemplateArticle() {
             <div className="rounded-2xl border border-border bg-muted p-5">
               <h3 className="font-semibold text-lg mb-3">Quick Recommendations</h3>
               <ul className="list-disc space-y-2 pl-6 text-sm text-muted-foreground">
-                <li><strong>Best Overall:</strong> <a href="/go/product-slug" className="text-primary hover:underline" rel="sponsored nofollow">Product Name</a> — brief description</li>
-                <li><strong>Best Budget:</strong> <a href="/go/product-slug" className="text-primary hover:underline" rel="sponsored nofollow">Product Name</a> — brief description</li>
+                <li>
+                  <strong>Best Overall:</strong>{" "}
+                  <a
+                    href="/go/product-slug"
+                    className="text-primary hover:underline"
+                    rel="sponsored nofollow"
+                  >
+                    Product Name
+                  </a>{" "}
+                  — brief description
+                </li>
+                <li>
+                  <strong>Best Budget:</strong>{" "}
+                  <a
+                    href="/go/product-slug"
+                    className="text-primary hover:underline"
+                    rel="sponsored nofollow"
+                  >
+                    Product Name
+                  </a>{" "}
+                  — brief description
+                </li>
               </ul>
               <p className="mt-3 text-sm text-muted-foreground">
-                Read our full <a href="/articles/related-article" className="text-primary hover:underline">Related Article</a> for detailed comparisons.
+                Read our full{" "}
+                <a href="/articles/related-article" className="text-primary hover:underline">
+                  Related Article
+                </a>{" "}
+                for detailed comparisons.
               </p>
             </div>
           </section>
@@ -161,18 +220,25 @@ function TemplateArticle() {
           <div className="rounded-2xl border border-border bg-muted p-6 pt-10">
             <h3 className="text-lg font-semibold text-center mb-2">Related Articles</h3>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="/articles/related-1" className="text-primary hover:underline">Related Article 1</a>
+              <a href="/articles/related-1" className="text-primary hover:underline">
+                Related Article 1
+              </a>
               <span className="text-muted-foreground">•</span>
-              <a href="/articles/related-2" className="text-primary hover:underline">Related Article 2</a>
+              <a href="/articles/related-2" className="text-primary hover:underline">
+                Related Article 2
+              </a>
               <span className="text-muted-foreground">•</span>
-              <a href="/articles/related-3" className="text-primary hover:underline">Related Article 3</a>
+              <a href="/articles/related-3" className="text-primary hover:underline">
+                Related Article 3
+              </a>
             </div>
           </div>
 
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center">
             <p className="text-sm text-muted-foreground">
-              <strong>Medical Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. 
-              Always consult your pediatrician or healthcare provider for concerns about your child's health.
+              <strong>Medical Disclaimer:</strong> This article is for educational purposes only and
+              does not constitute medical advice. Always consult your pediatrician or healthcare
+              provider for concerns about your child's health.
             </p>
           </div>
         </article>
