@@ -2,7 +2,7 @@
 
 **ChildBloom** is a modern, mobile-first parenting and child health website built for scalability, SEO performance, and affiliate monetization.
 
-> **Current Status (June 2026):** 31 high-quality articles published across 7 core pillars with full Pinterest automation and affiliate tracking.
+> **Current Status (June 2026):** 61 high-quality articles published across 7 core pillars with full Pinterest automation and affiliate tracking.
 
 ---
 
@@ -35,7 +35,7 @@ The site is optimized for:
 | Baby Sleep Guide | Newborn Care |
 | Parenting Survival Guide | Parenting |
 
-### 24 Supporting Articles
+### 54 Supporting Articles
 - **Fever Cluster**: Thermometers, fever treatment, teething, home remedies
 - **Nutrition Cluster**: Bottles, formula, toddler tips, starting solids, food makers
 - **Development Cluster**: Educational toys, monthly milestones, speech development, baby books
@@ -43,7 +43,7 @@ The site is optimized for:
 - **Gear Cluster**: Car seats, strollers, diaper bags, baby carriers
 - **General**: Newborn essentials checklist, parenting hacks
 
-**Total:** 31 articles with FAQ sections, internal linking, medical disclaimers, and affiliate opportunities.
+**Total:** 61 articles with FAQ sections, internal linking, medical disclaimers, and affiliate opportunities.
 
 ---
 
@@ -109,7 +109,7 @@ npm run format
 | `npx tsx scripts/generate-pinterest-images.ts` | Prepare image generation for all pins |
 | `npx tsx scripts/create-placeholder-pins.ts` | Create SVG placeholder images |
 
-**Pinterest Images:** 31 optimized images available in `public/pinterest-pins/` (10 AI-generated + 21 SVG placeholders).
+**Pinterest Images:** 61 optimized images available in `public/pinterest-pins/` (high-quality AI-generated + SVG placeholders).
 
 ---
 
@@ -118,16 +118,16 @@ npm run format
 ```
 src/
 ├── routes/
-│   ├── articles/              # 31 article routes
+│   ├── articles/              # 61 article routes
 │   │   ├── best-baby-books.tsx
 │   │   ├── speech-development-guide.tsx
 │   │   ├── best-car-seats.tsx
-│   │   ├── ... (28 more)
+│   │   ├── ... (58 more)
 │   │   └── $slug.tsx          # Dynamic fallback
 │   └── go/
 │       └── $slug.tsx          # Enhanced affiliate redirect + tracking
 ├── lib/
-│   └── site-data.ts           # Central article registry (31 articles)
+│   └── site-data.ts           # Central article registry (61 articles)
 ├── scripts/
 │   ├── generate-pins.ts
 │   ├── generate-pinterest-images.ts
@@ -177,10 +177,10 @@ MIT
 
 ## Recent Milestones (June 2026)
 
-- ✅ Implemented full 30+ article content plan
-- ✅ Added 11 new pillar & supporting articles
-- ✅ Enhanced affiliate tracking system
-- ✅ Built Pinterest pin generation & image pipeline
+- ✅ Implemented full 61-article content plan (Phase 1 + Phase 2)
+- ✅ Added 30 new pillar & supporting articles across Toddler, Pregnancy, Special Needs, and Product Reviews
+- ✅ Enhanced affiliate tracking system (`/go/$slug.tsx`)
+- ✅ Built Pinterest pin generation & image pipeline (61 pins)
 - ✅ All articles include schema, FAQ, internal links, and disclaimers
 - ✅ Pushed complete implementation to GitHub
 
