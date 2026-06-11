@@ -40,6 +40,21 @@ export const Route = createFileRoute("/articles/$slug")({
     const { article } = loaderData;
     const baseUrl = "https://childbloom.site";
     const url = `${baseUrl}/articles/${article.slug}`;
+    
+    const links: Array<{ rel: string; href: string; as?: string; fetchPriority?: "high" }> = [
+      { rel: "canonical", href: article.canonical_url ?? url },
+    ];
+    
+    // Add preload hint for LCP image
+    if (article.cover_image_url) {
+      links.push({
+        rel: "preload",
+        as: "image",
+        href: article.cover_image_url,
+        fetchPriority: "high",
+      });
+    }
+
     return {
       meta: [
         { title: article.seo_title ?? `${article.title} | ChildBloom` },
@@ -57,7 +72,7 @@ export const Route = createFileRoute("/articles/$slug")({
         { name: "article:published_time", content: article.published_at ?? undefined },
         { name: "article:section", content: article.category_name ?? undefined },
       ],
-      links: [{ rel: "canonical", href: article.canonical_url ?? url }],
+      links,
     };
   },
   errorComponent: ({ error }: { error: Error }) => (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 interface TocEntry {
   id: string;
@@ -22,6 +22,7 @@ function extractHeadings(html: string): TocEntry[] {
 
 /** Add IDs to h2/h3 tags in HTML content for anchor linking */
 export function addHeadingIds(html: string): string {
+  if (!html) return "";
   let counter = 0;
   return html.replace(/<h([23])([^>]*)>(.*?)<\/h\1>/gi, (_match, level, attrs, content) => {
     const existingId = /id="([^"]*)"/.exec(attrs);
@@ -33,7 +34,9 @@ export function addHeadingIds(html: string): string {
 
 export function TableOfContents({ html }: { html: string }) {
   const [activeId, setActiveId] = useState<string>("");
-  const headings = extractHeadings(html);
+  
+  // Memoize headings extraction to prevent unnecessary re-renders on every state change
+  const headings = useMemo(() => extractHeadings(html), [html]);
 
   useEffect(() => {
     if (typeof window === "undefined" || headings.length === 0) return;
