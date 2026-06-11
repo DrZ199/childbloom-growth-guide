@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/early-intervention" as const)({
+export const Route = createFileRoute("/articles/early-intervention")({
   head: () => ({
     meta: [
       { title: "Early Intervention Services: What Parents Need to Know | ChildBloom" },

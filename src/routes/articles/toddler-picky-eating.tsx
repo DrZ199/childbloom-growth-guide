@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/toddler-picky-eating" as const)({
+export const Route = createFileRoute("/articles/toddler-picky-eating")({
   head: () => ({
     meta: [
       { title: "Toddler Picky Eating: 25 Strategies That Actually Work | ChildBloom" },

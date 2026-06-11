@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/best-cribs-bassinets" as const)({
+export const Route = createFileRoute("/articles/best-cribs-bassinets")({
   head: () => ({
     meta: [
       { title: "Best Cribs & Bassinets 2026: Convertible, Mini & Next-to-Bed Options | ChildBloom" },

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/best-high-chairs" as const)({
+export const Route = createFileRoute("/articles/best-high-chairs")({
   head: () => ({
     meta: [
       { title: "Best High Chairs 2026: Convertible, Portable & Space-Saving Options | ChildBloom" },
@@ -80,7 +80,7 @@ function BestHighChairsArticle() {
             <ul className="list-disc space-y-2 pl-6">
               <li><strong>Traditional high chairs:</strong> Full-size, often with trays</li>
               <li><strong>Convertible high chairs:</strong> Grow with your child into booster seats</li>
-              <li><strong>Portable / travel high chairs:</h3> Lightweight, foldable options</li>
+              <li><strong>Portable / travel high chairs:</strong> Lightweight, foldable options</li>
               <li><strong>Hook-on chairs:</strong> Attach to tables (use with caution)</li>
             </ul>
           </section>

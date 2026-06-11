@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/potty-training-guide" as const)({
+export const Route = createFileRoute("/articles/potty-training-guide")({
   head: () => ({
     meta: [
       { title: "Potty Training Guide: Complete Step-by-Step for Toddlers 18-36 Months | ChildBloom" },

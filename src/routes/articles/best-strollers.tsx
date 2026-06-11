@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/best-strollers" as const)({
+export const Route = createFileRoute("/articles/best-strollers")({
   head: () => ({
     meta: [
       { title: "Best Strollers 2026: Travel Systems, Jogging & Everyday Picks | ChildBloom" },

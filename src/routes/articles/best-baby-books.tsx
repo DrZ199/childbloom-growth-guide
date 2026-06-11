@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/best-baby-books" as const)({
+export const Route = createFileRoute("/articles/best-baby-books")({
   head: () => ({
     meta: [
       { title: "Best Baby Books 2026: Board Books & Interactive Picks for Ages 0-3 | ChildBloom" },
