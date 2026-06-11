@@ -10,7 +10,7 @@ interface AffiliateData {
   source: string;
 }
 
-export const Route = createFileRoute("/go/$slug" as const)({
+export const Route = createFileRoute("/go/$slug")({
   loader: async ({ params }) => {
     const slug = params.slug;
 

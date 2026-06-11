@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/newborn-essentials-checklist" as const)({
+export const Route = createFileRoute("/articles/newborn-essentials-checklist")({
   head: () => ({
     meta: [
       { title: "Newborn Essentials Checklist 2026: Must-Have Baby Registry Items | ChildBloom" },

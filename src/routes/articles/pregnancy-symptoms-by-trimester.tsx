@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/pregnancy-symptoms-by-trimester" as const)({
+export const Route = createFileRoute("/articles/pregnancy-symptoms-by-trimester")({
   head: () => ({
     meta: [
       { title: "Pregnancy Symptoms by Trimester: What’s Normal and When to Worry | ChildBloom" },

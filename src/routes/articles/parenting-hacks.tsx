@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/parenting-hacks" as const)({
+export const Route = createFileRoute("/articles/parenting-hacks")({
   head: () => ({
     meta: [
       { title: "Parenting Hacks 2026: 25 Time-Saving Tips for New Parents | ChildBloom" },

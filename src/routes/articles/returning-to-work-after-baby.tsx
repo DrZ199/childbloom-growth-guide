@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/returning-to-work-after-baby" as const)({
+export const Route = createFileRoute("/articles/returning-to-work-after-baby")({
   head: () => ({
     meta: [
       { title: "Returning to Work After Baby: A Practical Guide for New Parents | ChildBloom" },

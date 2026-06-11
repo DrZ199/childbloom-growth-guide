@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/postpartum-hair-loss" as const)({
+export const Route = createFileRoute("/articles/postpartum-hair-loss")({
   head: () => ({
     meta: [
       { title: "Postpartum Hair Loss: Why It Happens and How to Cope | ChildBloom" },

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/adhd-in-toddlers" as const)({
+export const Route = createFileRoute("/articles/adhd-in-toddlers")({
   head: () => ({
     meta: [
       { title: "ADHD in Toddlers: Early Signs and What Parents Can Do | ChildBloom" },

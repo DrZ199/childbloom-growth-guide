@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/toddler-activities-at-home" as const)({
+export const Route = createFileRoute("/articles/toddler-activities-at-home")({
   head: () => ({
     meta: [
       { title: "Toddler Activities at Home: 40 Screen-Free Ideas by Age | ChildBloom" },

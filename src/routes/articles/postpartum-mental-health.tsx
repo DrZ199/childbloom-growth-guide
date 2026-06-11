@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/postpartum-mental-health" as const)({
+export const Route = createFileRoute("/articles/postpartum-mental-health")({
   head: () => ({
     meta: [
       { title: "Postpartum Mental Health: Recognizing PPD, PPA, and Getting Help | ChildBloom" },

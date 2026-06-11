@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/toddler-sleep-regression" as const)({
+export const Route = createFileRoute("/articles/toddler-sleep-regression")({
   head: () => ({
     meta: [
       { title: "Toddler Sleep Regression: 18 Months, 2 Years & 3 Years Explained | ChildBloom" },

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/best-diaper-bags" as const)({
+export const Route = createFileRoute("/articles/best-diaper-bags")({
   head: () => ({
     meta: [
       { title: "Best Diaper Bags 2026: Backpack, Tote & Messenger Styles | ChildBloom" },

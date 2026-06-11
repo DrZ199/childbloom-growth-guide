@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
 
-export const Route = createFileRoute("/articles/best-baby-walkers" as const)({
+export const Route = createFileRoute("/articles/best-baby-walkers")({
   head: () => ({
     meta: [
       { title: "Best Baby Walkers & Activity Centers 2026: Reviews & Safety Guide | ChildBloom" },
