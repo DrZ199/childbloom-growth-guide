@@ -94,8 +94,10 @@ export function OptimizedImage({
 /**
  * Hero image component optimized for LCP (Largest Contentful Paint)
  * - Priority loading
- * - Preload hint
  * - No blur placeholder to avoid layout shift
+ * 
+ * Note: Preload hints should be added to the document head via the router's head function,
+ * not rendered inline in the body, to avoid hydration mismatches and invalid HTML.
  */
 export function HeroImage({
   src,
@@ -104,18 +106,14 @@ export function HeroImage({
   ...props
 }: Omit<OptimizedImageProps, "priority" | "aspectRatio">) {
   return (
-    <>
-      {/* Preload hint for LCP */}
-      <link rel="preload" as="image" href={src} fetchPriority="high" />
-      <OptimizedImage
-        src={src}
-        alt={alt}
-        priority={true}
-        aspectRatio="wide"
-        sizes="100vw"
-        className={className}
-        {...props}
-      />
-    </>
+    <OptimizedImage
+      src={src}
+      alt={alt}
+      priority={true}
+      aspectRatio="wide"
+      sizes="100vw"
+      className={className}
+      {...props}
+    />
   );
 }
