@@ -23,6 +23,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AdminRouteRouteImport } from './routes/admin/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthorsIndexRouteImport } from './routes/authors/index'
+import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as GoSlugRouteImport } from './routes/go/$slug'
 import { Route as CategoriesSlugRouteImport } from './routes/categories/$slug'
@@ -166,6 +167,11 @@ const AuthorsIndexRoute = AuthorsIndexRouteImport.update({
   id: '/authors/',
   path: '/authors/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ArticlesRoute,
 } as any)
 const AdminIndexRoute = AdminIndexRouteImport.update({
   id: '/',
@@ -656,6 +662,7 @@ export interface FileRoutesByFullPath {
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
   '/admin/': typeof AdminIndexRoute
+  '/articles/': typeof ArticlesIndexRoute
   '/authors/': typeof AuthorsIndexRoute
   '/admin/articles/$id': typeof AdminArticlesIdRoute
   '/admin/articles/new': typeof AdminArticlesNewRoute
@@ -665,7 +672,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
-  '/articles': typeof ArticlesRouteWithChildren
   '/categories': typeof CategoriesRouteWithChildren
   '/contact': typeof ContactRoute
   '/cookie-policy': typeof CookiePolicyRoute
@@ -680,6 +686,7 @@ export interface FileRoutesByTo {
   '/admin/messages': typeof AdminMessagesRoute
   '/admin/subscribers': typeof AdminSubscribersRoute
   '/articles/$slug': typeof ArticlesSlugRoute
+  '/articles': typeof ArticlesIndexRoute
   '/articles/adhd-in-toddlers': typeof ArticlesAdhdInToddlersRoute
   '/articles/baby-milestones-by-month': typeof ArticlesBabyMilestonesByMonthRoute
   '/articles/baby-sleep-guide': typeof ArticlesBabySleepGuideRoute
@@ -833,6 +840,7 @@ export interface FileRoutesById {
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
   '/admin/': typeof AdminIndexRoute
+  '/articles/': typeof ArticlesIndexRoute
   '/authors/': typeof AuthorsIndexRoute
   '/admin/articles/$id': typeof AdminArticlesIdRoute
   '/admin/articles/new': typeof AdminArticlesNewRoute
@@ -923,6 +931,7 @@ export interface FileRouteTypes {
     | '/categories/$slug'
     | '/go/$slug'
     | '/admin/'
+    | '/articles/'
     | '/authors/'
     | '/admin/articles/$id'
     | '/admin/articles/new'
@@ -932,7 +941,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/affiliate-disclosure'
-    | '/articles'
     | '/categories'
     | '/contact'
     | '/cookie-policy'
@@ -947,6 +955,7 @@ export interface FileRouteTypes {
     | '/admin/messages'
     | '/admin/subscribers'
     | '/articles/$slug'
+    | '/articles'
     | '/articles/adhd-in-toddlers'
     | '/articles/baby-milestones-by-month'
     | '/articles/baby-sleep-guide'
@@ -1099,6 +1108,7 @@ export interface FileRouteTypes {
     | '/categories/$slug'
     | '/go/$slug'
     | '/admin/'
+    | '/articles/'
     | '/authors/'
     | '/admin/articles/$id'
     | '/admin/articles/new'
@@ -1223,6 +1233,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/authors/'
       preLoaderRoute: typeof AuthorsIndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/articles/': {
+      id: '/articles/'
+      path: '/'
+      fullPath: '/articles/'
+      preLoaderRoute: typeof ArticlesIndexRouteImport
+      parentRoute: typeof ArticlesRoute
     }
     '/admin/': {
       id: '/admin/'
@@ -1828,6 +1845,7 @@ interface ArticlesRouteChildren {
   ArticlesToddlerSleepRegressionRoute: typeof ArticlesToddlerSleepRegressionRoute
   ArticlesToddlerTantrumsRoute: typeof ArticlesToddlerTantrumsRoute
   ArticlesVaccinationGuideRoute: typeof ArticlesVaccinationGuideRoute
+  ArticlesIndexRoute: typeof ArticlesIndexRoute
 }
 
 const ArticlesRouteChildren: ArticlesRouteChildren = {
@@ -1896,6 +1914,7 @@ const ArticlesRouteChildren: ArticlesRouteChildren = {
   ArticlesToddlerSleepRegressionRoute: ArticlesToddlerSleepRegressionRoute,
   ArticlesToddlerTantrumsRoute: ArticlesToddlerTantrumsRoute,
   ArticlesVaccinationGuideRoute: ArticlesVaccinationGuideRoute,
+  ArticlesIndexRoute: ArticlesIndexRoute,
 }
 
 const ArticlesRouteWithChildren = ArticlesRoute._addFileChildren(
