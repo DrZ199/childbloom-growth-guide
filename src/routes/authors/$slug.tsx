@@ -89,7 +89,7 @@ function AuthorPage() {
             >
               {author.name
                 .split(" ")
-                .map((p) => p[0])
+                .map((p: string) => p[0])
                 .slice(0, 2)
                 .join("")}
             </div>

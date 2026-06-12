@@ -80,7 +80,7 @@ function DynamicCategoryPage() {
 
       {category.articles.length > 0 ? (
         <div className="grid gap-6 md:grid-cols-2">
-          {category.articles.map((article) => (
+          {category.articles.map((article: Record<string, never>) => (
             <article
               key={article.id}
               className="group overflow-hidden rounded-2xl border border-border bg-muted p-6 transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"

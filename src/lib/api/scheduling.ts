@@ -193,7 +193,8 @@ export const getWorkflowHistory = createServerFn({ method: "GET" })
       .limit(50);
 
     if (error || !rows) return [];
-    return rows as Array<Record<string, unknown>>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return rows as Array<Record<string, any>>;
   });
 
 /**
