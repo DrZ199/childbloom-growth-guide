@@ -43,7 +43,6 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
   useEffect(() => {
     captureException(error, {
-      boundary: "tanstack_root_error_component",
       action: "route_error",
       extra: { route: window.location.pathname },
     });

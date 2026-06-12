@@ -1,7 +1,12 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
-import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import { supabaseAdmin as _supabaseAdmin } from "@/integrations/supabase/client.server";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+
+// Cast to `any` because workflow_status / scheduled_publish_at / content_audit_log
+// are not present in the generated Supabase types.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const supabaseAdmin: any = _supabaseAdmin;
 
 // ---------------------------------------------------------------------------
 // Content Scheduling
@@ -188,7 +193,8 @@ export const getWorkflowHistory = createServerFn({ method: "GET" })
       .limit(50);
 
     if (error || !rows) return [];
-    return rows as Array<Record<string, unknown>>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return rows as Array<Record<string, any>>;
   });
 
 /**

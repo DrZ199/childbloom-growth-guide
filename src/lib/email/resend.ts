@@ -9,12 +9,15 @@
 const RESEND_API_KEY = process.env.RESEND_API_KEY as string | undefined;
 const RESEND_FROM = process.env.RESEND_FROM ?? "ChildBloom <noreply@childbloom.site>";
 
-let resendInstance: ReturnType<typeof import("resend").Resend> | null = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let resendInstance: any = null;
 
-function getResend(): ReturnType<typeof import("resend").Resend> | null {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getResend(): any {
   if (!RESEND_API_KEY) return null;
   if (resendInstance) return resendInstance;
-  const { Resend } = require("resend");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-explicit-any
+  const { Resend } = require("resend") as { Resend: new (key: string) => any };
   resendInstance = new Resend(RESEND_API_KEY);
   return resendInstance;
 }

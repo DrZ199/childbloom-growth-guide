@@ -343,7 +343,7 @@ function BabyMilestonesByMonth() {
                       Around 4 months, sleep cycles mature and babies wake between cycles. This is a
                       progression, not a regression. Consistency with sleep routines helps. See our{" "}
                       <Link
-                        to="/articles/baby-sleep-guide/"
+                        to="/articles/baby-sleep-guide"
                         className="text-pink-600 hover:underline"
                       >
                         Baby Sleep Guide
@@ -458,7 +458,7 @@ function BabyMilestonesByMonth() {
                     <p className="text-gray-700">
                       Around 6 months, most babies show readiness for solids. See our{" "}
                       <Link
-                        to="/articles/starting-solids-guide/"
+                        to="/articles/starting-solids-guide"
                         className="text-pink-600 hover:underline"
                       >
                         Starting Solids Guide
