@@ -72,9 +72,8 @@ export function initWebVitals(onReport: ReportCallback = defaultReporter): void 
 
   // Dynamically import web-vitals to avoid bundle bloat
   import("web-vitals").then(
-    ({ onCLS, onFID, onLCP, onINP, onTTFB }) => {
+    ({ onCLS, onLCP, onINP, onTTFB }) => {
       onCLS((m) => onReport({ ...m, rating: rateMetric("CLS", m.value) }));
-      onFID((m) => onReport({ ...m, rating: rateMetric("FID", m.value) }));
       onLCP((m) => onReport({ ...m, rating: rateMetric("LCP", m.value) }));
       onINP((m) => onReport({ ...m, rating: rateMetric("INP", m.value) }));
       onTTFB((m) => onReport({ ...m, rating: rateMetric("TTFB", m.value) }));

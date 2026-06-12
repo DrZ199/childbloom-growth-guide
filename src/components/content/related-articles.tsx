@@ -1,7 +1,11 @@
 import { Clock } from "lucide-react";
 import type { ArticleSummary } from "@/types/article";
 
-export function RelatedArticles({ articles }: { articles: ArticleSummary[] }) {
+type RelatedArticleInput =
+  | ArticleSummary
+  | (Partial<ArticleSummary> & { slug: string; title: string });
+
+export function RelatedArticles({ articles }: { articles: RelatedArticleInput[] }) {
   if (articles.length === 0) return null;
 
   return (
@@ -10,7 +14,7 @@ export function RelatedArticles({ articles }: { articles: ArticleSummary[] }) {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {articles.map((a) => (
           <a
-            key={a.id}
+            key={a.id ?? a.slug}
             href={`/articles/${a.slug}`}
             className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
           >

@@ -55,7 +55,7 @@ export function getEnv(): Env {
     }
   }
 
-  return result.data;
+  return result.data ?? (env as ReturnType<typeof envSchema.parse>);
 }
 
 // Export validated environment for use throughout the app

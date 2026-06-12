@@ -32,11 +32,25 @@ export function addHeadingIds(html: string): string {
   });
 }
 
-export function TableOfContents({ html }: { html: string }) {
+interface TocItem {
+  id: string;
+  title?: string;
+  text?: string;
+  level?: number;
+}
+
+export function TableOfContents(props: { html?: string; items?: TocItem[] }) {
+  const { html = "", items } = props;
   const [activeId, setActiveId] = useState<string>("");
-  
+
   // Memoize headings extraction to prevent unnecessary re-renders on every state change
-  const headings = useMemo(() => extractHeadings(html), [html]);
+  const headings = useMemo<TocEntry[]>(
+    () =>
+      items && items.length > 0
+        ? items.map((it) => ({ id: it.id, text: it.title ?? it.text ?? it.id, level: it.level ?? 2 }))
+        : extractHeadings(html),
+    [html, items],
+  );
 
   useEffect(() => {
     if (typeof window === "undefined" || headings.length === 0) return;
