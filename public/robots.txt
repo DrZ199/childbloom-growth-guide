@@ -15,6 +15,3 @@ Disallow: /search
 
 # Sitemaps
 Sitemap: https://childbloom.site/sitemap.xml
-
-# Crawl delay for polite crawling
-Crawl-delay: 1

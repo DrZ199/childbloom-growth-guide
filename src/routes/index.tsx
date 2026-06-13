@@ -61,6 +61,8 @@ const articles = [
     excerpt:
       "What pediatricians actually recommend for safe sleep, wake windows, and gentle routines.",
     read: "8 min read",
+    image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=800&q=80",
+    href: "/articles/newborn-sleep",
   },
   {
     tag: "Nutrition",
@@ -68,6 +70,8 @@ const articles = [
     excerpt:
       "Iron-rich first foods, allergens, textures, and a simple weekly schedule parents can follow.",
     read: "11 min read",
+    image: "https://images.unsplash.com/photo-1566004100631-35d015d6a491?auto=format&fit=crop&w=800&q=80",
+    href: "/articles/starting-solids",
   },
   {
     tag: "Development",
@@ -75,6 +79,8 @@ const articles = [
     excerpt:
       "What's typical, what's not, and 7 daily moments that quietly grow your toddler's vocabulary.",
     read: "7 min read",
+    image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80",
+    href: "/articles/speech-milestones",
   },
 ];
 
@@ -262,14 +268,22 @@ function LatestArticles() {
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {articles.map((a) => (
-            <article
+            <a
               key={a.title}
+              href={a.href}
               className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]"
             >
-              <div
-                className="aspect-[16/10] w-full"
-                style={{ background: "var(--gradient-hero)" }}
-              />
+              <div className="aspect-[16/10] w-full overflow-hidden bg-muted">
+                <img
+                  src={a.image}
+                  alt={a.title}
+                  width={800}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
               <div className="flex flex-1 flex-col p-6">
                 <span className="text-xs font-medium uppercase tracking-wider text-primary">
                   {a.tag}
@@ -283,7 +297,7 @@ function LatestArticles() {
                   <span className="font-medium text-primary">Read article →</span>
                 </div>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
