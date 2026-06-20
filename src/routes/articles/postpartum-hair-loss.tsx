@@ -1,154 +1,352 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { seo } from "@/lib/seo";
 import { ReadingProgress } from "@/components/content/reading-progress";
 import { BackToTop } from "@/components/content/back-to-top";
+import { TableOfContents } from "@/components/content/table-of-contents";
+import { RelatedArticles } from "@/components/content/related-articles";
 
 export const Route = createFileRoute("/articles/postpartum-hair-loss")({
-  head: () => ({
-    meta: [
-      { title: "Postpartum Hair Loss: Why It Happens and How to Cope | ChildBloom" },
-      {
-        name: "description",
-        content: "Complete guide to postpartum hair loss (telogen effluvium). Why it happens, when it peaks, how long it lasts, and practical ways to manage hair shedding after pregnancy.",
-      },
-      { property: "og:title", content: "Postpartum Hair Loss: Why It Happens and How to Cope | ChildBloom" },
-      { property: "og:description", content: "Complete guide to postpartum hair loss (telogen effluvium). Why it happens, when it peaks, how long it lasts, and practical ways to manage hair shedding." },
-      { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/articles/postpartum-hair-loss" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: "Postpartum Hair Loss: Why It Happens and How to Cope",
-          description: "Complete guide to postpartum hair loss (telogen effluvium). Why it happens, when it peaks, how long it lasts, and practical ways to manage hair shedding.",
-          author: { "@type": "Person", name: "Dr. Emma Lane" },
-          publisher: { "@type": "Organization", name: "ChildBloom" },
-          mainEntityOfPage: { "@type": "WebPage", "@id": "/articles/postpartum-hair-loss" },
-          datePublished: "2026-06-12",
-          dateModified: "2026-06-12",
-        }),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://childbloom.site" },
-            { "@type": "ListItem", position: 2, name: "Articles", item: "https://childbloom.site/articles" },
-            { "@type": "ListItem", position: 3, name: "Postpartum Hair Loss", item: "https://childbloom.site/articles/postpartum-hair-loss" },
-          ],
-        }),
-      },
-    ],
-  }),
   component: PostpartumHairLossArticle,
+  head: () => {
+    const url = "https://childbloom.site/articles/postpartum-hair-loss/";
+    return seo({
+      title: "Postpartum Hair Loss: Why It Happens & How to Cope | ChildBloom",
+      description:
+        "Postpartum hair loss explained: why it happens, when it peaks, how long it lasts, and gentle, practical ways to manage hair shedding after pregnancy.",
+      url,
+      type: "article",
+      publishedTime: "2026-06-12",
+      modifiedTime: "2026-06-21",
+      author: "ChildBloom Medical Team",
+      image: "https://childbloom.site/images/articles/postpartum-hair-loss-og.jpg",
+    });
+  },
 });
 
 function PostpartumHairLossArticle() {
+  const tableOfContents = [
+    { id: "quick-answer", title: "Quick Answer" },
+    { id: "what-is", title: "What Is Postpartum Hair Loss?" },
+    { id: "why", title: "Why It Happens" },
+    { id: "timeline", title: "When It Peaks and Ends" },
+    { id: "manage", title: "How to Manage It" },
+    { id: "avoid", title: "What to Avoid" },
+    { id: "when-to-call", title: "When to Call a Doctor" },
+    { id: "faq", title: "Frequently Asked Questions" },
+  ];
+
+  const relatedArticles = [
+    { title: "Postpartum Recovery", slug: "postpartum-recovery" },
+    { title: "Postpartum Mental Health", slug: "postpartum-mental-health" },
+    { title: "Returning to Work After Baby", slug: "returning-to-work-after-baby" },
+    { title: "Breastfeeding vs Formula", slug: "breastfeeding-vs-formula" },
+    { title: "Newborn Sleep", slug: "newborn-sleep" },
+  ];
+
   return (
     <>
       <ReadingProgress />
-      <main id="main-content" tabIndex={-1} className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-        <article className="space-y-8 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
-          <div className="space-y-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-              Parenting
-            </p>
-            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+      <div className="min-h-screen bg-gradient-to-b from-pink-50/30 to-white">
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <header className="mb-10">
+            <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+              <Link to="/" className="hover:text-pink-600 transition-colors">
+                Home
+              </Link>
+              <span>/</span>
+              <Link to="/articles" className="hover:text-pink-600 transition-colors">
+                Articles
+              </Link>
+              <span>/</span>
+              <span className="text-gray-700">Postpartum Hair Loss</span>
+            </nav>
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight text-balance">
               Postpartum Hair Loss: Why It Happens and How to Cope
             </h1>
-            <p className="text-sm text-muted-foreground">13 min read • Published June 12, 2026 • Medically reviewed by Dr. Emma Lane, MD</p>
-          </div>
-
-          <nav className="rounded-2xl border border-border bg-muted p-5 text-sm" aria-label="Table of contents">
-            <h2 className="font-semibold mb-3">In This Guide</h2>
-            <ol className="space-y-2">
-              <li><a href="#why-it-happens" className="text-primary hover:underline">Why Postpartum Hair Loss Happens</a></li>
-              <li><a href="#when-it-peaks" className="text-primary hover:underline">When It Peaks and How Long It Lasts</a></li>
-              <li><a href="#coping-strategies" className="text-primary hover:underline">Practical Coping Strategies</a></li>
-              <li><a href="#when-to-worry" className="text-primary hover:underline">When to See a Doctor</a></li>
-              <li><a href="#faq" className="text-primary hover:underline">Frequently Asked Questions</a></li>
-            </ol>
-          </nav>
-
-          <section id="why-it-happens" className="space-y-6 text-sm leading-7 text-muted-foreground">
-            <h2 className="text-2xl font-semibold">Why Postpartum Hair Loss Happens</h2>
-            <p>
-              During pregnancy, high estrogen levels keep hair in the growth phase longer, so many women experience thicker, fuller hair. 
-              After birth, estrogen drops sharply, causing a large number of hairs to enter the shedding phase at once (telogen effluvium).
+            <p className="text-xl text-gray-600 mb-6 leading-relaxed text-pretty">
+              Clumps of hair in the shower a few months after birth can be alarming. The good news:
+              postpartum shedding is normal, temporary, and not a sign that anything is wrong.
             </p>
-          </section>
+            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+              <span>By ChildBloom Medical Team</span>
+              <span>•</span>
+              <span>Updated June 21, 2026</span>
+              <span>•</span>
+              <span>10 min read</span>
+            </div>
+          </header>
 
-          <section id="when-it-peaks" className="space-y-6 text-sm leading-7 text-muted-foreground">
-            <h2 className="text-2xl font-semibold">When It Peaks and How Long It Lasts</h2>
-            <ul className="list-disc space-y-2 pl-6">
-              <li>Most women notice increased shedding between 3 and 6 months postpartum</li>
-              <li>Peak shedding usually occurs around 4 months</li>
-              <li>Hair typically returns to normal within 6–12 months</li>
-              <li>New growth may appear as short “baby hairs” around the hairline</li>
-            </ul>
-          </section>
-
-          <section id="coping-strategies" className="space-y-6 text-sm leading-7 text-muted-foreground">
-            <h2 className="text-2xl font-semibold">Practical Coping Strategies</h2>
-            <ul className="list-disc space-y-2 pl-6">
-              <li>Use gentle shampoos and avoid harsh styling</li>
-              <li>Consider a shorter haircut to reduce the appearance of thinning</li>
-              <li>Avoid tight hairstyles that pull on the hair</li>
-              <li>Eat a nutrient-rich diet (protein, iron, biotin)</li>
-              <li>Be patient — this is temporary</li>
-            </ul>
-          </section>
-
-          <section id="when-to-worry" className="space-y-6 text-sm leading-7 text-muted-foreground">
-            <h2 className="text-2xl font-semibold">When to See a Doctor</h2>
-            <p>
-              While postpartum hair loss is normal, consult your doctor if:
-            </p>
-            <ul className="list-disc space-y-2 pl-6">
-              <li>Hair loss is extreme or patchy</li>
-              <li>You notice bald spots</li>
-              <li>Shedding continues beyond 12–18 months</li>
-              <li>You have other symptoms (fatigue, weight changes)</li>
-            </ul>
-          </section>
-
-          <section id="faq" className="space-y-6 text-sm leading-7 text-muted-foreground">
-            <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
-            <dl className="space-y-6">
-              <div>
-                <dt className="font-semibold text-foreground">Will my hair ever go back to normal?</dt>
-                <dd className="mt-2">Yes. For the vast majority of women, hair returns to its pre-pregnancy thickness within 6–12 months after giving birth.</dd>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <aside className="hidden lg:block lg:col-span-3">
+              <div className="sticky top-20">
+                <TableOfContents items={tableOfContents} />
               </div>
-              <div>
-                <dt className="font-semibold text-foreground">Can I prevent postpartum hair loss?</dt>
-                <dd className="mt-2">You can’t fully prevent it, but maintaining good nutrition and gentle hair care can minimize the impact.</dd>
-              </div>
-            </dl>
-          </section>
+            </aside>
 
-          <div className="rounded-2xl border border-border bg-muted p-6 pt-10">
-            <h3 className="text-lg font-semibold text-center mb-2">Related Articles</h3>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="/articles/postpartum-recovery" className="text-primary hover:underline">Postpartum Recovery Timeline</a>
-              <span className="text-muted-foreground">•</span>
-              <a href="/articles/postpartum-mental-health" className="text-primary hover:underline">Postpartum Mental Health</a>
+            <div className="lg:col-span-9">
+              <div className="prose prose-lg prose-pink max-w-none">
+                <div id="quick-answer" className="bg-pink-50 border-l-4 border-pink-500 p-6 rounded-r-lg mb-8 scroll-mt-24">
+                  <h2 className="text-lg font-bold text-pink-900 mt-0 mb-2">Quick Answer</h2>
+                  <p className="text-pink-900 font-medium text-lg mb-0">
+                    Postpartum hair loss, called telogen effluvium, is normal shedding caused by falling
+                    estrogen levels after birth. It usually starts around 2 to 4 months postpartum,
+                    peaks around month 4, and settles by 6 to 12 months. You do not lose more hair than
+                    you grew in pregnancy, and no treatment is needed.
+                  </p>
+                </div>
+
+                <section id="what-is" className="mb-12 scroll-mt-24">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">What Is Postpartum Hair Loss?</h2>
+                  <p className="text-gray-700 mb-4">
+                    During pregnancy, high hormone levels keep more hair in the growing phase, so hair
+                    often feels thick and full. After birth, those hormones drop, and the extra hair
+                    moves into the shedding phase all at once. This sudden shed is called telogen
+                    effluvium.
+                  </p>
+                  <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-4">
+                    <h3 className="font-semibold text-blue-900 mb-2 mt-0">Featured Snippet: What causes postpartum hair loss?</h3>
+                    <p className="text-gray-700 mb-0">
+                      Postpartum hair loss is caused by a drop in estrogen after birth. Pregnancy
+                      hormones keep extra hair from falling out, so once they fall, that hair sheds at
+                      once. It is temporary and usually resolves within a year without treatment.
+                    </p>
+                  </div>
+                </section>
+
+                <section id="why" className="mb-12 scroll-mt-24">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">Why It Happens</h2>
+                  <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+                    <li>Estrogen rises in pregnancy and pauses normal hair shedding</li>
+                    <li>After birth, estrogen falls quickly</li>
+                    <li>Hair that "paused" all enters the shedding phase together</li>
+                    <li>Stress, sleep loss, and low iron can add to the effect</li>
+                  </ul>
+                  <p className="text-gray-700 mb-0">
+                    It can feel dramatic, but you are simply catching up on shedding you skipped during
+                    pregnancy.
+                  </p>
+                </section>
+
+                <section id="timeline" className="mb-12 scroll-mt-24">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">When It Peaks and Ends</h2>
+                  <div className="space-y-4 mb-4">
+                    <div className="bg-gray-50 p-5 rounded-lg">
+                      <h3 className="font-semibold text-gray-900 mb-1 mt-0">Months 2 to 4</h3>
+                      <p className="text-gray-700 mb-0">Shedding usually begins. You may notice more hair in the brush, shower, or on your pillow.</p>
+                    </div>
+                    <div className="bg-gray-50 p-5 rounded-lg">
+                      <h3 className="font-semibold text-gray-900 mb-1 mt-0">Around Month 4</h3>
+                      <p className="text-gray-700 mb-0">Shedding often peaks. This is when many parents feel most worried.</p>
+                    </div>
+                    <div className="bg-gray-50 p-5 rounded-lg">
+                      <h3 className="font-semibold text-gray-900 mb-1 mt-0">Months 6 to 12</h3>
+                      <p className="text-gray-700 mb-0">Shedding slows and stops. Most women see hair return to its usual fullness by their baby's first birthday.</p>
+                    </div>
+                  </div>
+                  <div className="bg-pink-50 border-l-4 border-pink-400 p-5 rounded-r-lg mb-4">
+                    <p className="text-gray-700 mb-0">
+                      <strong>Parent scenario:</strong> When Leah's hair started coming out in handfuls
+                      at four months, she feared something was wrong. Her doctor reassured her it was
+                      classic postpartum shedding. By her son's first birthday, her hairline had filled
+                      back in with soft new growth.
+                    </p>
+                  </div>
+                </section>
+
+                <section id="manage" className="mb-12 scroll-mt-24">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">How to Manage It</h2>
+                  <div className="bg-green-50 border border-green-200 p-6 rounded-lg mb-4">
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-0">
+                      <li>Eat a balanced diet with protein, iron, and vitamins</li>
+                      <li>Keep taking your prenatal or postnatal vitamin if advised</li>
+                      <li>Be gentle: use a wide-tooth comb and avoid tight styles</li>
+                      <li>Try a volumizing shampoo or a flattering shorter cut</li>
+                      <li>Use a soft scrunchie instead of tight elastics</li>
+                      <li>Be patient; new growth often appears as short baby hairs</li>
+                    </ul>
+                  </div>
+                </section>
+
+                <section id="avoid" className="mb-12 scroll-mt-24">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">What to Avoid</h2>
+                  <div className="bg-red-50 border border-red-200 p-6 rounded-lg mb-4">
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-0">
+                      <li>Tight ponytails, braids, or buns that pull on the roots</li>
+                      <li>Harsh heat styling and strong chemical treatments</li>
+                      <li>Crash diets, which can worsen shedding</li>
+                      <li>Unproven "miracle" hair loss products</li>
+                    </ul>
+                  </div>
+                </section>
+
+                <section id="when-to-call" className="mb-12 scroll-mt-24">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">When to Call a Doctor</h2>
+                  <p className="text-gray-700 mb-4">
+                    Postpartum shedding is normal, but check with your doctor if:
+                  </p>
+                  <div className="bg-red-50 border border-red-200 p-6 rounded-lg mb-4">
+                    <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-0">
+                      <li>Hair loss continues heavily past 12 months</li>
+                      <li>You see bald patches or your scalp shows clearly</li>
+                      <li>You also feel very tired, cold, or low in mood (possible thyroid or anemia)</li>
+                      <li>Your scalp is red, itchy, scaly, or sore</li>
+                      <li>You are worried something other than normal shedding is going on</li>
+                    </ul>
+                  </div>
+                  <p className="text-gray-700 mb-0">
+                    Thyroid problems and low iron are common after birth and can affect hair, so a
+                    simple blood test may help.
+                  </p>
+                </section>
+
+                <section id="faq" className="mb-12 scroll-mt-24">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                  <div className="space-y-6">
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 mt-0">
+                        Is postpartum hair loss permanent?
+                      </h3>
+                      <p className="text-gray-700 mb-0">
+                        No. It is temporary. Most women see their hair return to its normal thickness
+                        within 6 to 12 months after birth as the growth cycle resets.
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 mt-0">
+                        Will breastfeeding make hair loss worse?
+                      </h3>
+                      <p className="text-gray-700 mb-0">
+                        No. Breastfeeding does not cause or worsen postpartum hair loss. The shedding is
+                        driven by hormone changes after birth, not by nursing.
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 mt-0">
+                        Can vitamins stop the shedding?
+                      </h3>
+                      <p className="text-gray-700 mb-0">
+                        Vitamins support overall hair health but will not stop normal postpartum
+                        shedding, which runs its course. A balanced diet and treating any iron or thyroid
+                        issue are most helpful.
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 mt-0">
+                        Should I cut my hair?
+                      </h3>
+                      <p className="text-gray-700 mb-0">
+                        A shorter style can make thinning less noticeable and easier to manage with a
+                        baby, but it is a personal choice. Cutting hair does not change how much you
+                        shed.
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-lg">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 mt-0">
+                        When should I worry?
+                      </h3>
+                      <p className="text-gray-700 mb-0">
+                        See your doctor if shedding lasts beyond a year, you develop bald patches, or you
+                        have other symptoms like fatigue or feeling cold, which could point to a thyroid
+                        or iron problem.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                <div className="bg-pink-50 border-l-4 border-pink-500 p-6 rounded-r-lg">
+                  <h3 className="text-xl font-bold text-pink-900 mb-3 mt-0">Medical Disclaimer</h3>
+                  <p className="text-pink-800 mb-0">
+                    This article is for educational purposes only and is not a substitute for
+                    professional medical advice. Talk to your doctor about hair loss that is severe,
+                    lasts beyond a year, or comes with other symptoms.
+                  </p>
+                </div>
+              </div>
+
+              <RelatedArticles articles={relatedArticles} />
             </div>
           </div>
-
-          <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center">
-            <p className="text-sm text-muted-foreground">
-              <strong>Medical Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. 
-              Always consult your pediatrician or healthcare provider for concerns about your child's health.
-            </p>
-          </div>
         </article>
-      </main>
+      </div>
       <BackToTop />
     </>
   );
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Postpartum Hair Loss: Why It Happens and How to Cope",
+  description:
+    "Postpartum hair loss explained: why it happens, when it peaks, how long it lasts, and gentle, practical ways to manage hair shedding after pregnancy.",
+  image: "https://childbloom.site/images/articles/postpartum-hair-loss-og.jpg",
+  datePublished: "2026-06-12",
+  dateModified: "2026-06-21",
+  author: { "@type": "Organization", name: "ChildBloom Medical Team", url: "https://childbloom.site" },
+  publisher: {
+    "@type": "Organization",
+    name: "ChildBloom",
+    url: "https://childbloom.site",
+    logo: { "@type": "ImageObject", url: "https://childbloom.site/logo.png" },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://childbloom.site/articles/postpartum-hair-loss/",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is postpartum hair loss permanent?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. It is temporary. Most women see their hair return to its normal thickness within 6 to 12 months after birth as the growth cycle resets.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Will breastfeeding make hair loss worse?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Breastfeeding does not cause or worsen postpartum hair loss. The shedding is driven by hormone changes after birth, not by nursing.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can vitamins stop the shedding?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Vitamins support overall hair health but will not stop normal postpartum shedding, which runs its course. A balanced diet and treating any iron or thyroid issue are most helpful.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Should I cut my hair?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A shorter style can make thinning less noticeable and easier to manage with a baby, but it is a personal choice. Cutting hair does not change how much you shed.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When should I worry about postpartum hair loss?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "See your doctor if shedding lasts beyond a year, you develop bald patches, or you have other symptoms like fatigue or feeling cold, which could point to a thyroid or iron problem.",
+      },
+    },
+  ],
+};
+
+if (typeof document !== "undefined") {
+  for (const schema of [articleSchema, faqSchema]) {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+  }
 }
