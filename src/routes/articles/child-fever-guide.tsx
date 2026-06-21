@@ -22,10 +22,24 @@ export const Route = createFileRoute("/articles/child-fever-guide")({
           "Complete parent's guide to child fever: temperature thresholds, when to call the doctor, safe treatments, and red flags.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/child-fever-guide" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/child-fever-guide" }],
     scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://childbloom.site" },
+            { "@type": "ListItem", position: 2, name: "Articles", item: "https://childbloom.site/articles" },
+            { "@type": "ListItem", position: 3, name: "Child Fever Guide", item: "https://childbloom.site/articles/child-fever-guide" },
+          ],
+        }),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({

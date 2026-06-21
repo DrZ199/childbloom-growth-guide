@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/toddler-screen-time")({
           "Age-by-age guide to toddler screen time limits. AAP recommendations, effects on development, and how to set healthy boundaries.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-screen-time" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-screen-time" }],
     scripts: [
       {
         type: "application/ld+json",

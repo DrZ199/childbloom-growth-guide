@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/toddler-activities-at-home")({
       { property: "og:title", content: "Toddler Activities at Home: 40 Screen-Free Ideas by Age | ChildBloom" },
       { property: "og:description", content: "40 fun, screen-free toddler activities for ages 1–3. Easy indoor and outdoor ideas using household items." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-activities-at-home" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-activities-at-home" }],
     scripts: [
       {
         type: "application/ld+json",

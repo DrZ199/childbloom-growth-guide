@@ -25,9 +25,11 @@ export const Route = createFileRoute("/articles/sleep-training-methods")({
           "Complete guide to popular sleep training methods: Cry It Out, Ferber, Gentle Sleep Training, Chair Method, and more. Pros, cons, age recommendations.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/sleep-training-methods" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/sleep-training-methods" }],
     scripts: [
       {
         type: "application/ld+json",

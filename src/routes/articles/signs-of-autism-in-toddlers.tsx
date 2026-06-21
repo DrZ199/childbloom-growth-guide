@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/signs-of-autism-in-toddlers")({
       { property: "og:title", content: "Signs of Autism in Toddlers: Early Red Flags Parents Should Know | ChildBloom" },
       { property: "og:description", content: "Early signs of autism in toddlers (12–36 months). Social, communication, and behavioral red flags, when to seek evaluation, and what to do next." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/signs-of-autism-in-toddlers" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/signs-of-autism-in-toddlers" }],
     scripts: [
       {
         type: "application/ld+json",

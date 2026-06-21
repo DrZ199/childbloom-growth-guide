@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/baby-milestones-by-month")({
       publishedTime: "2025-03-01",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Medical Team",
-      image: "https://childbloom.site/images/articles/baby-milestones-by-month-og.jpg",
+      image: "https://childbloom.site/og-image.png",
     });
   },
 });
@@ -966,7 +966,7 @@ const jsonLd = {
   headline: "Baby Milestones by Month: Complete First Year Guide",
   description:
     "Month-by-month baby development guide: motor, cognitive, language, and social milestones for 0-12 months. Includes red flags and when to talk to your pediatrician.",
-  image: "https://childbloom.site/images/articles/baby-milestones-by-month-og.jpg",
+  image: "https://childbloom.site/og-image.png",
   datePublished: "2025-03-01",
   dateModified: "2025-06-10",
   author: {

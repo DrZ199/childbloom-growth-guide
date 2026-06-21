@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/toddler-tantrums")({
       { property: "og:title", content: "Toddler Tantrums: Why They Happen and How to Handle Them Calmly | ChildBloom" },
       { property: "og:description", content: "Complete guide to toddler tantrums: why they happen, how to prevent them, calm in-the-moment strategies, and when to seek help." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-tantrums" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-tantrums" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/baby-growth-spurts")({
           "When growth spurts happen, what signs to watch for, how long they last, and how to get through them.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/baby-growth-spurts" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/baby-growth-spurts" }],
     scripts: [
       {
         type: "application/ld+json",

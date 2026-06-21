@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/parenting-survival-guide")({
       publishedTime: "2025-01-15",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Parenting Team",
-      image: "https://childbloom.site/images/articles/parenting-survival-guide-og.jpg",
+      image: "https://childbloom.site/pinterest-pins/parenting-survival-guide.jpg",
     });
   },
 });
@@ -782,7 +782,7 @@ const jsonLd = {
   headline: "Parenting Survival Guide: 30 Essential Tips for New Parents",
   description:
     "Navigate the fourth trimester with confidence. Practical strategies for sleep deprivation, feeding challenges, emotional regulation, and building your support village.",
-  image: "https://childbloom.site/images/articles/parenting-survival-guide-og.jpg",
+  image: "https://childbloom.site/pinterest-pins/parenting-survival-guide.jpg",
   datePublished: "2025-01-15",
   dateModified: "2025-06-10",
   author: {

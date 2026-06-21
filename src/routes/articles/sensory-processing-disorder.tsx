@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/sensory-processing-disorder")({
       { property: "og:title", content: "Sensory Processing Disorder in Toddlers: Signs and Support Strategies | ChildBloom" },
       { property: "og:description", content: "Complete guide to Sensory Processing Disorder (SPD) in toddlers. Common signs, sensory-seeking vs sensory-avoiding behaviors, and practical strategies." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/sensory-processing-disorder" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/sensory-processing-disorder" }],
     scripts: [
       {
         type: "application/ld+json",

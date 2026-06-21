@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/adhd-in-toddlers")({
       { property: "og:title", content: "ADHD in Toddlers: Early Signs and What Parents Can Do | ChildBloom" },
       { property: "og:description", content: "Early signs of ADHD in toddlers (ages 2–4). What symptoms look like, when to seek evaluation, and practical strategies parents can use at home." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/adhd-in-toddlers" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/adhd-in-toddlers" }],
     scripts: [
       {
         type: "application/ld+json",

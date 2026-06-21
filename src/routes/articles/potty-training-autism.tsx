@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/potty-training-autism")({
       { property: "og:title", content: "Potty Training with Autism or Speech Delay: Gentle Methods That Work | ChildBloom" },
       { property: "og:description", content: "Potty training guide for children with autism, speech delay, or developmental delays. Visual supports, routines, and communication strategies." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/potty-training-autism" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/potty-training-autism" }],
     scripts: [
       {
         type: "application/ld+json",

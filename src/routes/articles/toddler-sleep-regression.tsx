@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/toddler-sleep-regression")({
       { property: "og:title", content: "Toddler Sleep Regression: 18 Months, 2 Years & 3 Years Explained | ChildBloom" },
       { property: "og:description", content: "Complete guide to toddler sleep regressions at 18 months, 2 years, and 3 years. Causes, duration, and gentle strategies." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-sleep-regression" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-sleep-regression" }],
     scripts: [
       {
         type: "application/ld+json",

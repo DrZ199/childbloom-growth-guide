@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/best-baby-bottles")({
       publishedTime: "2025-02-01",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Gear Team",
-      image: "https://childbloom.site/images/articles/best-baby-bottles-og.jpg",
+      image: "https://childbloom.site/pinterest-pins/best-baby-bottles.jpg",
     });
   },
 });
@@ -696,7 +696,7 @@ const jsonLd = {
   headline: "Best Baby Bottles 2025: Top 12 Reviewed for Every Feeding Need",
   description:
     "Expert reviews of the best baby bottles for breastfed babies, formula-fed babies, colic, gas, and more. Compare glass, plastic, silicone, and anti-colic options.",
-  image: "https://childbloom.site/images/articles/best-baby-bottles-og.jpg",
+  image: "https://childbloom.site/pinterest-pins/best-baby-bottles.jpg",
   datePublished: "2025-02-01",
   dateModified: "2025-06-10",
   author: {

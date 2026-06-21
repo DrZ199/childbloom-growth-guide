@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/baby-teething-symptoms")({
       publishedTime: "2025-01-25",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Medical Team",
-      image: "https://childbloom.site/images/articles/baby-teething-symptoms-og.jpg",
+      image: "https://childbloom.site/pinterest-pins/baby-teething-symptoms.jpg",
     });
   },
 });
@@ -458,7 +458,7 @@ const jsonLd = {
   headline: "Baby Teething Symptoms: Signs, Timeline, and Soothing Tips",
   description:
     "Learn to recognize teething symptoms in babies, understand the teething timeline, and discover safe, effective soothing strategies.",
-  image: "https://childbloom.site/images/articles/baby-teething-symptoms-og.jpg",
+  image: "https://childbloom.site/pinterest-pins/baby-teething-symptoms.jpg",
   datePublished: "2025-01-25",
   dateModified: "2025-06-10",
   author: {

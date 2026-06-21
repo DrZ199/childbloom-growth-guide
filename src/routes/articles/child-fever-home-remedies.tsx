@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/child-fever-home-remedies")({
       publishedTime: "2025-01-28",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Medical Team",
-      image: "https://childbloom.site/images/articles/child-fever-home-remedies-og.jpg",
+      image: "https://childbloom.site/pinterest-pins/child-fever-home-remedies.jpg",
     });
   },
 });
@@ -420,7 +420,7 @@ const jsonLd = {
   headline: "Child Fever Home Remedies: Safe Natural Fever Relief for Kids",
   description:
     "Evidence-based home remedies for children's fevers: cooling strategies, fluids, rest, and when home care is appropriate vs. when to call the doctor.",
-  image: "https://childbloom.site/images/articles/child-fever-home-remedies-og.jpg",
+  image: "https://childbloom.site/pinterest-pins/child-fever-home-remedies.jpg",
   datePublished: "2025-01-28",
   dateModified: "2025-06-10",
   author: {

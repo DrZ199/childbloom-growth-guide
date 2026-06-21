@@ -25,9 +25,11 @@ export const Route = createFileRoute("/articles/toddler-not-talking")({
           "If your 2-year-old is not talking, here is what may be causing it, what speech milestones to expect, when to seek an evaluation, and practical steps to support language development.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-not-talking" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-not-talking" }],
     scripts: [
       {
         type: "application/ld+json",

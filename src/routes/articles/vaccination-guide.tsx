@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/vaccination-guide")({
           "Complete vaccination guide for parents: CDC schedule birth-18 years, vaccine safety, side effects, myths debunked, and how to prepare your child for shots.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/pinterest-pins/vaccination-guide.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/pinterest-pins/vaccination-guide.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/articles/vaccination-guide" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/vaccination-guide" }],
     scripts: [
       {
         type: "application/ld+json",

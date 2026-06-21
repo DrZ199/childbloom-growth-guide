@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/starting-solids-guide")({
       publishedTime: "2025-02-15",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Nutrition Team",
-      image: "https://childbloom.site/images/articles/starting-solids-guide-og.jpg",
+      image: "https://childbloom.site/og-image.png",
     });
   },
 });
@@ -597,7 +597,7 @@ const jsonLd = {
   headline: "Starting Solids Guide: When, What & How to Feed Your Baby",
   description:
     "Complete guide to starting solids: readiness signs, first foods, baby-led weaning vs purees, allergens, schedules, and common mistakes to avoid.",
-  image: "https://childbloom.site/images/articles/starting-solids-guide-og.jpg",
+  image: "https://childbloom.site/og-image.png",
   datePublished: "2025-02-15",
   dateModified: "2025-06-10",
   author: {

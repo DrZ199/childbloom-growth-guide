@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/when-to-call-pediatrician")({
           "Quick-reference guide for parents: when to call your pediatrician, when urgent care is enough, and when to call 911.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/when-to-call-pediatrician" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/when-to-call-pediatrician" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/pregnancy-symptoms-by-trimester"
       { property: "og:title", content: "Pregnancy Symptoms by Trimester: What’s Normal and When to Worry | ChildBloom" },
       { property: "og:description", content: "Complete guide to pregnancy symptoms by trimester. First, second, and third trimester changes, common discomforts, and warning signs." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/pregnancy-symptoms-by-trimester" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/pregnancy-symptoms-by-trimester" }],
     scripts: [
       {
         type: "application/ld+json",

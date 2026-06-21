@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/best-baby-walkers")({
       { property: "og:title", content: "Best Baby Walkers & Activity Centers 2026: Reviews & Safety Guide | ChildBloom" },
       { property: "og:description", content: "Expert review of the best baby walkers and activity centers in 2026. Safety considerations, top picks, and alternatives." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-baby-walkers" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-baby-walkers" }],
     scripts: [
       {
         type: "application/ld+json",

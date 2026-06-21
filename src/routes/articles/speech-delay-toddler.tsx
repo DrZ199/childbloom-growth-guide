@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/speech-delay-toddler")({
       { property: "og:title", content: "Speech Delay in Toddlers: When to Worry and How to Help | ChildBloom" },
       { property: "og:description", content: "Complete guide to toddler speech delay. Red flags by age, causes, evaluation process, and practical ways parents can support language development." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/speech-delay-toddler" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/speech-delay-toddler" }],
     scripts: [
       {
         type: "application/ld+json",

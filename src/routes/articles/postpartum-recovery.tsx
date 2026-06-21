@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/postpartum-recovery")({
       { property: "og:title", content: "Postpartum Recovery Timeline: What to Expect Week by Week | ChildBloom" },
       { property: "og:description", content: "Complete postpartum recovery timeline: what to expect in the first 6 weeks and beyond. Physical healing, emotional changes, warning signs, and self-care tips." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/postpartum-recovery" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/postpartum-recovery" }],
     scripts: [
       {
         type: "application/ld+json",

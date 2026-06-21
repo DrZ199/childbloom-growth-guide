@@ -22,9 +22,11 @@ export const Route = createFileRoute("/articles/toddler-regression")({
           "Complete guide to toddler regression in sleep, potty training, and behavior. What causes regression, how long it lasts, and gentle strategies to get back on track.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-regression" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-regression" }],
     scripts: [
       {
         type: "application/ld+json",

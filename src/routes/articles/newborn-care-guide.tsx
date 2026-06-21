@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/newborn-care-guide")({
           "Complete newborn care guide for first-time parents: feeding, sleep, diapering, bathing, health concerns, and when to call the doctor.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/pinterest-pins/newborn-care-guide.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/pinterest-pins/newborn-care-guide.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/articles/newborn-care-guide" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/newborn-care-guide" }],
     scripts: [
       {
         type: "application/ld+json",

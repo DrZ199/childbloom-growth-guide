@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/toddler-biting")({
       { property: "og:title", content: "Biting in Toddlers: Why It Happens and How to Stop It | ChildBloom" },
       { property: "og:description", content: "Complete guide to toddler biting. Why toddlers bite, how to respond in the moment, prevention strategies, and when to seek help." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-biting" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-biting" }],
     scripts: [
       {
         type: "application/ld+json",

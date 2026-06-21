@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/postpartum-hair-loss")({
       { property: "og:title", content: "Postpartum Hair Loss: Why It Happens and How to Cope | ChildBloom" },
       { property: "og:description", content: "Complete guide to postpartum hair loss (telogen effluvium). Why it happens, when it peaks, how long it lasts, and practical ways to manage hair shedding." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/postpartum-hair-loss" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/postpartum-hair-loss" }],
     scripts: [
       {
         type: "application/ld+json",

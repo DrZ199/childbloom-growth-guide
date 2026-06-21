@@ -25,10 +25,12 @@ export const Route = createFileRoute("/articles/best-breast-pumps-working-moms")
           "Best breast pumps for working moms in 2026. Compare portable, hands-free, and wearable pumps for pumping at work, travel, and on the go. Expert picks with pros and cons.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
     links: [
-      { rel: "canonical", href: "/articles/best-breast-pumps-working-moms" },
+      { rel: "canonical", href: "https://childbloom.site/articles/best-breast-pumps-working-moms" },
     ],
     scripts: [
       {

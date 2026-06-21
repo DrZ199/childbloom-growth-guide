@@ -31,6 +31,18 @@ export const Route = createFileRoute("/articles/speech-milestones")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://childbloom.site" },
+            { "@type": "ListItem", position: 2, name: "Articles", item: "https://childbloom.site/articles" },
+            { "@type": "ListItem", position: 3, name: "Speech Milestones", item: "https://childbloom.site/articles/speech-milestones" },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "Article",
           headline: "Speech Milestones from 12 to 24 Months (and When to Ask for Help)",
           description: "Track your toddler's speech milestones and learn when to seek support.",

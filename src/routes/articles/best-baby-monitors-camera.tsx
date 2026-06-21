@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/best-baby-monitors-camera")({
       { property: "og:title", content: "Best Baby Monitors with Camera 2026: Video & Smart Monitor Reviews | ChildBloom" },
       { property: "og:description", content: "Expert review of the best baby monitors with camera in 2026. Compare video monitors, smart monitors, and Wi-Fi options." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-baby-monitors-camera" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-baby-monitors-camera" }],
     scripts: [
       {
         type: "application/ld+json",

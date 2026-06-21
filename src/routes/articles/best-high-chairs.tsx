@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/best-high-chairs")({
       { property: "og:title", content: "Best High Chairs 2026: Convertible, Portable & Space-Saving Options | ChildBloom" },
       { property: "og:description", content: "Expert review of the best high chairs in 2026. Compare convertible, portable, and space-saving high chairs with pros, cons, and top recommendations." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-high-chairs" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-high-chairs" }],
     scripts: [
       {
         type: "application/ld+json",

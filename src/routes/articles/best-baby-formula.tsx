@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/best-baby-formula")({
       publishedTime: "2025-02-05",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Gear Team",
-      image: "https://childbloom.site/images/articles/best-baby-formula-og.jpg",
+      image: "https://childbloom.site/og-image.png",
     });
   },
 });
@@ -733,7 +733,7 @@ const jsonLd = {
   headline: "Best Baby Formula 2025: Top 10 Reviewed for Every Need",
   description:
     "Expert reviews of the best baby formulas: standard, sensitive, organic, hypoallergenic, and specialty formulas. Compare ingredients, prices, and parent reviews.",
-  image: "https://childbloom.site/images/articles/best-baby-formula-og.jpg",
+  image: "https://childbloom.site/og-image.png",
   datePublished: "2025-02-05",
   dateModified: "2025-06-10",
   author: {

@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/toddler-hitting")({
           "Why toddlers hit, bite, and throw things — and gentle but firm strategies that actually work.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-hitting" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-hitting" }],
     scripts: [
       {
         type: "application/ld+json",

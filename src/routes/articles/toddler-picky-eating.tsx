@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/toddler-picky-eating")({
       { property: "og:title", content: "Toddler Picky Eating: 25 Strategies That Actually Work | ChildBloom" },
       { property: "og:description", content: "Practical strategies for feeding picky toddlers. 25 evidence-based tips to reduce mealtime battles and expand food variety." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-picky-eating" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-picky-eating" }],
     scripts: [
       {
         type: "application/ld+json",

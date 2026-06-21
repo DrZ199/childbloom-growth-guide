@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/baby-sleep-guide")({
           "Complete baby sleep guide covering newborn through toddler years: sleep science, schedules, training methods, regressions, and solutions for common sleep problems.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/pinterest-pins/baby-sleep-guide.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/pinterest-pins/baby-sleep-guide.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/articles/baby-sleep-guide" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/baby-sleep-guide" }],
     scripts: [
       {
         type: "application/ld+json",

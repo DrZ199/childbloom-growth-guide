@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/co-sleeping-safety")({
           "Everything parents need to know about co-sleeping safety — AAP safe sleep guidelines, bedsharing vs room-sharing, SIDS risk factors, and safer alternatives.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/co-sleeping-safety" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/co-sleeping-safety" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/best-baby-food-makers")({
       publishedTime: "2025-02-20",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Gear Team",
-      image: "https://childbloom.site/images/articles/best-baby-food-makers-og.jpg",
+      image: "https://childbloom.site/og-image.png",
     });
   },
 });
@@ -667,7 +667,7 @@ const jsonLd = {
   headline: "Best Baby Food Makers 2025: Top 8 Reviewed for Homemade Purees",
   description:
     "Expert reviews of the best baby food makers: all-in-one steam & blend, food processors, and manual options. Compare features, capacity, and ease of cleaning.",
-  image: "https://childbloom.site/images/articles/best-baby-food-makers-og.jpg",
+  image: "https://childbloom.site/og-image.png",
   datePublished: "2025-02-20",
   dateModified: "2025-06-10",
   author: {

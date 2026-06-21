@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/postpartum-mental-health")({
       { property: "og:title", content: "Postpartum Mental Health: Recognizing PPD, PPA, and Getting Help | ChildBloom" },
       { property: "og:description", content: "Complete guide to postpartum mental health. How to recognize postpartum depression (PPD), postpartum anxiety (PPA), and where to get help." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/postpartum-mental-health" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/postpartum-mental-health" }],
     scripts: [
       {
         type: "application/ld+json",

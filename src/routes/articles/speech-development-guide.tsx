@@ -24,9 +24,11 @@ export const Route = createFileRoute("/articles/speech-development-guide")({
           "Complete guide to toddler speech development: 12-36 month milestones, daily activities to boost language, signs of delay, and when to consult a speech therapist.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/speech-development-guide" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/speech-development-guide" }],
     scripts: [
       {
         type: "application/ld+json",

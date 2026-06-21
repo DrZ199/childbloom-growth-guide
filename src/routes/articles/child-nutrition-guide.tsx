@@ -22,10 +22,24 @@ export const Route = createFileRoute("/articles/child-nutrition-guide")({
           "Complete child nutrition guide by age: breastfeeding, formula, starting solids, picky eating, vitamins, and healthy habits.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/child-nutrition-guide" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/child-nutrition-guide" }],
     scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://childbloom.site" },
+            { "@type": "ListItem", position: 2, name: "Articles", item: "https://childbloom.site/articles" },
+            { "@type": "ListItem", position: 3, name: "Child Nutrition Guide", item: "https://childbloom.site/articles/child-nutrition-guide" },
+          ],
+        }),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify({

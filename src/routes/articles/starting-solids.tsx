@@ -31,6 +31,18 @@ export const Route = createFileRoute("/articles/starting-solids")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://childbloom.site" },
+            { "@type": "ListItem", position: 2, name: "Articles", item: "https://childbloom.site/articles" },
+            { "@type": "ListItem", position: 3, name: "Starting Solids", item: "https://childbloom.site/articles/starting-solids" },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "Article",
           headline: "Starting Solids at 6 Months: The Complete First-Foods Plan",
           description: "A complete first-foods plan for starting solids at 6 months with iron-rich and allergen-safe options.",

@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/child-development-milestones")({
           "Track your child's development from birth to 5 years with our comprehensive milestone guide. Motor, language, social, and cognitive milestones plus red flags.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/pinterest-pins/child-development-milestones.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/pinterest-pins/child-development-milestones.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/articles/child-development-milestones" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/child-development-milestones" }],
     scripts: [
       {
         type: "application/ld+json",
