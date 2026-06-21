@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/best-diaper-bags")({
           "Best diaper bags 2026: top backpack, tote, and messenger diaper bags with features, pros/cons, and Amazon affiliate recommendations.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-diaper-bags" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-diaper-bags" }],
     scripts: [
       {
         type: "application/ld+json",

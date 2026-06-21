@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/preschool-readiness")({
       { property: "og:title", content: "Preschool Readiness: Skills Your Child Needs Before Starting School | ChildBloom" },
       { property: "og:description", content: "Complete guide to preschool readiness. Academic, social, emotional, and self-care skills your child should have before starting preschool." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/preschool-readiness" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/preschool-readiness" }],
     scripts: [
       {
         type: "application/ld+json",

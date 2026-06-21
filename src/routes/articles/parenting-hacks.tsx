@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/parenting-hacks")({
           "25 practical parenting hacks for new parents: sleep, feeding, diapering, travel, and sanity-saving tips that actually work.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/parenting-hacks" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/parenting-hacks" }],
     scripts: [
       {
         type: "application/ld+json",

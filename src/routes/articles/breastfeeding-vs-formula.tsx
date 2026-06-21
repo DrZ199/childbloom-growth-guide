@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/breastfeeding-vs-formula")({
       { property: "og:title", content: "Breastfeeding vs Formula: Pros, Cons, and How to Decide | ChildBloom" },
       { property: "og:description", content: "Balanced comparison of breastfeeding vs formula feeding. Pros and cons of each, hybrid approaches, and how to make the best decision." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/breastfeeding-vs-formula" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/breastfeeding-vs-formula" }],
     scripts: [
       {
         type: "application/ld+json",

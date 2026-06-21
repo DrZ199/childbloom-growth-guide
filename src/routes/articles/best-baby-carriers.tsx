@@ -25,9 +25,11 @@ export const Route = createFileRoute("/articles/best-baby-carriers")({
           "Best baby carriers 2026: top ergonomic wraps, ring slings, and structured carriers with safety tips, pros/cons, and Amazon affiliate recommendations.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-baby-carriers" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-baby-carriers" }],
     scripts: [
       {
         type: "application/ld+json",

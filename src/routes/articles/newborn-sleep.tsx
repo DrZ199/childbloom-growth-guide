@@ -31,6 +31,18 @@ export const Route = createFileRoute("/articles/newborn-sleep")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://childbloom.site" },
+            { "@type": "ListItem", position: 2, name: "Articles", item: "https://childbloom.site/articles" },
+            { "@type": "ListItem", position: 3, name: "Newborn Sleep Guide", item: "https://childbloom.site/articles/newborn-sleep" },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "Article",
           headline: "Newborn Sleep: A Calm, Evidence-Based Guide for the First 12 Weeks",
           description: "A calm, evidence-based newborn sleep guide for the first 12 weeks.",

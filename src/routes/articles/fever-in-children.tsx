@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/fever-in-children")({
       publishedTime: "2025-01-22",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Medical Team",
-      image: "https://childbloom.site/images/articles/fever-in-children-og.jpg",
+      image: "https://childbloom.site/pinterest-pins/fever-in-children.jpg",
     });
   },
 });
@@ -532,7 +532,7 @@ const jsonLd = {
   headline: "Fever in Children: When to Worry and When to Relax",
   description:
     "Complete guide to fevers in children: normal ranges, when to call the doctor, fever reducers, and myths debunked.",
-  image: "https://childbloom.site/images/articles/fever-in-children-og.jpg",
+  image: "https://childbloom.site/pinterest-pins/fever-in-children.jpg",
   datePublished: "2025-01-22",
   dateModified: "2025-06-10",
   author: {

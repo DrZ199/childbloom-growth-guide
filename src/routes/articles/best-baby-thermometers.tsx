@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/best-baby-thermometers")({
       publishedTime: "2025-01-20",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Gear Team",
-      image: "https://childbloom.site/images/articles/best-baby-thermometers-og.jpg",
+      image: "https://childbloom.site/pinterest-pins/best-baby-thermometers.jpg",
     });
   },
 });
@@ -507,7 +507,7 @@ const jsonLd = {
   headline: "Best Baby Thermometers 2025: Top 10 Reviewed for Accuracy",
   description:
     "Comprehensive reviews of the best baby thermometers for newborns, infants, and toddlers. Compare forehead, ear, rectal, and temporal artery thermometers.",
-  image: "https://childbloom.site/images/articles/best-baby-thermometers-og.jpg",
+  image: "https://childbloom.site/pinterest-pins/best-baby-thermometers.jpg",
   datePublished: "2025-01-20",
   dateModified: "2025-06-10",
   author: {

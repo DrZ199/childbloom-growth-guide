@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/best-car-seats")({
           "Expert-reviewed best car seats 2026: top infant, convertible, and booster seats with safety ratings, pros/cons, and Amazon affiliate recommendations.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-car-seats" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-car-seats" }],
     scripts: [
       {
         type: "application/ld+json",

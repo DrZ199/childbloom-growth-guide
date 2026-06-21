@@ -25,9 +25,11 @@ export const Route = createFileRoute("/articles/toddler-sleep-problems")({
           "Solve common toddler sleep problems: night wakings, bedtime resistance, sleep regression, early rising, and separation anxiety.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/toddler-sleep-problems" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/toddler-sleep-problems" }],
     scripts: [
       {
         type: "application/ld+json",

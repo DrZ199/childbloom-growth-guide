@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/newborn-essentials-checklist")({
           "Complete newborn essentials checklist: must-have baby registry items for the first 3 months including clothing, feeding, sleep, diapering, and safety gear.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/newborn-essentials-checklist" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/newborn-essentials-checklist" }],
     scripts: [
       {
         type: "application/ld+json",

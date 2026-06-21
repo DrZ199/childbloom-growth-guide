@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/best-educational-toys")({
       publishedTime: "2025-02-25",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Gear Team",
-      image: "https://childbloom.site/images/articles/best-educational-toys-og.jpg",
+      image: "https://childbloom.site/og-image.png",
     });
   },
 });
@@ -774,7 +774,7 @@ const jsonLd = {
   headline: "Best Educational Toys 2025: Top 15 by Age & Developmental Stage",
   description:
     "Expert picks for the best educational toys for babies, toddlers, and preschoolers. Organized by age and developmental skill: motor, cognitive, language, STEM.",
-  image: "https://childbloom.site/images/articles/best-educational-toys-og.jpg",
+  image: "https://childbloom.site/og-image.png",
   datePublished: "2025-02-25",
   dateModified: "2025-06-10",
   author: {

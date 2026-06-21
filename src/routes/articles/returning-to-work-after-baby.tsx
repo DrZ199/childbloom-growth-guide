@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/returning-to-work-after-baby")({
       { property: "og:title", content: "Returning to Work After Baby: A Practical Guide for New Parents | ChildBloom" },
       { property: "og:description", content: "Complete guide to returning to work after maternity leave. Pumping at work, daycare tips, emotional preparation, and how to make the transition smoother." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/returning-to-work-after-baby" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/returning-to-work-after-baby" }],
     scripts: [
       {
         type: "application/ld+json",

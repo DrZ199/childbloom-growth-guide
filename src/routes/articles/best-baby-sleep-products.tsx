@@ -25,9 +25,11 @@ export const Route = createFileRoute("/articles/best-baby-sleep-products")({
           "Best baby sleep products 2026: top sleep sacks, white noise machines, blackout curtains, and safe sleep accessories with expert reviews.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-baby-sleep-products" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-baby-sleep-products" }],
     scripts: [
       {
         type: "application/ld+json",

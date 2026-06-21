@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/best-convertible-car-seats")({
       { property: "og:title", content: "Best Convertible Car Seats 2026: Extended Rear-Facing Picks | ChildBloom" },
       { property: "og:description", content: "Expert-reviewed best convertible car seats for 2026 with extended rear-facing capability. Safety ratings, pros/cons, and top recommendations." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-convertible-car-seats" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-convertible-car-seats" }],
     scripts: [
       {
         type: "application/ld+json",

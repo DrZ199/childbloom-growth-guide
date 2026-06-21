@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/potty-training-guide")({
       { property: "og:title", content: "Potty Training Guide: Complete Step-by-Step for Toddlers 18-36 Months | ChildBloom" },
       { property: "og:description", content: "Complete potty training guide for toddlers 18-36 months. Step-by-step methods, signs of readiness, common mistakes, night training, and gentle approaches." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/potty-training-guide" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/potty-training-guide" }],
     scripts: [
       {
         type: "application/ld+json",

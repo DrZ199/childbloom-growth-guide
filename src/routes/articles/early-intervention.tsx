@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/early-intervention")({
       { property: "og:title", content: "Early Intervention Services: What Parents Need to Know | ChildBloom" },
       { property: "og:description", content: "Complete guide to early intervention (EI) services. Who qualifies, how to get evaluated, what services are available, and how to advocate for your child." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/early-intervention" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/early-intervention" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/best-baby-books")({
           "The best baby books for newborns to toddlers: board books, lift-the-flap, touch-and-feel, and early literacy favorites with pros, cons, and Amazon affiliate links.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-baby-books" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-baby-books" }],
     scripts: [
       {
         type: "application/ld+json",

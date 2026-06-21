@@ -18,7 +18,7 @@ export const Route = createFileRoute("/articles/toddler-nutrition-tips")({
       publishedTime: "2025-02-10",
       modifiedTime: "2025-06-10",
       author: "ChildBloom Nutrition Team",
-      image: "https://childbloom.site/images/articles/toddler-nutrition-tips-og.jpg",
+      image: "https://childbloom.site/og-image.png",
     });
   },
 });
@@ -644,7 +644,7 @@ const jsonLd = {
   headline: "Toddler Nutrition Tips: Complete Guide for Ages 1-3",
   description:
     "Expert toddler nutrition guide: portion sizes, food groups, picky eating strategies, meal planning, and nutrient needs for ages 1-3.",
-  image: "https://childbloom.site/images/articles/toddler-nutrition-tips-og.jpg",
+  image: "https://childbloom.site/og-image.png",
   datePublished: "2025-02-10",
   dateModified: "2025-06-10",
   author: {

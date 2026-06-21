@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/best-breast-pumps")({
       { property: "og:title", content: "Best Breast Pumps 2026: Hospital-Grade, Portable & Wearable Comparison | ChildBloom" },
       { property: "og:description", content: "Expert comparison of the best breast pumps in 2026 including Spectra, Elvie, Willow, Medela, and hospital-grade options." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-breast-pumps" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-breast-pumps" }],
     scripts: [
       {
         type: "application/ld+json",

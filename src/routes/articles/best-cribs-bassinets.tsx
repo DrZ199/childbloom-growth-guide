@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/best-cribs-bassinets")({
       { property: "og:title", content: "Best Cribs & Bassinets 2026: Convertible, Mini & Next-to-Bed Options | ChildBloom" },
       { property: "og:description", content: "Expert review of the best cribs and bassinets in 2026. Compare convertible cribs, mini cribs, bedside bassinets, and safe sleep recommendations." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-cribs-bassinets" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-cribs-bassinets" }],
     scripts: [
       {
         type: "application/ld+json",

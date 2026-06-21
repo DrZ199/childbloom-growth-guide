@@ -13,9 +13,11 @@ export const Route = createFileRoute("/articles/birth-plan-template")({
       { property: "og:title", content: "Birth Plan Template: How to Write One + Sample Birth Plan | ChildBloom" },
       { property: "og:description", content: "Complete guide to creating a birth plan. Free template, what to include, sample birth plan, and how to communicate your preferences." },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/birth-plan-template" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/birth-plan-template" }],
     scripts: [
       {
         type: "application/ld+json",

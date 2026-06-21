@@ -21,9 +21,11 @@ export const Route = createFileRoute("/articles/best-strollers")({
           "Best strollers 2026: top travel systems, lightweight, jogging, and double strollers with expert reviews, pros/cons, and Amazon affiliate links.",
       },
       { property: "og:type", content: "article" },
+      { property: "og:image", content: "https://childbloom.site/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://childbloom.site/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/articles/best-strollers" }],
+    links: [{ rel: "canonical", href: "https://childbloom.site/articles/best-strollers" }],
     scripts: [
       {
         type: "application/ld+json",

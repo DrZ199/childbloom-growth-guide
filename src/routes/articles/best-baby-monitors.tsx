@@ -32,6 +32,18 @@ export const Route = createFileRoute("/articles/best-baby-monitors")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://childbloom.site" },
+            { "@type": "ListItem", position: 2, name: "Articles", item: "https://childbloom.site/articles" },
+            { "@type": "ListItem", position: 3, name: "Best Baby Monitors", item: "https://childbloom.site/articles/best-baby-monitors" },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "Article",
           headline: "The Best Baby Monitors of 2026",
           description: "Trusted baby monitor reviews with pros, cons, and buying advice for nursery safety.",
