@@ -28,14 +28,17 @@ import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as GoSlugRouteImport } from './routes/go/$slug'
 import { Route as CategoriesSlugRouteImport } from './routes/categories/$slug'
 import { Route as AuthorsSlugRouteImport } from './routes/authors/$slug'
+import { Route as ArticlesWhenToCallPediatricianRouteImport } from './routes/articles/when-to-call-pediatrician'
 import { Route as ArticlesVaccinationGuideRouteImport } from './routes/articles/vaccination-guide'
 import { Route as ArticlesToddlerTantrumsRouteImport } from './routes/articles/toddler-tantrums'
 import { Route as ArticlesToddlerSleepRegressionRouteImport } from './routes/articles/toddler-sleep-regression'
 import { Route as ArticlesToddlerSleepProblemsRouteImport } from './routes/articles/toddler-sleep-problems'
+import { Route as ArticlesToddlerScreenTimeRouteImport } from './routes/articles/toddler-screen-time'
 import { Route as ArticlesToddlerRegressionRouteImport } from './routes/articles/toddler-regression'
 import { Route as ArticlesToddlerPickyEatingRouteImport } from './routes/articles/toddler-picky-eating'
 import { Route as ArticlesToddlerNutritionTipsRouteImport } from './routes/articles/toddler-nutrition-tips'
 import { Route as ArticlesToddlerNotTalkingRouteImport } from './routes/articles/toddler-not-talking'
+import { Route as ArticlesToddlerHittingRouteImport } from './routes/articles/toddler-hitting'
 import { Route as ArticlesToddlerBitingRouteImport } from './routes/articles/toddler-biting'
 import { Route as ArticlesToddlerActivitiesAtHomeRouteImport } from './routes/articles/toddler-activities-at-home'
 import { Route as ArticlesStartingSolidsGuideRouteImport } from './routes/articles/starting-solids-guide'
@@ -61,6 +64,7 @@ import { Route as ArticlesNewbornEssentialsChecklistRouteImport } from './routes
 import { Route as ArticlesNewbornCareGuideRouteImport } from './routes/articles/newborn-care-guide'
 import { Route as ArticlesFeverInChildrenRouteImport } from './routes/articles/fever-in-children'
 import { Route as ArticlesEarlyInterventionRouteImport } from './routes/articles/early-intervention'
+import { Route as ArticlesCoSleepingSafetyRouteImport } from './routes/articles/co-sleeping-safety'
 import { Route as ArticlesChildNutritionGuideRouteImport } from './routes/articles/child-nutrition-guide'
 import { Route as ArticlesChildFeverHomeRemediesRouteImport } from './routes/articles/child-fever-home-remedies'
 import { Route as ArticlesChildFeverGuideRouteImport } from './routes/articles/child-fever-guide'
@@ -89,6 +93,7 @@ import { Route as ArticlesBestBabyBooksRouteImport } from './routes/articles/bes
 import { Route as ArticlesBabyTeethingSymptomsRouteImport } from './routes/articles/baby-teething-symptoms'
 import { Route as ArticlesBabySleepGuideRouteImport } from './routes/articles/baby-sleep-guide'
 import { Route as ArticlesBabyMilestonesByMonthRouteImport } from './routes/articles/baby-milestones-by-month'
+import { Route as ArticlesBabyGrowthSpurtsRouteImport } from './routes/articles/baby-growth-spurts'
 import { Route as ArticlesAdhdInToddlersRouteImport } from './routes/articles/adhd-in-toddlers'
 import { Route as ArticlesTemplateRouteImport } from './routes/articles/_template'
 import { Route as ArticlesSlugRouteImport } from './routes/articles/$slug'
@@ -196,6 +201,12 @@ const AuthorsSlugRoute = AuthorsSlugRouteImport.update({
   path: '/authors/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArticlesWhenToCallPediatricianRoute =
+  ArticlesWhenToCallPediatricianRouteImport.update({
+    id: '/when-to-call-pediatrician',
+    path: '/when-to-call-pediatrician',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
 const ArticlesVaccinationGuideRoute =
   ArticlesVaccinationGuideRouteImport.update({
     id: '/vaccination-guide',
@@ -217,6 +228,12 @@ const ArticlesToddlerSleepProblemsRoute =
   ArticlesToddlerSleepProblemsRouteImport.update({
     id: '/toddler-sleep-problems',
     path: '/toddler-sleep-problems',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
+const ArticlesToddlerScreenTimeRoute =
+  ArticlesToddlerScreenTimeRouteImport.update({
+    id: '/toddler-screen-time',
+    path: '/toddler-screen-time',
     getParentRoute: () => ArticlesRoute,
   } as any)
 const ArticlesToddlerRegressionRoute =
@@ -243,6 +260,11 @@ const ArticlesToddlerNotTalkingRoute =
     path: '/toddler-not-talking',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesToddlerHittingRoute = ArticlesToddlerHittingRouteImport.update({
+  id: '/toddler-hitting',
+  path: '/toddler-hitting',
+  getParentRoute: () => ArticlesRoute,
+} as any)
 const ArticlesToddlerBitingRoute = ArticlesToddlerBitingRouteImport.update({
   id: '/toddler-biting',
   path: '/toddler-biting',
@@ -386,6 +408,12 @@ const ArticlesEarlyInterventionRoute =
   ArticlesEarlyInterventionRouteImport.update({
     id: '/early-intervention',
     path: '/early-intervention',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
+const ArticlesCoSleepingSafetyRoute =
+  ArticlesCoSleepingSafetyRouteImport.update({
+    id: '/co-sleeping-safety',
+    path: '/co-sleeping-safety',
     getParentRoute: () => ArticlesRoute,
   } as any)
 const ArticlesChildNutritionGuideRoute =
@@ -545,6 +573,12 @@ const ArticlesBabyMilestonesByMonthRoute =
     path: '/baby-milestones-by-month',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesBabyGrowthSpurtsRoute =
+  ArticlesBabyGrowthSpurtsRouteImport.update({
+    id: '/baby-growth-spurts',
+    path: '/baby-growth-spurts',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
 const ArticlesAdhdInToddlersRoute = ArticlesAdhdInToddlersRouteImport.update({
   id: '/adhd-in-toddlers',
   path: '/adhd-in-toddlers',
@@ -621,6 +655,7 @@ export interface FileRoutesByFullPath {
   '/admin/subscribers': typeof AdminSubscribersRoute
   '/articles/$slug': typeof ArticlesSlugRoute
   '/articles/adhd-in-toddlers': typeof ArticlesAdhdInToddlersRoute
+  '/articles/baby-growth-spurts': typeof ArticlesBabyGrowthSpurtsRoute
   '/articles/baby-milestones-by-month': typeof ArticlesBabyMilestonesByMonthRoute
   '/articles/baby-sleep-guide': typeof ArticlesBabySleepGuideRoute
   '/articles/baby-teething-symptoms': typeof ArticlesBabyTeethingSymptomsRoute
@@ -649,6 +684,7 @@ export interface FileRoutesByFullPath {
   '/articles/child-fever-guide': typeof ArticlesChildFeverGuideRoute
   '/articles/child-fever-home-remedies': typeof ArticlesChildFeverHomeRemediesRoute
   '/articles/child-nutrition-guide': typeof ArticlesChildNutritionGuideRoute
+  '/articles/co-sleeping-safety': typeof ArticlesCoSleepingSafetyRoute
   '/articles/early-intervention': typeof ArticlesEarlyInterventionRoute
   '/articles/fever-in-children': typeof ArticlesFeverInChildrenRoute
   '/articles/newborn-care-guide': typeof ArticlesNewbornCareGuideRoute
@@ -674,14 +710,17 @@ export interface FileRoutesByFullPath {
   '/articles/starting-solids-guide': typeof ArticlesStartingSolidsGuideRoute
   '/articles/toddler-activities-at-home': typeof ArticlesToddlerActivitiesAtHomeRoute
   '/articles/toddler-biting': typeof ArticlesToddlerBitingRoute
+  '/articles/toddler-hitting': typeof ArticlesToddlerHittingRoute
   '/articles/toddler-not-talking': typeof ArticlesToddlerNotTalkingRoute
   '/articles/toddler-nutrition-tips': typeof ArticlesToddlerNutritionTipsRoute
   '/articles/toddler-picky-eating': typeof ArticlesToddlerPickyEatingRoute
   '/articles/toddler-regression': typeof ArticlesToddlerRegressionRoute
+  '/articles/toddler-screen-time': typeof ArticlesToddlerScreenTimeRoute
   '/articles/toddler-sleep-problems': typeof ArticlesToddlerSleepProblemsRoute
   '/articles/toddler-sleep-regression': typeof ArticlesToddlerSleepRegressionRoute
   '/articles/toddler-tantrums': typeof ArticlesToddlerTantrumsRoute
   '/articles/vaccination-guide': typeof ArticlesVaccinationGuideRoute
+  '/articles/when-to-call-pediatrician': typeof ArticlesWhenToCallPediatricianRoute
   '/authors/$slug': typeof AuthorsSlugRoute
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
@@ -712,6 +751,7 @@ export interface FileRoutesByTo {
   '/articles/$slug': typeof ArticlesSlugRoute
   '/articles': typeof ArticlesIndexRoute
   '/articles/adhd-in-toddlers': typeof ArticlesAdhdInToddlersRoute
+  '/articles/baby-growth-spurts': typeof ArticlesBabyGrowthSpurtsRoute
   '/articles/baby-milestones-by-month': typeof ArticlesBabyMilestonesByMonthRoute
   '/articles/baby-sleep-guide': typeof ArticlesBabySleepGuideRoute
   '/articles/baby-teething-symptoms': typeof ArticlesBabyTeethingSymptomsRoute
@@ -740,6 +780,7 @@ export interface FileRoutesByTo {
   '/articles/child-fever-guide': typeof ArticlesChildFeverGuideRoute
   '/articles/child-fever-home-remedies': typeof ArticlesChildFeverHomeRemediesRoute
   '/articles/child-nutrition-guide': typeof ArticlesChildNutritionGuideRoute
+  '/articles/co-sleeping-safety': typeof ArticlesCoSleepingSafetyRoute
   '/articles/early-intervention': typeof ArticlesEarlyInterventionRoute
   '/articles/fever-in-children': typeof ArticlesFeverInChildrenRoute
   '/articles/newborn-care-guide': typeof ArticlesNewbornCareGuideRoute
@@ -765,14 +806,17 @@ export interface FileRoutesByTo {
   '/articles/starting-solids-guide': typeof ArticlesStartingSolidsGuideRoute
   '/articles/toddler-activities-at-home': typeof ArticlesToddlerActivitiesAtHomeRoute
   '/articles/toddler-biting': typeof ArticlesToddlerBitingRoute
+  '/articles/toddler-hitting': typeof ArticlesToddlerHittingRoute
   '/articles/toddler-not-talking': typeof ArticlesToddlerNotTalkingRoute
   '/articles/toddler-nutrition-tips': typeof ArticlesToddlerNutritionTipsRoute
   '/articles/toddler-picky-eating': typeof ArticlesToddlerPickyEatingRoute
   '/articles/toddler-regression': typeof ArticlesToddlerRegressionRoute
+  '/articles/toddler-screen-time': typeof ArticlesToddlerScreenTimeRoute
   '/articles/toddler-sleep-problems': typeof ArticlesToddlerSleepProblemsRoute
   '/articles/toddler-sleep-regression': typeof ArticlesToddlerSleepRegressionRoute
   '/articles/toddler-tantrums': typeof ArticlesToddlerTantrumsRoute
   '/articles/vaccination-guide': typeof ArticlesVaccinationGuideRoute
+  '/articles/when-to-call-pediatrician': typeof ArticlesWhenToCallPediatricianRoute
   '/authors/$slug': typeof AuthorsSlugRoute
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
@@ -805,6 +849,7 @@ export interface FileRoutesById {
   '/articles/$slug': typeof ArticlesSlugRoute
   '/articles/_template': typeof ArticlesTemplateRoute
   '/articles/adhd-in-toddlers': typeof ArticlesAdhdInToddlersRoute
+  '/articles/baby-growth-spurts': typeof ArticlesBabyGrowthSpurtsRoute
   '/articles/baby-milestones-by-month': typeof ArticlesBabyMilestonesByMonthRoute
   '/articles/baby-sleep-guide': typeof ArticlesBabySleepGuideRoute
   '/articles/baby-teething-symptoms': typeof ArticlesBabyTeethingSymptomsRoute
@@ -833,6 +878,7 @@ export interface FileRoutesById {
   '/articles/child-fever-guide': typeof ArticlesChildFeverGuideRoute
   '/articles/child-fever-home-remedies': typeof ArticlesChildFeverHomeRemediesRoute
   '/articles/child-nutrition-guide': typeof ArticlesChildNutritionGuideRoute
+  '/articles/co-sleeping-safety': typeof ArticlesCoSleepingSafetyRoute
   '/articles/early-intervention': typeof ArticlesEarlyInterventionRoute
   '/articles/fever-in-children': typeof ArticlesFeverInChildrenRoute
   '/articles/newborn-care-guide': typeof ArticlesNewbornCareGuideRoute
@@ -858,14 +904,17 @@ export interface FileRoutesById {
   '/articles/starting-solids-guide': typeof ArticlesStartingSolidsGuideRoute
   '/articles/toddler-activities-at-home': typeof ArticlesToddlerActivitiesAtHomeRoute
   '/articles/toddler-biting': typeof ArticlesToddlerBitingRoute
+  '/articles/toddler-hitting': typeof ArticlesToddlerHittingRoute
   '/articles/toddler-not-talking': typeof ArticlesToddlerNotTalkingRoute
   '/articles/toddler-nutrition-tips': typeof ArticlesToddlerNutritionTipsRoute
   '/articles/toddler-picky-eating': typeof ArticlesToddlerPickyEatingRoute
   '/articles/toddler-regression': typeof ArticlesToddlerRegressionRoute
+  '/articles/toddler-screen-time': typeof ArticlesToddlerScreenTimeRoute
   '/articles/toddler-sleep-problems': typeof ArticlesToddlerSleepProblemsRoute
   '/articles/toddler-sleep-regression': typeof ArticlesToddlerSleepRegressionRoute
   '/articles/toddler-tantrums': typeof ArticlesToddlerTantrumsRoute
   '/articles/vaccination-guide': typeof ArticlesVaccinationGuideRoute
+  '/articles/when-to-call-pediatrician': typeof ArticlesWhenToCallPediatricianRoute
   '/authors/$slug': typeof AuthorsSlugRoute
   '/categories/$slug': typeof CategoriesSlugRoute
   '/go/$slug': typeof GoSlugRoute
@@ -899,6 +948,7 @@ export interface FileRouteTypes {
     | '/admin/subscribers'
     | '/articles/$slug'
     | '/articles/adhd-in-toddlers'
+    | '/articles/baby-growth-spurts'
     | '/articles/baby-milestones-by-month'
     | '/articles/baby-sleep-guide'
     | '/articles/baby-teething-symptoms'
@@ -927,6 +977,7 @@ export interface FileRouteTypes {
     | '/articles/child-fever-guide'
     | '/articles/child-fever-home-remedies'
     | '/articles/child-nutrition-guide'
+    | '/articles/co-sleeping-safety'
     | '/articles/early-intervention'
     | '/articles/fever-in-children'
     | '/articles/newborn-care-guide'
@@ -952,14 +1003,17 @@ export interface FileRouteTypes {
     | '/articles/starting-solids-guide'
     | '/articles/toddler-activities-at-home'
     | '/articles/toddler-biting'
+    | '/articles/toddler-hitting'
     | '/articles/toddler-not-talking'
     | '/articles/toddler-nutrition-tips'
     | '/articles/toddler-picky-eating'
     | '/articles/toddler-regression'
+    | '/articles/toddler-screen-time'
     | '/articles/toddler-sleep-problems'
     | '/articles/toddler-sleep-regression'
     | '/articles/toddler-tantrums'
     | '/articles/vaccination-guide'
+    | '/articles/when-to-call-pediatrician'
     | '/authors/$slug'
     | '/categories/$slug'
     | '/go/$slug'
@@ -990,6 +1044,7 @@ export interface FileRouteTypes {
     | '/articles/$slug'
     | '/articles'
     | '/articles/adhd-in-toddlers'
+    | '/articles/baby-growth-spurts'
     | '/articles/baby-milestones-by-month'
     | '/articles/baby-sleep-guide'
     | '/articles/baby-teething-symptoms'
@@ -1018,6 +1073,7 @@ export interface FileRouteTypes {
     | '/articles/child-fever-guide'
     | '/articles/child-fever-home-remedies'
     | '/articles/child-nutrition-guide'
+    | '/articles/co-sleeping-safety'
     | '/articles/early-intervention'
     | '/articles/fever-in-children'
     | '/articles/newborn-care-guide'
@@ -1043,14 +1099,17 @@ export interface FileRouteTypes {
     | '/articles/starting-solids-guide'
     | '/articles/toddler-activities-at-home'
     | '/articles/toddler-biting'
+    | '/articles/toddler-hitting'
     | '/articles/toddler-not-talking'
     | '/articles/toddler-nutrition-tips'
     | '/articles/toddler-picky-eating'
     | '/articles/toddler-regression'
+    | '/articles/toddler-screen-time'
     | '/articles/toddler-sleep-problems'
     | '/articles/toddler-sleep-regression'
     | '/articles/toddler-tantrums'
     | '/articles/vaccination-guide'
+    | '/articles/when-to-call-pediatrician'
     | '/authors/$slug'
     | '/categories/$slug'
     | '/go/$slug'
@@ -1082,6 +1141,7 @@ export interface FileRouteTypes {
     | '/articles/$slug'
     | '/articles/_template'
     | '/articles/adhd-in-toddlers'
+    | '/articles/baby-growth-spurts'
     | '/articles/baby-milestones-by-month'
     | '/articles/baby-sleep-guide'
     | '/articles/baby-teething-symptoms'
@@ -1110,6 +1170,7 @@ export interface FileRouteTypes {
     | '/articles/child-fever-guide'
     | '/articles/child-fever-home-remedies'
     | '/articles/child-nutrition-guide'
+    | '/articles/co-sleeping-safety'
     | '/articles/early-intervention'
     | '/articles/fever-in-children'
     | '/articles/newborn-care-guide'
@@ -1135,14 +1196,17 @@ export interface FileRouteTypes {
     | '/articles/starting-solids-guide'
     | '/articles/toddler-activities-at-home'
     | '/articles/toddler-biting'
+    | '/articles/toddler-hitting'
     | '/articles/toddler-not-talking'
     | '/articles/toddler-nutrition-tips'
     | '/articles/toddler-picky-eating'
     | '/articles/toddler-regression'
+    | '/articles/toddler-screen-time'
     | '/articles/toddler-sleep-problems'
     | '/articles/toddler-sleep-regression'
     | '/articles/toddler-tantrums'
     | '/articles/vaccination-guide'
+    | '/articles/when-to-call-pediatrician'
     | '/authors/$slug'
     | '/categories/$slug'
     | '/go/$slug'
@@ -1308,6 +1372,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthorsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/articles/when-to-call-pediatrician': {
+      id: '/articles/when-to-call-pediatrician'
+      path: '/when-to-call-pediatrician'
+      fullPath: '/articles/when-to-call-pediatrician'
+      preLoaderRoute: typeof ArticlesWhenToCallPediatricianRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/vaccination-guide': {
       id: '/articles/vaccination-guide'
       path: '/vaccination-guide'
@@ -1336,6 +1407,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesToddlerSleepProblemsRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/toddler-screen-time': {
+      id: '/articles/toddler-screen-time'
+      path: '/toddler-screen-time'
+      fullPath: '/articles/toddler-screen-time'
+      preLoaderRoute: typeof ArticlesToddlerScreenTimeRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/toddler-regression': {
       id: '/articles/toddler-regression'
       path: '/toddler-regression'
@@ -1362,6 +1440,13 @@ declare module '@tanstack/react-router' {
       path: '/toddler-not-talking'
       fullPath: '/articles/toddler-not-talking'
       preLoaderRoute: typeof ArticlesToddlerNotTalkingRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/toddler-hitting': {
+      id: '/articles/toddler-hitting'
+      path: '/toddler-hitting'
+      fullPath: '/articles/toddler-hitting'
+      preLoaderRoute: typeof ArticlesToddlerHittingRouteImport
       parentRoute: typeof ArticlesRoute
     }
     '/articles/toddler-biting': {
@@ -1537,6 +1622,13 @@ declare module '@tanstack/react-router' {
       path: '/early-intervention'
       fullPath: '/articles/early-intervention'
       preLoaderRoute: typeof ArticlesEarlyInterventionRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/co-sleeping-safety': {
+      id: '/articles/co-sleeping-safety'
+      path: '/co-sleeping-safety'
+      fullPath: '/articles/co-sleeping-safety'
+      preLoaderRoute: typeof ArticlesCoSleepingSafetyRouteImport
       parentRoute: typeof ArticlesRoute
     }
     '/articles/child-nutrition-guide': {
@@ -1735,6 +1827,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesBabyMilestonesByMonthRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/baby-growth-spurts': {
+      id: '/articles/baby-growth-spurts'
+      path: '/baby-growth-spurts'
+      fullPath: '/articles/baby-growth-spurts'
+      preLoaderRoute: typeof ArticlesBabyGrowthSpurtsRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/adhd-in-toddlers': {
       id: '/articles/adhd-in-toddlers'
       path: '/adhd-in-toddlers'
@@ -1847,6 +1946,7 @@ interface ArticlesRouteChildren {
   ArticlesSlugRoute: typeof ArticlesSlugRoute
   ArticlesTemplateRoute: typeof ArticlesTemplateRoute
   ArticlesAdhdInToddlersRoute: typeof ArticlesAdhdInToddlersRoute
+  ArticlesBabyGrowthSpurtsRoute: typeof ArticlesBabyGrowthSpurtsRoute
   ArticlesBabyMilestonesByMonthRoute: typeof ArticlesBabyMilestonesByMonthRoute
   ArticlesBabySleepGuideRoute: typeof ArticlesBabySleepGuideRoute
   ArticlesBabyTeethingSymptomsRoute: typeof ArticlesBabyTeethingSymptomsRoute
@@ -1875,6 +1975,7 @@ interface ArticlesRouteChildren {
   ArticlesChildFeverGuideRoute: typeof ArticlesChildFeverGuideRoute
   ArticlesChildFeverHomeRemediesRoute: typeof ArticlesChildFeverHomeRemediesRoute
   ArticlesChildNutritionGuideRoute: typeof ArticlesChildNutritionGuideRoute
+  ArticlesCoSleepingSafetyRoute: typeof ArticlesCoSleepingSafetyRoute
   ArticlesEarlyInterventionRoute: typeof ArticlesEarlyInterventionRoute
   ArticlesFeverInChildrenRoute: typeof ArticlesFeverInChildrenRoute
   ArticlesNewbornCareGuideRoute: typeof ArticlesNewbornCareGuideRoute
@@ -1900,14 +2001,17 @@ interface ArticlesRouteChildren {
   ArticlesStartingSolidsGuideRoute: typeof ArticlesStartingSolidsGuideRoute
   ArticlesToddlerActivitiesAtHomeRoute: typeof ArticlesToddlerActivitiesAtHomeRoute
   ArticlesToddlerBitingRoute: typeof ArticlesToddlerBitingRoute
+  ArticlesToddlerHittingRoute: typeof ArticlesToddlerHittingRoute
   ArticlesToddlerNotTalkingRoute: typeof ArticlesToddlerNotTalkingRoute
   ArticlesToddlerNutritionTipsRoute: typeof ArticlesToddlerNutritionTipsRoute
   ArticlesToddlerPickyEatingRoute: typeof ArticlesToddlerPickyEatingRoute
   ArticlesToddlerRegressionRoute: typeof ArticlesToddlerRegressionRoute
+  ArticlesToddlerScreenTimeRoute: typeof ArticlesToddlerScreenTimeRoute
   ArticlesToddlerSleepProblemsRoute: typeof ArticlesToddlerSleepProblemsRoute
   ArticlesToddlerSleepRegressionRoute: typeof ArticlesToddlerSleepRegressionRoute
   ArticlesToddlerTantrumsRoute: typeof ArticlesToddlerTantrumsRoute
   ArticlesVaccinationGuideRoute: typeof ArticlesVaccinationGuideRoute
+  ArticlesWhenToCallPediatricianRoute: typeof ArticlesWhenToCallPediatricianRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
 }
 
@@ -1915,6 +2019,7 @@ const ArticlesRouteChildren: ArticlesRouteChildren = {
   ArticlesSlugRoute: ArticlesSlugRoute,
   ArticlesTemplateRoute: ArticlesTemplateRoute,
   ArticlesAdhdInToddlersRoute: ArticlesAdhdInToddlersRoute,
+  ArticlesBabyGrowthSpurtsRoute: ArticlesBabyGrowthSpurtsRoute,
   ArticlesBabyMilestonesByMonthRoute: ArticlesBabyMilestonesByMonthRoute,
   ArticlesBabySleepGuideRoute: ArticlesBabySleepGuideRoute,
   ArticlesBabyTeethingSymptomsRoute: ArticlesBabyTeethingSymptomsRoute,
@@ -1945,6 +2050,7 @@ const ArticlesRouteChildren: ArticlesRouteChildren = {
   ArticlesChildFeverGuideRoute: ArticlesChildFeverGuideRoute,
   ArticlesChildFeverHomeRemediesRoute: ArticlesChildFeverHomeRemediesRoute,
   ArticlesChildNutritionGuideRoute: ArticlesChildNutritionGuideRoute,
+  ArticlesCoSleepingSafetyRoute: ArticlesCoSleepingSafetyRoute,
   ArticlesEarlyInterventionRoute: ArticlesEarlyInterventionRoute,
   ArticlesFeverInChildrenRoute: ArticlesFeverInChildrenRoute,
   ArticlesNewbornCareGuideRoute: ArticlesNewbornCareGuideRoute,
@@ -1973,14 +2079,17 @@ const ArticlesRouteChildren: ArticlesRouteChildren = {
   ArticlesStartingSolidsGuideRoute: ArticlesStartingSolidsGuideRoute,
   ArticlesToddlerActivitiesAtHomeRoute: ArticlesToddlerActivitiesAtHomeRoute,
   ArticlesToddlerBitingRoute: ArticlesToddlerBitingRoute,
+  ArticlesToddlerHittingRoute: ArticlesToddlerHittingRoute,
   ArticlesToddlerNotTalkingRoute: ArticlesToddlerNotTalkingRoute,
   ArticlesToddlerNutritionTipsRoute: ArticlesToddlerNutritionTipsRoute,
   ArticlesToddlerPickyEatingRoute: ArticlesToddlerPickyEatingRoute,
   ArticlesToddlerRegressionRoute: ArticlesToddlerRegressionRoute,
+  ArticlesToddlerScreenTimeRoute: ArticlesToddlerScreenTimeRoute,
   ArticlesToddlerSleepProblemsRoute: ArticlesToddlerSleepProblemsRoute,
   ArticlesToddlerSleepRegressionRoute: ArticlesToddlerSleepRegressionRoute,
   ArticlesToddlerTantrumsRoute: ArticlesToddlerTantrumsRoute,
   ArticlesVaccinationGuideRoute: ArticlesVaccinationGuideRoute,
+  ArticlesWhenToCallPediatricianRoute: ArticlesWhenToCallPediatricianRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
 }
 
