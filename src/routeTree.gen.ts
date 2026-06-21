@@ -32,8 +32,10 @@ import { Route as ArticlesVaccinationGuideRouteImport } from './routes/articles/
 import { Route as ArticlesToddlerTantrumsRouteImport } from './routes/articles/toddler-tantrums'
 import { Route as ArticlesToddlerSleepRegressionRouteImport } from './routes/articles/toddler-sleep-regression'
 import { Route as ArticlesToddlerSleepProblemsRouteImport } from './routes/articles/toddler-sleep-problems'
+import { Route as ArticlesToddlerRegressionRouteImport } from './routes/articles/toddler-regression'
 import { Route as ArticlesToddlerPickyEatingRouteImport } from './routes/articles/toddler-picky-eating'
 import { Route as ArticlesToddlerNutritionTipsRouteImport } from './routes/articles/toddler-nutrition-tips'
+import { Route as ArticlesToddlerNotTalkingRouteImport } from './routes/articles/toddler-not-talking'
 import { Route as ArticlesToddlerBitingRouteImport } from './routes/articles/toddler-biting'
 import { Route as ArticlesToddlerActivitiesAtHomeRouteImport } from './routes/articles/toddler-activities-at-home'
 import { Route as ArticlesStartingSolidsGuideRouteImport } from './routes/articles/starting-solids-guide'
@@ -72,6 +74,7 @@ import { Route as ArticlesBestDiaperBagsRouteImport } from './routes/articles/be
 import { Route as ArticlesBestCribsBassinetsRouteImport } from './routes/articles/best-cribs-bassinets'
 import { Route as ArticlesBestConvertibleCarSeatsRouteImport } from './routes/articles/best-convertible-car-seats'
 import { Route as ArticlesBestCarSeatsRouteImport } from './routes/articles/best-car-seats'
+import { Route as ArticlesBestBreastPumpsWorkingMomsRouteImport } from './routes/articles/best-breast-pumps-working-moms'
 import { Route as ArticlesBestBreastPumpsRouteImport } from './routes/articles/best-breast-pumps'
 import { Route as ArticlesBestBabyWalkersRouteImport } from './routes/articles/best-baby-walkers'
 import { Route as ArticlesBestBabyThermometersRouteImport } from './routes/articles/best-baby-thermometers'
@@ -216,6 +219,12 @@ const ArticlesToddlerSleepProblemsRoute =
     path: '/toddler-sleep-problems',
     getParentRoute: () => ArticlesRoute,
   } as any)
+const ArticlesToddlerRegressionRoute =
+  ArticlesToddlerRegressionRouteImport.update({
+    id: '/toddler-regression',
+    path: '/toddler-regression',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
 const ArticlesToddlerPickyEatingRoute =
   ArticlesToddlerPickyEatingRouteImport.update({
     id: '/toddler-picky-eating',
@@ -226,6 +235,12 @@ const ArticlesToddlerNutritionTipsRoute =
   ArticlesToddlerNutritionTipsRouteImport.update({
     id: '/toddler-nutrition-tips',
     path: '/toddler-nutrition-tips',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
+const ArticlesToddlerNotTalkingRoute =
+  ArticlesToddlerNotTalkingRouteImport.update({
+    id: '/toddler-not-talking',
+    path: '/toddler-not-talking',
     getParentRoute: () => ArticlesRoute,
   } as any)
 const ArticlesToddlerBitingRoute = ArticlesToddlerBitingRouteImport.update({
@@ -446,6 +461,12 @@ const ArticlesBestCarSeatsRoute = ArticlesBestCarSeatsRouteImport.update({
   path: '/best-car-seats',
   getParentRoute: () => ArticlesRoute,
 } as any)
+const ArticlesBestBreastPumpsWorkingMomsRoute =
+  ArticlesBestBreastPumpsWorkingMomsRouteImport.update({
+    id: '/best-breast-pumps-working-moms',
+    path: '/best-breast-pumps-working-moms',
+    getParentRoute: () => ArticlesRoute,
+  } as any)
 const ArticlesBestBreastPumpsRoute = ArticlesBestBreastPumpsRouteImport.update({
   id: '/best-breast-pumps',
   path: '/best-breast-pumps',
@@ -614,6 +635,7 @@ export interface FileRoutesByFullPath {
   '/articles/best-baby-thermometers': typeof ArticlesBestBabyThermometersRoute
   '/articles/best-baby-walkers': typeof ArticlesBestBabyWalkersRoute
   '/articles/best-breast-pumps': typeof ArticlesBestBreastPumpsRoute
+  '/articles/best-breast-pumps-working-moms': typeof ArticlesBestBreastPumpsWorkingMomsRoute
   '/articles/best-car-seats': typeof ArticlesBestCarSeatsRoute
   '/articles/best-convertible-car-seats': typeof ArticlesBestConvertibleCarSeatsRoute
   '/articles/best-cribs-bassinets': typeof ArticlesBestCribsBassinetsRoute
@@ -652,8 +674,10 @@ export interface FileRoutesByFullPath {
   '/articles/starting-solids-guide': typeof ArticlesStartingSolidsGuideRoute
   '/articles/toddler-activities-at-home': typeof ArticlesToddlerActivitiesAtHomeRoute
   '/articles/toddler-biting': typeof ArticlesToddlerBitingRoute
+  '/articles/toddler-not-talking': typeof ArticlesToddlerNotTalkingRoute
   '/articles/toddler-nutrition-tips': typeof ArticlesToddlerNutritionTipsRoute
   '/articles/toddler-picky-eating': typeof ArticlesToddlerPickyEatingRoute
+  '/articles/toddler-regression': typeof ArticlesToddlerRegressionRoute
   '/articles/toddler-sleep-problems': typeof ArticlesToddlerSleepProblemsRoute
   '/articles/toddler-sleep-regression': typeof ArticlesToddlerSleepRegressionRoute
   '/articles/toddler-tantrums': typeof ArticlesToddlerTantrumsRoute
@@ -702,6 +726,7 @@ export interface FileRoutesByTo {
   '/articles/best-baby-thermometers': typeof ArticlesBestBabyThermometersRoute
   '/articles/best-baby-walkers': typeof ArticlesBestBabyWalkersRoute
   '/articles/best-breast-pumps': typeof ArticlesBestBreastPumpsRoute
+  '/articles/best-breast-pumps-working-moms': typeof ArticlesBestBreastPumpsWorkingMomsRoute
   '/articles/best-car-seats': typeof ArticlesBestCarSeatsRoute
   '/articles/best-convertible-car-seats': typeof ArticlesBestConvertibleCarSeatsRoute
   '/articles/best-cribs-bassinets': typeof ArticlesBestCribsBassinetsRoute
@@ -740,8 +765,10 @@ export interface FileRoutesByTo {
   '/articles/starting-solids-guide': typeof ArticlesStartingSolidsGuideRoute
   '/articles/toddler-activities-at-home': typeof ArticlesToddlerActivitiesAtHomeRoute
   '/articles/toddler-biting': typeof ArticlesToddlerBitingRoute
+  '/articles/toddler-not-talking': typeof ArticlesToddlerNotTalkingRoute
   '/articles/toddler-nutrition-tips': typeof ArticlesToddlerNutritionTipsRoute
   '/articles/toddler-picky-eating': typeof ArticlesToddlerPickyEatingRoute
+  '/articles/toddler-regression': typeof ArticlesToddlerRegressionRoute
   '/articles/toddler-sleep-problems': typeof ArticlesToddlerSleepProblemsRoute
   '/articles/toddler-sleep-regression': typeof ArticlesToddlerSleepRegressionRoute
   '/articles/toddler-tantrums': typeof ArticlesToddlerTantrumsRoute
@@ -792,6 +819,7 @@ export interface FileRoutesById {
   '/articles/best-baby-thermometers': typeof ArticlesBestBabyThermometersRoute
   '/articles/best-baby-walkers': typeof ArticlesBestBabyWalkersRoute
   '/articles/best-breast-pumps': typeof ArticlesBestBreastPumpsRoute
+  '/articles/best-breast-pumps-working-moms': typeof ArticlesBestBreastPumpsWorkingMomsRoute
   '/articles/best-car-seats': typeof ArticlesBestCarSeatsRoute
   '/articles/best-convertible-car-seats': typeof ArticlesBestConvertibleCarSeatsRoute
   '/articles/best-cribs-bassinets': typeof ArticlesBestCribsBassinetsRoute
@@ -830,8 +858,10 @@ export interface FileRoutesById {
   '/articles/starting-solids-guide': typeof ArticlesStartingSolidsGuideRoute
   '/articles/toddler-activities-at-home': typeof ArticlesToddlerActivitiesAtHomeRoute
   '/articles/toddler-biting': typeof ArticlesToddlerBitingRoute
+  '/articles/toddler-not-talking': typeof ArticlesToddlerNotTalkingRoute
   '/articles/toddler-nutrition-tips': typeof ArticlesToddlerNutritionTipsRoute
   '/articles/toddler-picky-eating': typeof ArticlesToddlerPickyEatingRoute
+  '/articles/toddler-regression': typeof ArticlesToddlerRegressionRoute
   '/articles/toddler-sleep-problems': typeof ArticlesToddlerSleepProblemsRoute
   '/articles/toddler-sleep-regression': typeof ArticlesToddlerSleepRegressionRoute
   '/articles/toddler-tantrums': typeof ArticlesToddlerTantrumsRoute
@@ -883,6 +913,7 @@ export interface FileRouteTypes {
     | '/articles/best-baby-thermometers'
     | '/articles/best-baby-walkers'
     | '/articles/best-breast-pumps'
+    | '/articles/best-breast-pumps-working-moms'
     | '/articles/best-car-seats'
     | '/articles/best-convertible-car-seats'
     | '/articles/best-cribs-bassinets'
@@ -921,8 +952,10 @@ export interface FileRouteTypes {
     | '/articles/starting-solids-guide'
     | '/articles/toddler-activities-at-home'
     | '/articles/toddler-biting'
+    | '/articles/toddler-not-talking'
     | '/articles/toddler-nutrition-tips'
     | '/articles/toddler-picky-eating'
+    | '/articles/toddler-regression'
     | '/articles/toddler-sleep-problems'
     | '/articles/toddler-sleep-regression'
     | '/articles/toddler-tantrums'
@@ -971,6 +1004,7 @@ export interface FileRouteTypes {
     | '/articles/best-baby-thermometers'
     | '/articles/best-baby-walkers'
     | '/articles/best-breast-pumps'
+    | '/articles/best-breast-pumps-working-moms'
     | '/articles/best-car-seats'
     | '/articles/best-convertible-car-seats'
     | '/articles/best-cribs-bassinets'
@@ -1009,8 +1043,10 @@ export interface FileRouteTypes {
     | '/articles/starting-solids-guide'
     | '/articles/toddler-activities-at-home'
     | '/articles/toddler-biting'
+    | '/articles/toddler-not-talking'
     | '/articles/toddler-nutrition-tips'
     | '/articles/toddler-picky-eating'
+    | '/articles/toddler-regression'
     | '/articles/toddler-sleep-problems'
     | '/articles/toddler-sleep-regression'
     | '/articles/toddler-tantrums'
@@ -1060,6 +1096,7 @@ export interface FileRouteTypes {
     | '/articles/best-baby-thermometers'
     | '/articles/best-baby-walkers'
     | '/articles/best-breast-pumps'
+    | '/articles/best-breast-pumps-working-moms'
     | '/articles/best-car-seats'
     | '/articles/best-convertible-car-seats'
     | '/articles/best-cribs-bassinets'
@@ -1098,8 +1135,10 @@ export interface FileRouteTypes {
     | '/articles/starting-solids-guide'
     | '/articles/toddler-activities-at-home'
     | '/articles/toddler-biting'
+    | '/articles/toddler-not-talking'
     | '/articles/toddler-nutrition-tips'
     | '/articles/toddler-picky-eating'
+    | '/articles/toddler-regression'
     | '/articles/toddler-sleep-problems'
     | '/articles/toddler-sleep-regression'
     | '/articles/toddler-tantrums'
@@ -1297,6 +1336,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesToddlerSleepProblemsRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/toddler-regression': {
+      id: '/articles/toddler-regression'
+      path: '/toddler-regression'
+      fullPath: '/articles/toddler-regression'
+      preLoaderRoute: typeof ArticlesToddlerRegressionRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/toddler-picky-eating': {
       id: '/articles/toddler-picky-eating'
       path: '/toddler-picky-eating'
@@ -1309,6 +1355,13 @@ declare module '@tanstack/react-router' {
       path: '/toddler-nutrition-tips'
       fullPath: '/articles/toddler-nutrition-tips'
       preLoaderRoute: typeof ArticlesToddlerNutritionTipsRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
+    '/articles/toddler-not-talking': {
+      id: '/articles/toddler-not-talking'
+      path: '/toddler-not-talking'
+      fullPath: '/articles/toddler-not-talking'
+      preLoaderRoute: typeof ArticlesToddlerNotTalkingRouteImport
       parentRoute: typeof ArticlesRoute
     }
     '/articles/toddler-biting': {
@@ -1577,6 +1630,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesBestCarSeatsRouteImport
       parentRoute: typeof ArticlesRoute
     }
+    '/articles/best-breast-pumps-working-moms': {
+      id: '/articles/best-breast-pumps-working-moms'
+      path: '/best-breast-pumps-working-moms'
+      fullPath: '/articles/best-breast-pumps-working-moms'
+      preLoaderRoute: typeof ArticlesBestBreastPumpsWorkingMomsRouteImport
+      parentRoute: typeof ArticlesRoute
+    }
     '/articles/best-breast-pumps': {
       id: '/articles/best-breast-pumps'
       path: '/best-breast-pumps'
@@ -1801,6 +1861,7 @@ interface ArticlesRouteChildren {
   ArticlesBestBabyThermometersRoute: typeof ArticlesBestBabyThermometersRoute
   ArticlesBestBabyWalkersRoute: typeof ArticlesBestBabyWalkersRoute
   ArticlesBestBreastPumpsRoute: typeof ArticlesBestBreastPumpsRoute
+  ArticlesBestBreastPumpsWorkingMomsRoute: typeof ArticlesBestBreastPumpsWorkingMomsRoute
   ArticlesBestCarSeatsRoute: typeof ArticlesBestCarSeatsRoute
   ArticlesBestConvertibleCarSeatsRoute: typeof ArticlesBestConvertibleCarSeatsRoute
   ArticlesBestCribsBassinetsRoute: typeof ArticlesBestCribsBassinetsRoute
@@ -1839,8 +1900,10 @@ interface ArticlesRouteChildren {
   ArticlesStartingSolidsGuideRoute: typeof ArticlesStartingSolidsGuideRoute
   ArticlesToddlerActivitiesAtHomeRoute: typeof ArticlesToddlerActivitiesAtHomeRoute
   ArticlesToddlerBitingRoute: typeof ArticlesToddlerBitingRoute
+  ArticlesToddlerNotTalkingRoute: typeof ArticlesToddlerNotTalkingRoute
   ArticlesToddlerNutritionTipsRoute: typeof ArticlesToddlerNutritionTipsRoute
   ArticlesToddlerPickyEatingRoute: typeof ArticlesToddlerPickyEatingRoute
+  ArticlesToddlerRegressionRoute: typeof ArticlesToddlerRegressionRoute
   ArticlesToddlerSleepProblemsRoute: typeof ArticlesToddlerSleepProblemsRoute
   ArticlesToddlerSleepRegressionRoute: typeof ArticlesToddlerSleepRegressionRoute
   ArticlesToddlerTantrumsRoute: typeof ArticlesToddlerTantrumsRoute
@@ -1866,6 +1929,8 @@ const ArticlesRouteChildren: ArticlesRouteChildren = {
   ArticlesBestBabyThermometersRoute: ArticlesBestBabyThermometersRoute,
   ArticlesBestBabyWalkersRoute: ArticlesBestBabyWalkersRoute,
   ArticlesBestBreastPumpsRoute: ArticlesBestBreastPumpsRoute,
+  ArticlesBestBreastPumpsWorkingMomsRoute:
+    ArticlesBestBreastPumpsWorkingMomsRoute,
   ArticlesBestCarSeatsRoute: ArticlesBestCarSeatsRoute,
   ArticlesBestConvertibleCarSeatsRoute: ArticlesBestConvertibleCarSeatsRoute,
   ArticlesBestCribsBassinetsRoute: ArticlesBestCribsBassinetsRoute,
@@ -1908,8 +1973,10 @@ const ArticlesRouteChildren: ArticlesRouteChildren = {
   ArticlesStartingSolidsGuideRoute: ArticlesStartingSolidsGuideRoute,
   ArticlesToddlerActivitiesAtHomeRoute: ArticlesToddlerActivitiesAtHomeRoute,
   ArticlesToddlerBitingRoute: ArticlesToddlerBitingRoute,
+  ArticlesToddlerNotTalkingRoute: ArticlesToddlerNotTalkingRoute,
   ArticlesToddlerNutritionTipsRoute: ArticlesToddlerNutritionTipsRoute,
   ArticlesToddlerPickyEatingRoute: ArticlesToddlerPickyEatingRoute,
+  ArticlesToddlerRegressionRoute: ArticlesToddlerRegressionRoute,
   ArticlesToddlerSleepProblemsRoute: ArticlesToddlerSleepProblemsRoute,
   ArticlesToddlerSleepRegressionRoute: ArticlesToddlerSleepRegressionRoute,
   ArticlesToddlerTantrumsRoute: ArticlesToddlerTantrumsRoute,
